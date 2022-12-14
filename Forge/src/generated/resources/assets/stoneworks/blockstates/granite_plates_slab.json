@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "stoneworks:block/granite_plates_slab"
+    },
+    "type=double": {
+      "model": "stoneworks:block/granite_plates"
+    },
+    "type=top": {
+      "model": "stoneworks:block/granite_plates_slab_top"
+    }
+  }
+}

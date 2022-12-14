@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "stoneworks:block/diorite_tiles_slab"
+    },
+    "type=double": {
+      "model": "stoneworks:block/diorite_tiles"
+    },
+    "type=top": {
+      "model": "stoneworks:block/diorite_tiles_slab_top"
+    }
+  }
+}

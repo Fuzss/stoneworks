@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "stoneworks:block/quartz_shingles_slab"
+    },
+    "type=double": {
+      "model": "stoneworks:block/quartz_shingles"
+    },
+    "type=top": {
+      "model": "stoneworks:block/quartz_shingles_slab_top"
+    }
+  }
+}

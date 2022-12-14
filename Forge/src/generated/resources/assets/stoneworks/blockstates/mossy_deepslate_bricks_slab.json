@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "stoneworks:block/mossy_deepslate_bricks_slab"
+    },
+    "type=double": {
+      "model": "stoneworks:block/mossy_deepslate_bricks"
+    },
+    "type=top": {
+      "model": "stoneworks:block/mossy_deepslate_bricks_slab_top"
+    }
+  }
+}

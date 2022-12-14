@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "stoneworks:block/andesite_tiles_slab"
+    },
+    "type=double": {
+      "model": "stoneworks:block/andesite_tiles"
+    },
+    "type=top": {
+      "model": "stoneworks:block/andesite_tiles_slab_top"
+    }
+  }
+}

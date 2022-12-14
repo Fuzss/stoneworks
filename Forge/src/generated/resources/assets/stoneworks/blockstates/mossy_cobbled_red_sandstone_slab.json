@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "stoneworks:block/mossy_cobbled_red_sandstone_slab"
+    },
+    "type=double": {
+      "model": "stoneworks:block/mossy_cobbled_red_sandstone"
+    },
+    "type=top": {
+      "model": "stoneworks:block/mossy_cobbled_red_sandstone_slab_top"
+    }
+  }
+}

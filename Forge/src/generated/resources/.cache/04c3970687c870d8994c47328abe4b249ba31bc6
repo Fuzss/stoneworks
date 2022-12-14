@@ -1,4 +1,4 @@
-// 1.19.2	2022-12-14T15:44:41.087732	Block States: stoneworks
+// 1.19.2	2022-12-14T17:13:09.478648	Block States: stoneworks
 d97c867fb2ac22d79df44af806b26d6ea6260b35 assets/stoneworks/blockstates/andesite_brick_slab.json
 594cd50684b1dd32ed4934b2125912a97a219a16 assets/stoneworks/blockstates/andesite_brick_stairs.json
 ac2087e3fdf63da470d1dd6118226b75696aad53 assets/stoneworks/blockstates/andesite_brick_wall.json
@@ -758,7 +758,7 @@ fbb15726973adbd69bf1360e05627eb4af337133 assets/stoneworks/models/block/calcite_
 84906f57ade9c9035d6e2ae89fe381afd267f3ba assets/stoneworks/models/block/calcite_tile_wall_side_tall.json
 cc2c265d54f1cd7eccb27d0f5dd0f308b53da237 assets/stoneworks/models/block/calcite_tiles.json
 0095e7639e2bc35b1da5131209b1f22ea2587bf6 assets/stoneworks/models/block/chiseled_andesite.json
-92bf757e33d232dffd52ade72cc7fc51ee6bb2be assets/stoneworks/models/block/chiseled_basalt.json
+71b96a76e7d11e64c4db76cc96cce82755be3117 assets/stoneworks/models/block/chiseled_basalt.json
 bc490d3168978089ffa35afc531f51dd338f880c assets/stoneworks/models/block/chiseled_calcite.json
 a8890b0a10656d9566ed13309d5e0908414c3b17 assets/stoneworks/models/block/chiseled_dark_prismarine.json
 f1d1b1cf8c8f8deedec80a6b96f890424293f31e assets/stoneworks/models/block/chiseled_diorite.json

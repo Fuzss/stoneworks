@@ -2,7 +2,8 @@ package fuzs.stoneworks.data;
 
 import com.google.common.collect.Maps;
 import fuzs.stoneworks.Stoneworks;
-import fuzs.stoneworks.init.StoneVariantsProvider;
+import fuzs.stoneworks.world.block.variant.StoneBlockVariant;
+import fuzs.stoneworks.world.block.variant.StoneVariantsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -19,7 +20,7 @@ public class ModLanguageProvider extends LanguageProvider {
     protected void addTranslations() {
         this.add("itemGroup.stoneworks.main", Stoneworks.MOD_NAME);
         Map<Block, String> translations = Maps.newHashMap();
-        for (StoneVariantsProvider.StoneBlockVariant variant : StoneVariantsProvider.getStoneBlockVariants()) {
+        for (StoneBlockVariant variant : StoneVariantsProvider.getStoneBlockVariants().toList()) {
             variant.addTranslations(translations);
         }
         for (Map.Entry<Block, String> entry : translations.entrySet()) {

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "stoneworks:netherrack_plates"
+  },
+  "result": "stoneworks:netherrack_plate_wall"
+}

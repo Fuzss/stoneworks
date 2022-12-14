@@ -1,6 +1,8 @@
 package fuzs.stoneworks.data;
 
-import fuzs.stoneworks.init.StoneVariantsProvider;
+import fuzs.stoneworks.world.block.variant.BlockVariant;
+import fuzs.stoneworks.world.block.variant.StoneBlockVariant;
+import fuzs.stoneworks.world.block.variant.StoneVariantsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
@@ -17,14 +19,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        for (StoneVariantsProvider.StoneBlockVariant variant : StoneVariantsProvider.getStoneBlockVariants()) {
-            if (variant.blockVariant() == StoneVariantsProvider.BlockVariant.PILLAR) {
+        for (StoneBlockVariant variant : StoneVariantsProvider.getStoneBlockVariants().toList()) {
+            if (variant.blockVariant() == BlockVariant.PILLAR) {
                 this.axisBlock((RotatedPillarBlock) variant.block(), this.blockTexture(variant.name() + "_side"), this.blockTexture(variant.name() + "_top"));
                 this.simpleBlockItem(variant.block(), variant.name());
             } else {
                 ResourceLocation texture = this.blockTexture(variant.name());
-                if (variant.blockVariant() == StoneVariantsProvider.BlockVariant.CHISELED && variant.stoneType().hasChiseledMotif()) {
-                    this.simpleColumnBlock(variant.block(), texture, this.blockTexture(StoneVariantsProvider.BlockVariant.POLISHED.getName(variant.stoneType())));
+                if (variant.blockVariant() == BlockVariant.CHISELED && variant.stoneType().hasChiseledMotif()) {
+                    this.simpleColumnBlock(variant.block(), texture, this.blockTexture(BlockVariant.POLISHED.getName(variant.stoneType())));
                 } else {
                     this.simpleBlock(variant.block());
                 }

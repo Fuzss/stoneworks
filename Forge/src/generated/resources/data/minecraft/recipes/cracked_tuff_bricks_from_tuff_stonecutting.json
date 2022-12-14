@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "minecraft:tuff"
+  },
+  "result": "stoneworks:cracked_tuff_bricks"
+}

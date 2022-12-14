@@ -4,9 +4,15 @@ import fuzs.puzzleslib.core.CommonAbstractions;
 import fuzs.puzzleslib.core.CommonFactories;
 import fuzs.puzzleslib.init.RegistryManager;
 import fuzs.stoneworks.Stoneworks;
+import fuzs.stoneworks.world.block.variant.BlockVariant;
+import fuzs.stoneworks.world.block.variant.StoneBlockVariant;
+import fuzs.stoneworks.world.block.variant.StoneVariantsProvider;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.WallBlock;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -21,7 +27,7 @@ public class ModRegistry {
         @Override
         public ItemStack get() {
             if (this.itemStacks == null) {
-                this.itemStacks = StoneVariantsProvider.getAllStoneBlockVariants().filter(variant -> variant.blockVariant() == StoneVariantsProvider.BlockVariant.REGULAR).map(StoneVariantsProvider.StoneBlockVariant::block).map(ItemStack::new).toArray(ItemStack[]::new);
+                this.itemStacks = StoneVariantsProvider.getAllStoneBlockVariants().filter(variant -> variant.blockVariant() == BlockVariant.REGULAR).map(StoneBlockVariant::block).map(ItemStack::new).toArray(ItemStack[]::new);
             }
             // stolen from XFactHD, thanks :)
             int index = (int) (System.currentTimeMillis() / 2000) % this.itemStacks.length;
@@ -32,13 +38,13 @@ public class ModRegistry {
     }).showSearch().build();
 
     public static void touch() {
-        for (StoneVariantsProvider.StoneBlockVariant variant : StoneVariantsProvider.getStoneBlockVariants()) {
-            if (variant.blockVariant() == StoneVariantsProvider.BlockVariant.PILLAR) {
+        for (StoneBlockVariant variant : StoneVariantsProvider.getStoneBlockVariants().toList()) {
+            if (variant.blockVariant() == BlockVariant.PILLAR) {
                 REGISTRY.registerBlockWithItem(variant.name(), () -> new RotatedPillarBlock(variant.baseBlockProperties()), CREATIVE_MODE_TAB);
             } else {
                 REGISTRY.registerBlockWithItem(variant.name(), () -> new Block(variant.baseBlockProperties()), CREATIVE_MODE_TAB);
                 if (variant.blockVariant().supportsAdditionalBlocks()) {
-                    REGISTRY.registerBlockWithItem(variant.stairsName(), () -> new StairBlock(variant.baseBlockState(), variant.baseBlockProperties()) {}, CREATIVE_MODE_TAB);
+                    REGISTRY.registerBlockWithItem(variant.stairsName(), () -> CommonAbstractions.INSTANCE.stairBlock(variant::baseBlockState, variant.baseBlockProperties()), CREATIVE_MODE_TAB);
                     REGISTRY.registerBlockWithItem(variant.slabName(), () -> new SlabBlock(variant.baseBlockProperties()), CREATIVE_MODE_TAB);
                     REGISTRY.registerBlockWithItem(variant.wallName(), () -> new WallBlock(variant.baseBlockProperties()), CREATIVE_MODE_TAB);
                 }

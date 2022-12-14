@@ -4,6 +4,7 @@ import com.google.common.collect.Maps;
 import fuzs.stoneworks.Stoneworks;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -16,14 +17,30 @@ import java.util.stream.Stream;
 
 public class StoneVariantsProvider {
     private static final Map<String, StoneBlockVariant> STONE_BLOCK_VARIANTS = Maps.newHashMap();
+    @Nullable
+    private static Collection<ItemStack> sortedVariantItems;
 
     static {
         registerAllStoneBlockVariants();
         registerVanillaOverrides();
     }
 
+    public static Stream<StoneBlockVariant> getAllStoneBlockVariants() {
+        return STONE_BLOCK_VARIANTS.values().stream();
+    }
+
     public static Collection<StoneBlockVariant> getStoneBlockVariants() {
         return STONE_BLOCK_VARIANTS.values().stream().filter(variant -> !(variant instanceof VanillaStoneBlockVariant)).toList();
+    }
+
+    public static Collection<ItemStack> getSortedVariantItems() {
+        if (sortedVariantItems == null) {
+            sortedVariantItems = STONE_BLOCK_VARIANTS.values().stream()
+                    .sorted(Comparator.<StoneBlockVariant>comparingInt(v -> v.stoneType().ordinal()).thenComparingInt(v -> v.blockVariant().ordinal()))
+                    .flatMap(StoneBlockVariant::allBlocks)
+                    .map(Block::asItem).map(ItemStack::new).toList();
+        }
+        return sortedVariantItems;
     }
 
     private static void registerAllStoneBlockVariants() {
@@ -118,20 +135,24 @@ public class StoneVariantsProvider {
             return this.blockVariant;
         }
 
-        public String name() {
+        public final String name() {
             return this.blockVariant.getName(this.stoneType);
         }
 
+        public String blockName() {
+            return this.name();
+        }
+
         public String stairsName() {
-            return this.name() + "_stairs";
+            return this.blockVariant.getAdditionalName(this.stoneType, "stairs");
         }
 
         public String slabName() {
-            return this.name() + "_slab";
+            return this.blockVariant.getAdditionalName(this.stoneType, "slab");
         }
 
         public String wallName() {
-            return this.name() + "_wall";
+            return this.blockVariant.getAdditionalName(this.stoneType, "wall");
         }
 
         public void addTranslations(Map<Block, String> translations) {
@@ -158,7 +179,7 @@ public class StoneVariantsProvider {
 
         @NotNull
         public Block block() {
-            return Objects.requireNonNull(this.block(0, this.name()), "base block was null");
+            return Objects.requireNonNull(this.block(0, this.blockName()), "base block was null");
         }
 
         @Nullable
@@ -178,14 +199,26 @@ public class StoneVariantsProvider {
 
         @Nullable
         private Block block(int index, String key) {
-            if (this.blocks[index] == null && (index == 0 || this.blockVariant.supportsAdditionalBlocks())) {
-                ResourceLocation id = Stoneworks.id(key);
+            if (this.blocks[index] == null && (this.isVanillaVariant() || index == 0 || this.blockVariant.supportsAdditionalBlocks())) {
+                ResourceLocation id = this.id(key);
                 if (!Registry.BLOCK.containsKey(id)) {
-                    throw new IllegalArgumentException("%s is not a valid block".formatted(id));
+                    if (this.isVanillaVariant()) {
+                        // stupid hack so this does not run every time when the vanilla variant simply doesn't have the block type
+                        // could also just let the call to Registry.BLOCK::get go through, as air is default entry,
+                        // but not trusting that with all the registry stuff Forge does
+                        this.blocks[index] = Blocks.AIR;
+                    } else {
+                        throw new IllegalArgumentException("%s is not a valid block".formatted(id));
+                    }
+                } else {
+                    this.blocks[index] = Registry.BLOCK.get(id);
                 }
-                this.blocks[index] = Registry.BLOCK.get(id);
             }
-            return this.blocks[index];
+            return this.blocks[index] == Blocks.AIR ? null : this.blocks[index];
+        }
+
+        protected ResourceLocation id(String key) {
+            return new ResourceLocation(Stoneworks.MOD_ID, key);
         }
 
         public BlockState baseBlockState() {
@@ -195,36 +228,50 @@ public class StoneVariantsProvider {
         public BlockBehaviour.Properties baseBlockProperties() {
             return this.stoneType.getBlockProperties(this.blockVariant);
         }
+
+        public boolean isVanillaVariant() {
+            return false;
+        }
     }
 
     private static class VanillaStoneBlockVariant extends StoneBlockVariant {
-        private final Block block;
+        private final String block;
+        private final boolean deviates;
 
         public VanillaStoneBlockVariant(Block block, StoneType stoneType, BlockVariant blockVariant) {
             super(stoneType, blockVariant);
-            this.block = block;
+            this.block = Registry.BLOCK.getKey(block).getPath();
+            this.deviates = !this.blockName().equals(this.name());
         }
 
-        @NotNull
         @Override
-        public Block block() {
+        public String blockName() {
             return this.block;
         }
 
-        @Nullable
         @Override
-        public Block stairs() {
-            return null;
+        public String stairsName() {
+            return this.deviates ? this.blockName() + "_stairs" : super.stairsName();
         }
 
         @Override
-        public @Nullable Block slab() {
-            return null;
+        public String slabName() {
+            return this.deviates ? this.blockName() + "_slab" : super.slabName();
         }
 
         @Override
-        public @Nullable Block wall() {
-            return null;
+        public String wallName() {
+            return this.deviates ? this.blockName() + "_wall" : super.wallName();
+        }
+
+        @Override
+        protected ResourceLocation id(String key) {
+            return new ResourceLocation(key);
+        }
+
+        @Override
+        public boolean isVanillaVariant() {
+            return true;
         }
     }
 
@@ -242,7 +289,7 @@ public class StoneVariantsProvider {
         }
 
         private BlockBehaviour.Properties getBlockProperties(BlockVariant blockVariant) {
-            if (this == NETHERRACK && blockVariant != BlockVariant.REGULAR) {
+            if (this == NETHERRACK && blockVariant.ordinal() >= BlockVariant.CHISELED.ordinal()) {
                 return BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS);
             }
             BlockBehaviour.Properties properties = BlockBehaviour.Properties.copy(this.baseBlock);
@@ -255,19 +302,34 @@ public class StoneVariantsProvider {
         public String getName() {
             return this.name().toLowerCase(Locale.ROOT);
         }
+
+        public boolean hasChiseledMotif() {
+            // no basalt it looks bad, also vanilla variants are ignored anyway
+            return this == DIORITE || this == DEEPSLATE || this == CALCITE || this == TUFF || this == BLACKSTONE || this == NETHERRACK || this == PRISMARINE || this == DARK_PRISMARINE || this == SANDSTONE || this == RED_SANDSTONE;
+        }
     }
 
     public enum BlockVariant {
-        REGULAR("%s"), COBBLED("cobbled_%s"), MOSSY_COBBLED("mossy_cobbled_%s"), BRICKS("%s_bricks"), MOSSY_BRICKS("mossy_%s_bricks"), CRACKED_BRICKS("cracked_%s_bricks"), POLISHED("polished_%s"), CHISELED("chiseled_%s"), TILES("%s_tiles"), CRACKED_TILES("cracked_%s_tiles"), PILLAR("%s_pillar"), SHINGLES("%s_shingles"), PAVERS("%s_pavers"), PLATES("%s_plates");
+        REGULAR("%s"), COBBLED("cobbled_%s"), MOSSY_COBBLED("mossy_cobbled_%s"), BRICKS("%s_bricks", "%s_brick_%s"), MOSSY_BRICKS("mossy_%s_bricks", "mossy_%s_brick_%s"), CRACKED_BRICKS("cracked_%s_bricks", "cracked_%s_brick_%s"), POLISHED("polished_%s"), CHISELED("chiseled_%s"), TILES("%s_tiles", "%s_tile_%s"), CRACKED_TILES("cracked_%s_tiles", "cracked_%s_tile_%s"), PILLAR("%s_pillar"), SHINGLES("%s_shingles", "%s_shingle_%s"), PAVERS("%s_pavers", "%s_paver_%s"), PLATES("%s_plates", "%s_plate_%s");
 
         private final String template;
+        private final String additionalTemplate;
 
         BlockVariant(String template) {
+            this(template, template + "_%s");
+        }
+
+        BlockVariant(String template, String additionalTemplate) {
             this.template = template;
+            this.additionalTemplate = additionalTemplate;
         }
 
         public String getName(StoneType stoneType) {
             return this.template.formatted(stoneType.getName());
+        }
+
+        public String getAdditionalName(StoneType stoneType, String additional) {
+            return this.additionalTemplate.formatted(stoneType.getName(), additional);
         }
 
         public boolean supportsAdditionalBlocks() {

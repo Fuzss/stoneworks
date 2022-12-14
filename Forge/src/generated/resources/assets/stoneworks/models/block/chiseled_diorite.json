@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "stoneworks:block/chiseled_diorite"
+    "end": "stoneworks:block/polished_diorite",
+    "side": "stoneworks:block/chiseled_diorite"
   }
 }

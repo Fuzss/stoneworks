@@ -9,32 +9,27 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.*;
 
 import javax.annotation.Nullable;
-import java.util.Comparator;
 import java.util.List;
 import java.util.function.Supplier;
 
 public class ModRegistry {
     private static final RegistryManager REGISTRY = CommonFactories.INSTANCE.registration(Stoneworks.MOD_ID);
-    private static final CreativeModeTab CREATIVE_MODE_TAB = CommonAbstractions.INSTANCE.creativeTab(Stoneworks.MOD_ID, "main", new Supplier<ItemStack>() {
+    private static final CreativeModeTab CREATIVE_MODE_TAB = CommonAbstractions.INSTANCE.creativeModeTabBuilder(Stoneworks.MOD_ID, "main").setIcon(new Supplier<>() {
         @Nullable
         private ItemStack[] itemStacks;
 
         @Override
         public ItemStack get() {
             if (this.itemStacks == null) {
-                this.itemStacks = StoneVariantsProvider.getStoneBlockVariants().stream().filter(variant -> variant.blockVariant() == StoneVariantsProvider.BlockVariant.REGULAR).map(StoneVariantsProvider.StoneBlockVariant::block).map(ItemStack::new).toArray(ItemStack[]::new);
+                this.itemStacks = StoneVariantsProvider.getAllStoneBlockVariants().filter(variant -> variant.blockVariant() == StoneVariantsProvider.BlockVariant.REGULAR).map(StoneVariantsProvider.StoneBlockVariant::block).map(ItemStack::new).toArray(ItemStack[]::new);
             }
-            // stolen from XFactHD, thanks
-            int index = (int) (System.currentTimeMillis() / 1200) % this.itemStacks.length;
+            // stolen from XFactHD, thanks :)
+            int index = (int) (System.currentTimeMillis() / 2000) % this.itemStacks.length;
             return this.itemStacks[index];
         }
-    }, false, (List<ItemStack> itemStacks, CreativeModeTab creativeModeTab) -> {
-        StoneVariantsProvider.getStoneBlockVariants().stream()
-                .sorted(Comparator.<StoneVariantsProvider.StoneBlockVariant>comparingInt(v -> v.stoneType().ordinal()).thenComparingInt(v -> v.blockVariant().ordinal()))
-                .flatMap(StoneVariantsProvider.StoneBlockVariant::allBlocks)
-                .map(Block::asItem).map(ItemStack::new)
-                .forEach(itemStacks::add);
-    });
+    }).disableIconCache().appendItems((List<ItemStack> itemStacks, CreativeModeTab creativeModeTab) -> {
+        itemStacks.addAll(StoneVariantsProvider.getSortedVariantItems());
+    }).showSearch().build();
 
     public static void touch() {
         for (StoneVariantsProvider.StoneBlockVariant variant : StoneVariantsProvider.getStoneBlockVariants()) {

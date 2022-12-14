@@ -7,6 +7,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModBlockStateProvider extends BlockStateProvider {
 
@@ -21,22 +22,35 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 this.axisBlock((RotatedPillarBlock) variant.block(), this.blockTexture(variant.name() + "_side"), this.blockTexture(variant.name() + "_top"));
                 this.simpleBlockItem(variant.block(), variant.name());
             } else {
-                this.simpleBlock(variant.block());
+                ResourceLocation texture = this.blockTexture(variant.name());
+                if (variant.blockVariant() == StoneVariantsProvider.BlockVariant.CHISELED && variant.stoneType().hasChiseledMotif()) {
+                    this.simpleColumnBlock(variant.block(), texture, this.blockTexture(StoneVariantsProvider.BlockVariant.POLISHED.getName(variant.stoneType())));
+                } else {
+                    this.simpleBlock(variant.block());
+                }
                 this.simpleBlockItem(variant.block(), variant.name());
                 if (variant.blockVariant().supportsAdditionalBlocks()) {
-                    ResourceLocation texture = this.blockTexture(variant.name());
                     this.stairsBlock((StairBlock) variant.stairs(), texture);
-//                    this.simpleBlockItem(variant.stairs(), variant.stairsName());
                     this.itemModels().stairs(variant.stairsName(), texture, texture, texture);
                     this.slabBlock((SlabBlock) variant.slab(), texture, texture);
-//                    this.simpleBlockItem(variant.slab(), variant.slabName());
                     this.itemModels().slab(variant.slabName(), texture, texture, texture);
                     this.wallBlock((WallBlock) variant.wall(), texture);
-//                    this.simpleBlockItem(variant.wall(), variant.wallName());
                     this.itemModels().wallInventory(variant.wallName(), texture);
                 }
             }
         }
+    }
+
+    public void simpleColumnBlock(Block block, ResourceLocation side, ResourceLocation end) {
+        this.simpleBlock(block, this.models().cubeColumn(this.name(block), side, end));
+    }
+
+    private String name(Block block) {
+        return this.key(block).getPath();
+    }
+
+    private ResourceLocation key(Block block) {
+        return ForgeRegistries.BLOCKS.getKey(block);
     }
 
     private ResourceLocation blockTexture(String block) {

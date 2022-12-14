@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "stoneworks:block/chiseled_prismarine"
+    "end": "stoneworks:block/polished_prismarine",
+    "side": "stoneworks:block/chiseled_prismarine"
   }
 }

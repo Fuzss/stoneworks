@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "stoneworks:block/chiseled_basalt"
+    "end": "stoneworks:block/polished_basalt",
+    "side": "stoneworks:block/chiseled_basalt"
   }
 }

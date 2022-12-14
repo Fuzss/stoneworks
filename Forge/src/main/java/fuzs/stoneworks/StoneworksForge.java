@@ -4,6 +4,7 @@ import fuzs.puzzleslib.core.CommonFactories;
 import fuzs.stoneworks.data.ModBlockStateProvider;
 import fuzs.stoneworks.data.ModBlockTagsProvider;
 import fuzs.stoneworks.data.ModLanguageProvider;
+import fuzs.stoneworks.data.ModRecipeProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -27,5 +28,6 @@ public class StoneworksForge {
         generator.addProvider(true, new ModLanguageProvider(generator, Stoneworks.MOD_ID));
         generator.addProvider(true, new ModBlockStateProvider(generator, Stoneworks.MOD_ID, existingFileHelper));
         generator.addProvider(true, new ModBlockTagsProvider(generator, Stoneworks.MOD_ID, existingFileHelper));
+        generator.addProvider(true, new ModRecipeProvider(generator));
     }
 }

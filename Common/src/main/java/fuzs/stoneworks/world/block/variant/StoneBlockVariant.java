@@ -120,7 +120,7 @@ public class StoneBlockVariant {
         return this.blocks[index] == Blocks.AIR ? null : this.blocks[index];
     }
 
-    protected ResourceLocation id(String key) {
+    public ResourceLocation id(String key) {
         return new ResourceLocation(Stoneworks.MOD_ID, key);
     }
 

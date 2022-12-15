@@ -26,7 +26,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
             } else {
                 ResourceLocation texture = this.blockTexture(variant.name());
                 if (variant.blockVariant() == BlockVariant.CHISELED && variant.stoneType().hasChiseledMotif()) {
-                    this.simpleColumnBlock(variant.block(), texture, this.blockTexture(BlockVariant.POLISHED.getName(variant.stoneType())));
+                    StoneBlockVariant polishedVariant = StoneVariantsProvider.getStoneVariant(variant.stoneType(), BlockVariant.POLISHED);
+                    this.simpleColumnBlock(variant.block(), texture, this.blockTexture(polishedVariant.id(polishedVariant.name())));
                 } else {
                     this.simpleBlock(variant.block());
                 }
@@ -57,6 +58,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private ResourceLocation blockTexture(String block) {
         return this.modLoc(ModelProvider.BLOCK_FOLDER + "/" + block);
+    }
+
+    private ResourceLocation blockTexture(ResourceLocation id) {
+        return new ResourceLocation(id.getNamespace(), ModelProvider.BLOCK_FOLDER + "/" + id.getPath());
     }
 
     private void simpleBlockItem(Block block, String name) {

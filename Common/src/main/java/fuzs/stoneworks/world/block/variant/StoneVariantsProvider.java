@@ -63,6 +63,10 @@ public class StoneVariantsProvider {
         }
     }
 
+    public static StoneBlockVariant getStoneVariant(StoneType stoneType, BlockVariant blockVariant) {
+        return STONE_BLOCK_VARIANTS.get(blockVariant.getName(stoneType));
+    }
+
     private static void registerVanillaOverrides() {
         registerVanillaOverride(StoneType.STONE, BlockVariant.REGULAR, Blocks.STONE);
         registerVanillaOverride(StoneType.STONE, BlockVariant.COBBLED, Blocks.COBBLESTONE);
@@ -155,7 +159,7 @@ public class StoneVariantsProvider {
         }
 
         @Override
-        protected ResourceLocation id(String key) {
+        public ResourceLocation id(String key) {
             return new ResourceLocation(key);
         }
 

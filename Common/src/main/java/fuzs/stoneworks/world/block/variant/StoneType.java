@@ -9,12 +9,21 @@ import java.util.Locale;
 
 public enum StoneType {
     STONE(Blocks.STONE), ANDESITE(Blocks.ANDESITE), GRANITE(Blocks.GRANITE), DIORITE(Blocks.DIORITE), DEEPSLATE(Blocks.DEEPSLATE), CALCITE(Blocks.CALCITE), TUFF(Blocks.TUFF), BASALT(Blocks.BASALT), BLACKSTONE(Blocks.BLACKSTONE), NETHERRACK(Blocks.NETHERRACK, false) {
+
         @Override
         public Block getBaseBlock(BlockVariant blockVariant) {
-            if (blockVariant == BlockVariant.CHISELED || blockVariant == BlockVariant.TILES || blockVariant == BlockVariant.CRACKED_TILES || blockVariant == BlockVariant.PILLAR || blockVariant == BlockVariant.SHINGLES || blockVariant == BlockVariant.PAVERS || blockVariant == BlockVariant.PLATES) {
+            if (blockVariant.usesNetherbricksMaterial()) {
                 return Blocks.NETHER_BRICKS;
             }
             return super.getBaseBlock(blockVariant);
+        }
+
+        @Override
+        public String getName(BlockVariant blockVariant) {
+            if (blockVariant.usesNetherbricksMaterial()) {
+                return "nether_brick";
+            }
+            return super.getName(blockVariant);
         }
     }, END_STONE(Blocks.END_STONE, false), PURPUR(Blocks.PURPUR_BLOCK, false), PRISMARINE(Blocks.PRISMARINE, false), DARK_PRISMARINE(Blocks.DARK_PRISMARINE, false), SANDSTONE(Blocks.SANDSTONE, false), RED_SANDSTONE(Blocks.RED_SANDSTONE, false), QUARTZ(Blocks.QUARTZ_BLOCK, false);
 
@@ -47,7 +56,7 @@ public enum StoneType {
         return properties;
     }
 
-    public String getName() {
+    public String getName(BlockVariant blockVariant) {
         return this.name().toLowerCase(Locale.ROOT);
     }
 

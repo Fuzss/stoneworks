@@ -16,14 +16,18 @@ public enum BlockVariant {
     }
 
     public String getName(StoneType stoneType) {
-        return this.template.formatted(stoneType.getName());
+        return this.template.formatted(stoneType.getName(this));
     }
 
     public String getAdditionalName(StoneType stoneType, String additional) {
-        return this.additionalTemplate.formatted(stoneType.getName(), additional);
+        return this.additionalTemplate.formatted(stoneType.getName(this), additional);
     }
 
     public boolean supportsAdditionalBlocks() {
         return this == REGULAR || this == COBBLED || this == MOSSY_COBBLED || this == BRICKS || this == MOSSY_BRICKS || this == POLISHED || this == TILES || this == SHINGLES || this == PAVERS || this == PLATES;
+    }
+    
+    public boolean usesNetherbricksMaterial() {
+        return this == BlockVariant.CHISELED || this == BlockVariant.TILES || this == BlockVariant.CRACKED_TILES || this == BlockVariant.PILLAR || this == BlockVariant.SHINGLES || this == BlockVariant.PAVERS || this == BlockVariant.PLATES;
     }
 }

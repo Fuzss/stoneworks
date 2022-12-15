@@ -18,11 +18,16 @@ import java.util.stream.Stream;
 public class StoneBlockVariant {
     private final StoneType stoneType;
     private final BlockVariant blockVariant;
-    private final Block[] blocks = new Block[4];
+    private final Block[] blocks;
 
     public StoneBlockVariant(StoneType stoneType, BlockVariant blockVariant) {
+        this(stoneType, blockVariant, new Block[4]);
+    }
+
+    protected StoneBlockVariant(StoneType stoneType, BlockVariant blockVariant, Block[] blocks) {
         this.stoneType = stoneType;
         this.blockVariant = blockVariant;
+        this.blocks = blocks;
     }
 
     public StoneType stoneType() {

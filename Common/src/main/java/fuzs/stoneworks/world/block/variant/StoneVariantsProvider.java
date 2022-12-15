@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.Map;
@@ -63,72 +64,73 @@ public class StoneVariantsProvider {
     }
 
     private static void registerVanillaOverrides() {
-        registerVanillaOverride(Blocks.STONE, StoneType.STONE, BlockVariant.REGULAR);
-        registerVanillaOverride(Blocks.COBBLESTONE, StoneType.STONE, BlockVariant.COBBLED);
-        registerVanillaOverride(Blocks.MOSSY_COBBLESTONE, StoneType.STONE, BlockVariant.MOSSY_COBBLED);
-        registerVanillaOverride(Blocks.STONE_BRICKS, StoneType.STONE, BlockVariant.BRICKS);
-        registerVanillaOverride(Blocks.MOSSY_STONE_BRICKS, StoneType.STONE, BlockVariant.MOSSY_BRICKS);
-        registerVanillaOverride(Blocks.CRACKED_STONE_BRICKS, StoneType.STONE, BlockVariant.CRACKED_BRICKS);
-        registerVanillaOverride(Blocks.SMOOTH_STONE, StoneType.STONE, BlockVariant.POLISHED);
-        registerVanillaOverride(Blocks.CHISELED_STONE_BRICKS, StoneType.STONE, BlockVariant.CHISELED);
-        registerVanillaOverride(Blocks.ANDESITE, StoneType.ANDESITE, BlockVariant.REGULAR);
-        registerVanillaOverride(Blocks.POLISHED_ANDESITE, StoneType.ANDESITE, BlockVariant.POLISHED);
-        registerVanillaOverride(Blocks.GRANITE, StoneType.GRANITE, BlockVariant.REGULAR);
-        registerVanillaOverride(Blocks.POLISHED_GRANITE, StoneType.GRANITE, BlockVariant.POLISHED);
-        registerVanillaOverride(Blocks.DIORITE, StoneType.DIORITE, BlockVariant.REGULAR);
-        registerVanillaOverride(Blocks.POLISHED_DIORITE, StoneType.DIORITE, BlockVariant.POLISHED);
-        registerVanillaOverride(Blocks.DEEPSLATE, StoneType.DEEPSLATE, BlockVariant.REGULAR);
-        registerVanillaOverride(Blocks.COBBLED_DEEPSLATE, StoneType.DEEPSLATE, BlockVariant.COBBLED);
-        registerVanillaOverride(Blocks.DEEPSLATE_BRICKS, StoneType.DEEPSLATE, BlockVariant.BRICKS);
-        registerVanillaOverride(Blocks.CRACKED_DEEPSLATE_BRICKS, StoneType.DEEPSLATE, BlockVariant.CRACKED_BRICKS);
-        registerVanillaOverride(Blocks.POLISHED_DEEPSLATE, StoneType.DEEPSLATE, BlockVariant.POLISHED);
-        registerVanillaOverride(Blocks.CHISELED_DEEPSLATE, StoneType.DEEPSLATE, BlockVariant.CHISELED);
-        registerVanillaOverride(Blocks.DEEPSLATE_TILES, StoneType.DEEPSLATE, BlockVariant.TILES);
-        registerVanillaOverride(Blocks.CRACKED_DEEPSLATE_TILES, StoneType.DEEPSLATE, BlockVariant.CRACKED_TILES);
-        registerVanillaOverride(Blocks.CALCITE, StoneType.CALCITE, BlockVariant.REGULAR);
-        registerVanillaOverride(Blocks.TUFF, StoneType.TUFF, BlockVariant.REGULAR);
-        registerVanillaOverride(Blocks.BASALT, StoneType.BASALT, BlockVariant.REGULAR);
-        registerVanillaOverride(Blocks.SMOOTH_BASALT, StoneType.BASALT, BlockVariant.POLISHED);
-        registerVanillaOverride(Blocks.POLISHED_BASALT, StoneType.BASALT, BlockVariant.PILLAR);
-        registerVanillaOverride(Blocks.BLACKSTONE, StoneType.BLACKSTONE, BlockVariant.REGULAR);
-        registerVanillaOverride(Blocks.POLISHED_BLACKSTONE_BRICKS, StoneType.BLACKSTONE, BlockVariant.BRICKS);
-        registerVanillaOverride(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS, StoneType.BLACKSTONE, BlockVariant.CRACKED_BRICKS);
-        registerVanillaOverride(Blocks.POLISHED_BLACKSTONE, StoneType.BLACKSTONE, BlockVariant.POLISHED);
-        registerVanillaOverride(Blocks.CHISELED_POLISHED_BLACKSTONE, StoneType.BLACKSTONE, BlockVariant.CHISELED);
-        registerVanillaOverride(Blocks.NETHERRACK, StoneType.NETHERRACK, BlockVariant.REGULAR);
-        registerVanillaOverride(Blocks.CHISELED_NETHER_BRICKS, StoneType.NETHERRACK, BlockVariant.CHISELED);
-        registerVanillaOverride(Blocks.NETHER_BRICKS, StoneType.NETHERRACK, BlockVariant.TILES);
-        registerVanillaOverride(Blocks.CRACKED_NETHER_BRICKS, StoneType.NETHERRACK, BlockVariant.CRACKED_TILES);
-        registerVanillaOverride(Blocks.END_STONE, StoneType.END_STONE, BlockVariant.REGULAR);
-        registerVanillaOverride(Blocks.END_STONE_BRICKS, StoneType.END_STONE, BlockVariant.BRICKS);
-        registerVanillaOverride(Blocks.PURPUR_BLOCK, StoneType.PURPUR, BlockVariant.PLATES);
-        registerVanillaOverride(Blocks.PURPUR_PILLAR, StoneType.PURPUR, BlockVariant.PILLAR);
-        registerVanillaOverride(Blocks.PRISMARINE, StoneType.PRISMARINE, BlockVariant.REGULAR);
-        registerVanillaOverride(Blocks.PRISMARINE_BRICKS, StoneType.PRISMARINE, BlockVariant.SHINGLES);
-        registerVanillaOverride(Blocks.DARK_PRISMARINE, StoneType.DARK_PRISMARINE, BlockVariant.PAVERS);
-        registerVanillaOverride(Blocks.SANDSTONE, StoneType.SANDSTONE, BlockVariant.REGULAR);
-        registerVanillaOverride(Blocks.CUT_SANDSTONE, StoneType.SANDSTONE, BlockVariant.POLISHED);
-        registerVanillaOverride(Blocks.CHISELED_SANDSTONE, StoneType.SANDSTONE, BlockVariant.CHISELED);
-        registerVanillaOverride(Blocks.RED_SANDSTONE, StoneType.RED_SANDSTONE, BlockVariant.REGULAR);
-        registerVanillaOverride(Blocks.CUT_RED_SANDSTONE, StoneType.RED_SANDSTONE, BlockVariant.POLISHED);
-        registerVanillaOverride(Blocks.CHISELED_RED_SANDSTONE, StoneType.RED_SANDSTONE, BlockVariant.CHISELED);
-        registerVanillaOverride(Blocks.QUARTZ_BLOCK, StoneType.QUARTZ, BlockVariant.REGULAR);
-        registerVanillaOverride(Blocks.QUARTZ_BRICKS, StoneType.QUARTZ, BlockVariant.BRICKS);
-        registerVanillaOverride(Blocks.CHISELED_QUARTZ_BLOCK, StoneType.QUARTZ, BlockVariant.CHISELED);
-        registerVanillaOverride(Blocks.QUARTZ_PILLAR, StoneType.QUARTZ, BlockVariant.PILLAR);
+        registerVanillaOverride(StoneType.STONE, BlockVariant.REGULAR, Blocks.STONE);
+        registerVanillaOverride(StoneType.STONE, BlockVariant.COBBLED, Blocks.COBBLESTONE);
+        registerVanillaOverride(StoneType.STONE, BlockVariant.MOSSY_COBBLED, Blocks.MOSSY_COBBLESTONE);
+        registerVanillaOverride(StoneType.STONE, BlockVariant.BRICKS, Blocks.STONE_BRICKS);
+        registerVanillaOverride(StoneType.STONE, BlockVariant.MOSSY_BRICKS, Blocks.MOSSY_STONE_BRICKS);
+        registerVanillaOverride(StoneType.STONE, BlockVariant.CRACKED_BRICKS, Blocks.CRACKED_STONE_BRICKS);
+        registerVanillaOverride(StoneType.STONE, BlockVariant.POLISHED, Blocks.SMOOTH_STONE);
+        registerVanillaOverride(StoneType.STONE, BlockVariant.CHISELED, Blocks.CHISELED_STONE_BRICKS);
+        registerVanillaOverride(StoneType.ANDESITE, BlockVariant.REGULAR, Blocks.ANDESITE);
+        registerVanillaOverride(StoneType.ANDESITE, BlockVariant.POLISHED, Blocks.POLISHED_ANDESITE);
+        registerVanillaOverride(StoneType.GRANITE, BlockVariant.REGULAR, Blocks.GRANITE);
+        registerVanillaOverride(StoneType.GRANITE, BlockVariant.POLISHED, Blocks.POLISHED_GRANITE);
+        registerVanillaOverride(StoneType.DIORITE, BlockVariant.REGULAR, Blocks.DIORITE);
+        registerVanillaOverride(StoneType.DIORITE, BlockVariant.POLISHED, Blocks.POLISHED_DIORITE);
+        registerVanillaOverride(StoneType.DEEPSLATE, BlockVariant.REGULAR, Blocks.DEEPSLATE);
+        registerVanillaOverride(StoneType.DEEPSLATE, BlockVariant.COBBLED, Blocks.COBBLED_DEEPSLATE);
+        registerVanillaOverride(StoneType.DEEPSLATE, BlockVariant.BRICKS, Blocks.DEEPSLATE_BRICKS);
+        registerVanillaOverride(StoneType.DEEPSLATE, BlockVariant.CRACKED_BRICKS, Blocks.CRACKED_DEEPSLATE_BRICKS);
+        registerVanillaOverride(StoneType.DEEPSLATE, BlockVariant.POLISHED, Blocks.POLISHED_DEEPSLATE);
+        registerVanillaOverride(StoneType.DEEPSLATE, BlockVariant.CHISELED, Blocks.CHISELED_DEEPSLATE);
+        registerVanillaOverride(StoneType.DEEPSLATE, BlockVariant.TILES, Blocks.DEEPSLATE_TILES);
+        registerVanillaOverride(StoneType.DEEPSLATE, BlockVariant.CRACKED_TILES, Blocks.CRACKED_DEEPSLATE_TILES);
+        registerVanillaOverride(StoneType.CALCITE, BlockVariant.REGULAR, Blocks.CALCITE);
+        registerVanillaOverride(StoneType.TUFF, BlockVariant.REGULAR, Blocks.TUFF);
+        registerVanillaOverride(StoneType.BASALT, BlockVariant.REGULAR, Blocks.BASALT);
+        registerVanillaOverride(StoneType.BASALT, BlockVariant.POLISHED, Blocks.SMOOTH_BASALT);
+        registerVanillaOverride(StoneType.BASALT, BlockVariant.PILLAR, Blocks.POLISHED_BASALT);
+        registerVanillaOverride(StoneType.BLACKSTONE, BlockVariant.REGULAR, Blocks.BLACKSTONE);
+        registerVanillaOverride(StoneType.BLACKSTONE, BlockVariant.BRICKS, Blocks.POLISHED_BLACKSTONE_BRICKS);
+        registerVanillaOverride(StoneType.BLACKSTONE, BlockVariant.CRACKED_BRICKS, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+        registerVanillaOverride(StoneType.BLACKSTONE, BlockVariant.POLISHED, Blocks.POLISHED_BLACKSTONE);
+        registerVanillaOverride(StoneType.BLACKSTONE, BlockVariant.CHISELED, Blocks.CHISELED_POLISHED_BLACKSTONE);
+        registerVanillaOverride(StoneType.NETHERRACK, BlockVariant.REGULAR, Blocks.NETHERRACK);
+        registerVanillaOverride(StoneType.NETHERRACK, BlockVariant.CHISELED, Blocks.CHISELED_NETHER_BRICKS);
+        registerVanillaOverride(StoneType.NETHERRACK, BlockVariant.TILES, Blocks.NETHER_BRICKS);
+        registerVanillaOverride(StoneType.NETHERRACK, BlockVariant.CRACKED_TILES, Blocks.CRACKED_NETHER_BRICKS);
+        registerVanillaOverride(StoneType.END_STONE, BlockVariant.REGULAR, Blocks.END_STONE);
+        registerVanillaOverride(StoneType.END_STONE, BlockVariant.BRICKS, Blocks.END_STONE_BRICKS);
+        registerVanillaOverride(StoneType.PURPUR, BlockVariant.PLATES, Blocks.PURPUR_BLOCK, Blocks.PURPUR_STAIRS, Blocks.PURPUR_SLAB);
+        registerVanillaOverride(StoneType.PURPUR, BlockVariant.PILLAR, Blocks.PURPUR_PILLAR);
+        registerVanillaOverride(StoneType.PRISMARINE, BlockVariant.REGULAR, Blocks.PRISMARINE);
+        registerVanillaOverride(StoneType.PRISMARINE, BlockVariant.SHINGLES, Blocks.PRISMARINE_BRICKS);
+        registerVanillaOverride(StoneType.DARK_PRISMARINE, BlockVariant.PAVERS, Blocks.DARK_PRISMARINE);
+        registerVanillaOverride(StoneType.SANDSTONE, BlockVariant.REGULAR, Blocks.SANDSTONE);
+        registerVanillaOverride(StoneType.SANDSTONE, BlockVariant.POLISHED, Blocks.CUT_SANDSTONE);
+        registerVanillaOverride(StoneType.SANDSTONE, BlockVariant.CHISELED, Blocks.CHISELED_SANDSTONE);
+        registerVanillaOverride(StoneType.RED_SANDSTONE, BlockVariant.REGULAR, Blocks.RED_SANDSTONE);
+        registerVanillaOverride(StoneType.RED_SANDSTONE, BlockVariant.POLISHED, Blocks.CUT_RED_SANDSTONE);
+        registerVanillaOverride(StoneType.RED_SANDSTONE, BlockVariant.CHISELED, Blocks.CHISELED_RED_SANDSTONE);
+        registerVanillaOverride(StoneType.QUARTZ, BlockVariant.REGULAR, Blocks.QUARTZ_BLOCK);
+        registerVanillaOverride(StoneType.QUARTZ, BlockVariant.BRICKS, Blocks.QUARTZ_BRICKS);
+        registerVanillaOverride(StoneType.QUARTZ, BlockVariant.CHISELED, Blocks.CHISELED_QUARTZ_BLOCK);
+        registerVanillaOverride(StoneType.QUARTZ, BlockVariant.PILLAR, Blocks.QUARTZ_PILLAR);
     }
 
-    private static void registerVanillaOverride(Block block, StoneType stoneType, BlockVariant blockVariant) {
-        registerStoneBlockVariant(new VanillaStoneBlockVariant(block, stoneType, blockVariant), true);
+    private static void registerVanillaOverride(StoneType stoneType, BlockVariant blockVariant, Block... blocks) {
+        registerStoneBlockVariant(new VanillaStoneBlockVariant(stoneType, blockVariant, blocks), true);
     }
 
     private static class VanillaStoneBlockVariant extends StoneBlockVariant {
         private final String block;
         private final boolean deviates;
 
-        VanillaStoneBlockVariant(Block block, StoneType stoneType, BlockVariant blockVariant) {
-            super(stoneType, blockVariant);
-            this.block = Registry.BLOCK.getKey(block).getPath();
+        VanillaStoneBlockVariant(StoneType stoneType, BlockVariant blockVariant, Block... blocks) {
+            super(stoneType, blockVariant, Arrays.copyOf(blocks, 4));
+            if (blocks.length < 1 || blocks.length > 4) throw new IllegalStateException("wrong number of blocks provided");
+            this.block = Registry.BLOCK.getKey(blocks[0]).getPath();
             this.deviates = !this.blockName().equals(this.name());
         }
 

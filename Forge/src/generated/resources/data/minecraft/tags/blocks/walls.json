@@ -39,6 +39,7 @@
     "stoneworks:andesite_brick_wall",
     "stoneworks:blackstone_tile_wall",
     "stoneworks:nether_brick_shingle_wall",
+    "stoneworks:raw_dark_prismarine_wall",
     "stoneworks:mossy_tuff_brick_wall",
     "stoneworks:quartz_shingle_wall",
     "stoneworks:granite_brick_wall",
@@ -74,7 +75,6 @@
     "stoneworks:mossy_quartz_brick_wall",
     "stoneworks:calcite_paver_wall",
     "stoneworks:mossy_cobbled_andesite_wall",
-    "stoneworks:purpur_wall",
     "stoneworks:end_stone_tile_wall",
     "stoneworks:end_stone_paver_wall",
     "stoneworks:mossy_netherrack_brick_wall",
@@ -84,6 +84,7 @@
     "stoneworks:polished_prismarine_wall",
     "stoneworks:mossy_dark_prismarine_brick_wall",
     "stoneworks:mossy_calcite_brick_wall",
+    "stoneworks:raw_purpur_wall",
     "stoneworks:red_sandstone_tile_wall",
     "stoneworks:mossy_deepslate_brick_wall",
     "stoneworks:netherrack_brick_wall",
@@ -129,7 +130,6 @@
     "stoneworks:andesite_plate_wall",
     "stoneworks:diorite_tile_wall",
     "stoneworks:mossy_blackstone_brick_wall",
-    "stoneworks:dark_prismarine_wall",
     "stoneworks:cobbled_sandstone_wall",
     "stoneworks:dark_prismarine_shingle_wall"
   ]

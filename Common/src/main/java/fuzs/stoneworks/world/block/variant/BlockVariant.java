@@ -1,7 +1,7 @@
 package fuzs.stoneworks.world.block.variant;
 
 public enum BlockVariant {
-    REGULAR("%s"), COBBLED("cobbled_%s"), MOSSY_COBBLED("mossy_cobbled_%s"), BRICKS("%s_bricks", "%s_brick_%s"), MOSSY_BRICKS("mossy_%s_bricks", "mossy_%s_brick_%s"), CRACKED_BRICKS("cracked_%s_bricks", "cracked_%s_brick_%s"), POLISHED("polished_%s"), CHISELED("chiseled_%s"), TILES("%s_tiles", "%s_tile_%s"), CRACKED_TILES("cracked_%s_tiles", "cracked_%s_tile_%s"), PILLAR("%s_pillar"), SHINGLES("%s_shingles", "%s_shingle_%s"), PAVERS("%s_pavers", "%s_paver_%s"), PLATES("%s_plates", "%s_plate_%s");
+    REGULAR("raw_%s"), COBBLED("cobbled_%s"), MOSSY_COBBLED("mossy_cobbled_%s"), BRICKS("%s_bricks", "%s_brick_%s"), MOSSY_BRICKS("mossy_%s_bricks", "mossy_%s_brick_%s"), CRACKED_BRICKS("cracked_%s_bricks", "cracked_%s_brick_%s"), POLISHED("polished_%s"), CHISELED("chiseled_%s"), TILES("%s_tiles", "%s_tile_%s"), CRACKED_TILES("cracked_%s_tiles", "cracked_%s_tile_%s"), PILLAR("%s_pillar"), SHINGLES("%s_shingles", "%s_shingle_%s"), PAVERS("%s_pavers", "%s_paver_%s"), PLATES("%s_plates", "%s_plate_%s");
 
     private final String template;
     private final String additionalTemplate;

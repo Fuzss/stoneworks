@@ -39,6 +39,7 @@
     "stoneworks:andesite_brick_stairs",
     "stoneworks:blackstone_tile_stairs",
     "stoneworks:nether_brick_shingle_stairs",
+    "stoneworks:raw_dark_prismarine_stairs",
     "stoneworks:mossy_tuff_brick_stairs",
     "stoneworks:quartz_shingle_stairs",
     "stoneworks:granite_brick_stairs",
@@ -74,7 +75,6 @@
     "stoneworks:mossy_quartz_brick_stairs",
     "stoneworks:calcite_paver_stairs",
     "stoneworks:mossy_cobbled_andesite_stairs",
-    "stoneworks:purpur_stairs",
     "stoneworks:end_stone_tile_stairs",
     "stoneworks:end_stone_paver_stairs",
     "stoneworks:mossy_netherrack_brick_stairs",
@@ -84,6 +84,7 @@
     "stoneworks:polished_prismarine_stairs",
     "stoneworks:mossy_dark_prismarine_brick_stairs",
     "stoneworks:mossy_calcite_brick_stairs",
+    "stoneworks:raw_purpur_stairs",
     "stoneworks:red_sandstone_tile_stairs",
     "stoneworks:mossy_deepslate_brick_stairs",
     "stoneworks:netherrack_brick_stairs",
@@ -129,7 +130,6 @@
     "stoneworks:andesite_plate_stairs",
     "stoneworks:diorite_tile_stairs",
     "stoneworks:mossy_blackstone_brick_stairs",
-    "stoneworks:dark_prismarine_stairs",
     "stoneworks:cobbled_sandstone_stairs",
     "stoneworks:dark_prismarine_shingle_stairs"
   ]

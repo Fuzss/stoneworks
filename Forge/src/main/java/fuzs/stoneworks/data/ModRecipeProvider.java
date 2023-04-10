@@ -9,6 +9,7 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
 
 import java.util.function.Consumer;
 
@@ -21,11 +22,17 @@ public class ModRecipeProvider extends RecipeProvider {
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> recipeConsumer) {
         for (StoneBlockVariant variant : StoneVariantsProvider.getStoneBlockVariants().toList()) {
-            stonecutterResultFromBase(recipeConsumer, variant.block(), variant.stoneType().getBaseBlock(variant.blockVariant()));
+            Block baseBlock = variant.stoneType().getBaseBlock(variant.blockVariant());
+            stonecutterResultFromBase(recipeConsumer, variant.block(), baseBlock);
             if (variant.blockVariant().supportsAdditionalBlocks()) {
                 stonecutterResultFromBase(recipeConsumer, variant.stairs(), variant.block());
                 stonecutterResultFromBase(recipeConsumer, variant.slab(), variant.block(), 2);
                 stonecutterResultFromBase(recipeConsumer, variant.wall(), variant.block());
+                if (variant.block() != baseBlock) {
+                    stonecutterResultFromBase(recipeConsumer, variant.stairs(), baseBlock);
+                    stonecutterResultFromBase(recipeConsumer, variant.slab(), baseBlock, 2);
+                    stonecutterResultFromBase(recipeConsumer, variant.wall(), baseBlock);
+                }
             }
         }
     }

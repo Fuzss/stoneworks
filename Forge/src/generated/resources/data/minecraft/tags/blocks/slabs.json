@@ -39,6 +39,7 @@
     "stoneworks:andesite_brick_slab",
     "stoneworks:blackstone_tile_slab",
     "stoneworks:nether_brick_shingle_slab",
+    "stoneworks:raw_dark_prismarine_slab",
     "stoneworks:mossy_tuff_brick_slab",
     "stoneworks:quartz_shingle_slab",
     "stoneworks:granite_brick_slab",
@@ -74,7 +75,6 @@
     "stoneworks:mossy_quartz_brick_slab",
     "stoneworks:calcite_paver_slab",
     "stoneworks:mossy_cobbled_andesite_slab",
-    "stoneworks:purpur_slab",
     "stoneworks:end_stone_tile_slab",
     "stoneworks:end_stone_paver_slab",
     "stoneworks:mossy_netherrack_brick_slab",
@@ -84,6 +84,7 @@
     "stoneworks:polished_prismarine_slab",
     "stoneworks:mossy_dark_prismarine_brick_slab",
     "stoneworks:mossy_calcite_brick_slab",
+    "stoneworks:raw_purpur_slab",
     "stoneworks:red_sandstone_tile_slab",
     "stoneworks:mossy_deepslate_brick_slab",
     "stoneworks:netherrack_brick_slab",
@@ -129,7 +130,6 @@
     "stoneworks:andesite_plate_slab",
     "stoneworks:diorite_tile_slab",
     "stoneworks:mossy_blackstone_brick_slab",
-    "stoneworks:dark_prismarine_slab",
     "stoneworks:cobbled_sandstone_slab",
     "stoneworks:dark_prismarine_shingle_slab"
   ]

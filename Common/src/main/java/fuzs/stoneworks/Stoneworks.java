@@ -5,6 +5,7 @@ import fuzs.puzzleslib.core.CommonFactories;
 import fuzs.puzzleslib.core.ModConstructor;
 import fuzs.stoneworks.config.ClientConfig;
 import fuzs.stoneworks.init.ModRegistry;
+import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,5 +21,9 @@ public class Stoneworks implements ModConstructor {
     public void onConstructMod() {
         CONFIG.bakeConfigs(MOD_ID);
         ModRegistry.touch();
+    }
+
+    public static ResourceLocation id(String path) {
+        return new ResourceLocation(MOD_ID, path);
     }
 }

@@ -1,7 +1,7 @@
 package fuzs.stoneworks.config;
 
-import fuzs.puzzleslib.config.ConfigCore;
-import fuzs.puzzleslib.config.annotation.Config;
+import fuzs.puzzleslib.api.config.v3.Config;
+import fuzs.puzzleslib.api.config.v3.ConfigCore;
 import fuzs.stoneworks.world.block.variant.StoneVariantsProvider;
 
 public class ClientConfig implements ConfigCore {

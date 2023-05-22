@@ -1,7 +1,7 @@
 package fuzs.stoneworks.world.block.variant;
 
 import fuzs.stoneworks.Stoneworks;
-import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -104,7 +104,7 @@ public class StoneBlockVariant {
     private Block block(int index, String key) {
         if (this.blocks[index] == null && (this.isVanillaVariant() || index == 0 || this.blockVariant.supportsAdditionalBlocks())) {
             ResourceLocation id = this.id(key);
-            if (!Registry.BLOCK.containsKey(id)) {
+            if (!BuiltInRegistries.BLOCK.containsKey(id)) {
                 if (this.isVanillaVariant()) {
                     // stupid hack so this does not run every time when the vanilla variant simply doesn't have the block type
                     // could also just let the call to Registry.BLOCK::get go through, as air is default entry,
@@ -114,7 +114,7 @@ public class StoneBlockVariant {
                     throw new IllegalArgumentException("%s is not a valid block".formatted(id));
                 }
             } else {
-                this.blocks[index] = Registry.BLOCK.get(id);
+                this.blocks[index] = BuiltInRegistries.BLOCK.get(id);
             }
         }
         return this.blocks[index] == Blocks.AIR ? null : this.blocks[index];

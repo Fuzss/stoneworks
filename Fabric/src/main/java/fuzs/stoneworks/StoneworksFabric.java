@@ -1,12 +1,12 @@
 package fuzs.stoneworks;
 
-import fuzs.puzzleslib.core.CommonFactories;
+import fuzs.puzzleslib.api.core.v1.ModConstructor;
 import net.fabricmc.api.ModInitializer;
 
 public class StoneworksFabric implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        CommonFactories.INSTANCE.modConstructor(Stoneworks.MOD_ID).accept(new Stoneworks());
+        ModConstructor.construct(Stoneworks.MOD_ID, Stoneworks::new);
     }
 }

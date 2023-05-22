@@ -1,24 +1,24 @@
 package fuzs.stoneworks.data;
 
 import com.google.common.collect.Maps;
+import fuzs.puzzleslib.api.data.v1.AbstractLanguageProvider;
 import fuzs.stoneworks.Stoneworks;
 import fuzs.stoneworks.world.block.variant.StoneBlockVariant;
 import fuzs.stoneworks.world.block.variant.StoneVariantsProvider;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.data.LanguageProvider;
 
 import java.util.Map;
 
-public class ModLanguageProvider extends LanguageProvider {
+public class ModLanguageProvider extends AbstractLanguageProvider {
 
-    public ModLanguageProvider(DataGenerator gen, String modId) {
-        super(gen, modId, "en_us");
+    public ModLanguageProvider(PackOutput packOutput, String modId) {
+        super(packOutput, modId);
     }
 
     @Override
     protected void addTranslations() {
-        this.add("itemGroup.stoneworks.main", Stoneworks.MOD_NAME);
+        this.addCreativeModeTab(Stoneworks.MOD_NAME);
         Map<Block, String> translations = Maps.newHashMap();
         for (StoneBlockVariant variant : StoneVariantsProvider.getStoneBlockVariants().toList()) {
             variant.addTranslations(translations);

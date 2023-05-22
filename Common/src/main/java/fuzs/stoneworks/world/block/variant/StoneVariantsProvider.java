@@ -3,7 +3,7 @@ package fuzs.stoneworks.world.block.variant;
 import com.google.common.collect.Maps;
 import fuzs.stoneworks.Stoneworks;
 import fuzs.stoneworks.config.ClientConfig;
-import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
@@ -37,6 +37,10 @@ public class StoneVariantsProvider {
 
     public static Stream<StoneBlockVariant> getStoneBlockVariants() {
         return STONE_BLOCK_VARIANTS.values().stream().filter(Predicate.not(StoneBlockVariant::isVanillaVariant));
+    }
+
+    public static ItemStack[] getDisplayItemStacks() {
+        return StoneVariantsProvider.getAllStoneBlockVariants().filter(variant -> variant.blockVariant() == BlockVariant.REGULAR).map(StoneBlockVariant::block).map(ItemStack::new).toArray(ItemStack[]::new);
     }
 
     public static Collection<ItemStack> getSortedVariantItems() {
@@ -134,7 +138,7 @@ public class StoneVariantsProvider {
         VanillaStoneBlockVariant(StoneType stoneType, BlockVariant blockVariant, Block... blocks) {
             super(stoneType, blockVariant, Arrays.copyOf(blocks, 4));
             if (blocks.length < 1 || blocks.length > 4) throw new IllegalStateException("wrong number of blocks provided");
-            this.block = Registry.BLOCK.getKey(blocks[0]).getPath();
+            this.block = BuiltInRegistries.BLOCK.getKey(blocks[0]).getPath();
             this.deviates = !this.blockName().equals(this.name());
         }
 

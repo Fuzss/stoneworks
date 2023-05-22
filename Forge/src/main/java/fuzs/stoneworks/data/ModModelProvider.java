@@ -1,20 +1,19 @@
 package fuzs.stoneworks.data;
 
+import fuzs.puzzleslib.api.data.v1.AbstractModelProvider;
 import fuzs.stoneworks.world.block.variant.BlockVariant;
 import fuzs.stoneworks.world.block.variant.StoneBlockVariant;
 import fuzs.stoneworks.world.block.variant.StoneVariantsProvider;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
 
-public class ModBlockStateProvider extends BlockStateProvider {
+public class ModModelProvider extends AbstractModelProvider {
 
-    public ModBlockStateProvider(DataGenerator gen, String modId, ExistingFileHelper exFileHelper) {
-        super(gen, modId, exFileHelper);
+    public ModModelProvider(PackOutput packOutput, String modId, ExistingFileHelper fileHelper) {
+        super(packOutput, modId, fileHelper);
     }
 
     @Override
@@ -46,14 +45,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     public void simpleColumnBlock(Block block, ResourceLocation side, ResourceLocation end) {
         this.simpleBlock(block, this.models().cubeColumn(this.name(block), side, end));
-    }
-
-    private String name(Block block) {
-        return this.key(block).getPath();
-    }
-
-    private ResourceLocation key(Block block) {
-        return ForgeRegistries.BLOCKS.getKey(block);
     }
 
     private ResourceLocation blockTexture(String block) {

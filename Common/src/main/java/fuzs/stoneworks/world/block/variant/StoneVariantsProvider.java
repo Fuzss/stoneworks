@@ -18,7 +18,7 @@ import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 public class StoneVariantsProvider {
-    private static final Map<String, StoneBlockVariant> STONE_BLOCK_VARIANTS = Maps.newHashMap();
+    private static final Map<String, StoneBlockVariant> STONE_BLOCK_VARIANTS = Maps.newLinkedHashMap();
     @Nullable
     private static Collection<ItemStack> sortedVariantItems;
 

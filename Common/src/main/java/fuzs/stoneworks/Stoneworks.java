@@ -8,8 +8,6 @@ import fuzs.stoneworks.config.ClientConfig;
 import fuzs.stoneworks.init.ModRegistry;
 import fuzs.stoneworks.world.block.variant.StoneVariantsProvider;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,8 +24,7 @@ public class Stoneworks implements ModConstructor {
 
     @Override
     public void onRegisterCreativeModeTabs(CreativeModeTabContext context) {
-        // TODO remove single icon again for 1.19.4, this is handled in puzzles lib then
-        context.registerCreativeModeTab(CreativeModeTabConfigurator.from(MOD_ID).icon(() -> new ItemStack(Items.STONE)).icons(StoneVariantsProvider::getDisplayItemStacks).displayItems((featureFlagSet, output, bl) -> {
+        context.registerCreativeModeTab(CreativeModeTabConfigurator.from(MOD_ID).icons(StoneVariantsProvider::getDisplayItemStacks).displayItems((itemDisplayParameters, output) -> {
             output.acceptAll(StoneVariantsProvider.getSortedVariantItems());
         }).withSearchBar());
     }

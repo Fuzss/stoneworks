@@ -16,5 +16,6 @@
       ],
       "rolls": 1.0
     }
-  ]
+  ],
+  "random_sequence": "stoneworks:blocks/cracked_diorite_tiles"
 }

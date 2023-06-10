@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:raw_purpur_stairs_from_purpur_block_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

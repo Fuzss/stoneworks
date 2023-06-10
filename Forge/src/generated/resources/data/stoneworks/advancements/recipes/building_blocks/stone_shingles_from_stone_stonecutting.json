@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:stone_shingles_from_stone_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

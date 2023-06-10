@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:andesite_shingle_wall_from_andesite_shingles_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:basalt_shingle_wall_from_basalt_shingles_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

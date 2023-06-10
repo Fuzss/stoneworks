@@ -30,5 +30,6 @@
       ],
       "rolls": 1.0
     }
-  ]
+  ],
+  "random_sequence": "stoneworks:blocks/calcite_paver_slab"
 }

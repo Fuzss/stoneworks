@@ -16,5 +16,6 @@
       ],
       "rolls": 1.0
     }
-  ]
+  ],
+  "random_sequence": "stoneworks:blocks/basalt_brick_stairs"
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:netherrack_brick_wall_from_netherrack_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

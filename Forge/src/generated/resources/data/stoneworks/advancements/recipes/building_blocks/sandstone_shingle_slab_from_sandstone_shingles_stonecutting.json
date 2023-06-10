@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:sandstone_shingle_slab_from_sandstone_shingles_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

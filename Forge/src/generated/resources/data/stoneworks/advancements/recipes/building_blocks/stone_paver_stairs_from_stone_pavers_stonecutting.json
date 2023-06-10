@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:stone_paver_stairs_from_stone_pavers_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

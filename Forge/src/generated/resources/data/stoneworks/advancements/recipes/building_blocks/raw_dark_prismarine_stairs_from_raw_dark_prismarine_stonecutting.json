@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:raw_dark_prismarine_stairs_from_raw_dark_prismarine_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

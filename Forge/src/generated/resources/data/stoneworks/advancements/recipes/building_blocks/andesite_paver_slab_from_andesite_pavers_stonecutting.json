@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:andesite_paver_slab_from_andesite_pavers_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

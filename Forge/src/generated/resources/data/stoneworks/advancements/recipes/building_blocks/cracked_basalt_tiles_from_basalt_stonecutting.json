@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:cracked_basalt_tiles_from_basalt_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:diorite_plates_from_diorite_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -30,5 +30,6 @@
       ],
       "rolls": 1.0
     }
-  ]
+  ],
+  "random_sequence": "stoneworks:blocks/quartz_tile_slab"
 }

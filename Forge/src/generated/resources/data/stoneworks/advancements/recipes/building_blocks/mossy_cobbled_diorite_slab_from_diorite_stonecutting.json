@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:mossy_cobbled_diorite_slab_from_diorite_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

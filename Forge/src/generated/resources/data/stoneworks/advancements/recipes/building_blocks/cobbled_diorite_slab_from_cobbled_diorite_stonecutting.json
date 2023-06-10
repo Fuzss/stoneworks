@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:cobbled_diorite_slab_from_cobbled_diorite_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

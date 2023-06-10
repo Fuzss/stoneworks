@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:mossy_basalt_brick_wall_from_basalt_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

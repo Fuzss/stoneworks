@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:mossy_basalt_brick_stairs_from_mossy_basalt_bricks_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

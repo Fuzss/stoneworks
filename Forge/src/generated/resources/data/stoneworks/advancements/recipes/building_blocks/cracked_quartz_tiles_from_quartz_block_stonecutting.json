@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:cracked_quartz_tiles_from_quartz_block_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

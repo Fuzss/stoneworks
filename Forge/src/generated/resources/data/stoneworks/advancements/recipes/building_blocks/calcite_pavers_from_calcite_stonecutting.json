@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:calcite_pavers_from_calcite_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

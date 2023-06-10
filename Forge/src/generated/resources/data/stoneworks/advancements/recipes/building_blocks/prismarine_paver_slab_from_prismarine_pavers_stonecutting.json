@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:prismarine_paver_slab_from_prismarine_pavers_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

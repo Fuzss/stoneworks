@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:cobbled_prismarine_stairs_from_cobbled_prismarine_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

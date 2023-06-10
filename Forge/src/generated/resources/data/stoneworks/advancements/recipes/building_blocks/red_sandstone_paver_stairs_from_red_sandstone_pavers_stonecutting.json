@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:red_sandstone_paver_stairs_from_red_sandstone_pavers_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

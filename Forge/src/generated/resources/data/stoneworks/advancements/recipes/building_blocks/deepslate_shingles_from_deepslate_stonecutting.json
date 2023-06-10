@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:deepslate_shingles_from_deepslate_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

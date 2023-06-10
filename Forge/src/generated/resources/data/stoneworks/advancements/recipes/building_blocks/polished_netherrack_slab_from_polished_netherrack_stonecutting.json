@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:polished_netherrack_slab_from_polished_netherrack_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

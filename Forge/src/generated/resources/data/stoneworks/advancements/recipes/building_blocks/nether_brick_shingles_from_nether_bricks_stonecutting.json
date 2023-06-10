@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:nether_brick_shingles_from_nether_bricks_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

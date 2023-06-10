@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:mossy_cobbled_basalt_stairs_from_mossy_cobbled_basalt_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

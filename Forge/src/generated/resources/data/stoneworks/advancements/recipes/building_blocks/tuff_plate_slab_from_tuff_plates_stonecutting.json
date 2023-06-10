@@ -30,5 +30,6 @@
     "recipes": [
       "stoneworks:tuff_plate_slab_from_tuff_plates_stonecutting"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

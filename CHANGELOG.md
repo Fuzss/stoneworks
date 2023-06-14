@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog].
 
+## [v7.0.1-1.20] - 2023-06-14
+### Fixed
+- Fixed server crash when other mods try to access Stonework's creative mode tab contents
+
 ## [v7.0.0-1.20] - 2023-06-10
 - Ported to Minecraft 1.20
 

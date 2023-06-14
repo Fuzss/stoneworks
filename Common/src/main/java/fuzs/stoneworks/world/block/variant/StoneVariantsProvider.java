@@ -2,7 +2,7 @@ package fuzs.stoneworks.world.block.variant;
 
 import com.google.common.collect.Maps;
 import fuzs.stoneworks.Stoneworks;
-import fuzs.stoneworks.config.ClientConfig;
+import fuzs.stoneworks.config.CommonConfig;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
@@ -45,7 +45,7 @@ public class StoneVariantsProvider {
 
     public static Collection<ItemStack> getSortedVariantItems() {
         if (sortedVariantItems == null) {
-            Stream<StoneBlockVariant> stream = Stoneworks.CONFIG.get(ClientConfig.class).vanillaVariantsInCreativeTab ? getAllStoneBlockVariants() : getStoneBlockVariants();
+            Stream<StoneBlockVariant> stream = Stoneworks.CONFIG.get(CommonConfig.class).vanillaVariantsInCreativeTab ? getAllStoneBlockVariants() : getStoneBlockVariants();
             sortedVariantItems = stream.sorted(Comparator.<StoneBlockVariant>comparingInt(v -> v.stoneType().ordinal()).thenComparingInt(v -> v.blockVariant().ordinal()))
                     .flatMap(StoneBlockVariant::allBlocks)
                     .map(Block::asItem).map(ItemStack::new).toList();

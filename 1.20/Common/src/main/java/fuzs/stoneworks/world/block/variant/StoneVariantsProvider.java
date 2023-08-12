@@ -45,7 +45,7 @@ public class StoneVariantsProvider {
 
     public static Collection<ItemStack> getSortedVariantItems() {
         if (sortedVariantItems == null) {
-            Stream<StoneBlockVariant> stream = Stoneworks.CONFIG.get(CommonConfig.class).vanillaVariantsInCreativeTab ? getAllStoneBlockVariants() : getStoneBlockVariants();
+            Stream<StoneBlockVariant> stream = Stoneworks.CONFIG.getHolder(CommonConfig.class).isAvailable() && Stoneworks.CONFIG.get(CommonConfig.class).vanillaVariantsInCreativeTab ? getAllStoneBlockVariants() : getStoneBlockVariants();
             sortedVariantItems = stream.sorted(Comparator.<StoneBlockVariant>comparingInt(v -> v.stoneType().ordinal()).thenComparingInt(v -> v.blockVariant().ordinal()))
                     .flatMap(StoneBlockVariant::allBlocks)
                     .map(Block::asItem).map(ItemStack::new).toList();

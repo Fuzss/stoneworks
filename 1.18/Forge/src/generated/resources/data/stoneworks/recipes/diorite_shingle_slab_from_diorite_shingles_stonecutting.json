@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:diorite_shingles"
+  },
+  "result": "stoneworks:diorite_shingle_slab",
+  "count": 2
+}

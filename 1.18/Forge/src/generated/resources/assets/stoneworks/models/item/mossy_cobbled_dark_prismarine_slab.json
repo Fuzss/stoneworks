@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "side": "stoneworks:block/mossy_cobbled_dark_prismarine",
+    "bottom": "stoneworks:block/mossy_cobbled_dark_prismarine",
+    "top": "stoneworks:block/mossy_cobbled_dark_prismarine"
+  }
+}

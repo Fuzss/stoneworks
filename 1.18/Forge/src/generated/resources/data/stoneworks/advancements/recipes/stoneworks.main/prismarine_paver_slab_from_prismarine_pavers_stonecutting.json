@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "stoneworks:prismarine_paver_slab_from_prismarine_pavers_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_prismarine_pavers": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "stoneworks:prismarine_pavers"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "stoneworks:prismarine_paver_slab_from_prismarine_pavers_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_prismarine_pavers",
+      "has_the_recipe"
+    ]
+  ]
+}

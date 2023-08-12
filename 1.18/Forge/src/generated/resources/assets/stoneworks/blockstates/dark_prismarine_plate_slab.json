@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "stoneworks:block/dark_prismarine_plate_slab_top"
+    },
+    "type=bottom": {
+      "model": "stoneworks:block/dark_prismarine_plate_slab"
+    },
+    "type=double": {
+      "model": "stoneworks:block/dark_prismarine_plates"
+    }
+  }
+}

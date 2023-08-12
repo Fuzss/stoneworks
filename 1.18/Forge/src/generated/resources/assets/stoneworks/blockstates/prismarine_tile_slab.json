@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "stoneworks:block/prismarine_tile_slab_top"
+    },
+    "type=bottom": {
+      "model": "stoneworks:block/prismarine_tile_slab"
+    },
+    "type=double": {
+      "model": "stoneworks:block/prismarine_tiles"
+    }
+  }
+}

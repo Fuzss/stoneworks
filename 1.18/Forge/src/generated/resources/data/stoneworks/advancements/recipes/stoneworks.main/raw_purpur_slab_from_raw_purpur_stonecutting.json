@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "stoneworks:raw_purpur_slab_from_raw_purpur_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_raw_purpur": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "stoneworks:raw_purpur"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "stoneworks:raw_purpur_slab_from_raw_purpur_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_purpur",
+      "has_the_recipe"
+    ]
+  ]
+}

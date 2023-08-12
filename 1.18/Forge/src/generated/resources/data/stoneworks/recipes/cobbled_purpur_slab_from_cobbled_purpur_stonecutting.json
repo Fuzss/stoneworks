@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:cobbled_purpur"
+  },
+  "result": "stoneworks:cobbled_purpur_slab",
+  "count": 2
+}

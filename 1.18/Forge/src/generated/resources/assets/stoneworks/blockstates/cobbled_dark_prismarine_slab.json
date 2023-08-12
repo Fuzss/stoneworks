@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "stoneworks:block/cobbled_dark_prismarine_slab_top"
+    },
+    "type=bottom": {
+      "model": "stoneworks:block/cobbled_dark_prismarine_slab"
+    },
+    "type=double": {
+      "model": "stoneworks:block/cobbled_dark_prismarine"
+    }
+  }
+}

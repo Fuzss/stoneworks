@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:polished_netherrack"
+  },
+  "result": "stoneworks:polished_netherrack_wall",
+  "count": 1
+}

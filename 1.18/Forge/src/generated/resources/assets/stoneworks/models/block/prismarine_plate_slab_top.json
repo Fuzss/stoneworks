@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "side": "stoneworks:block/prismarine_plates",
+    "bottom": "stoneworks:block/prismarine_plates",
+    "top": "stoneworks:block/prismarine_plates"
+  }
+}

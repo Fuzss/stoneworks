@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "side": "stoneworks:block/deepslate_plates",
+    "bottom": "stoneworks:block/deepslate_plates",
+    "top": "stoneworks:block/deepslate_plates"
+  }
+}

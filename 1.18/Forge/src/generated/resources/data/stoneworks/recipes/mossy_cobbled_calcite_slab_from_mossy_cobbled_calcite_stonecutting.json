@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:mossy_cobbled_calcite"
+  },
+  "result": "stoneworks:mossy_cobbled_calcite_slab",
+  "count": 2
+}

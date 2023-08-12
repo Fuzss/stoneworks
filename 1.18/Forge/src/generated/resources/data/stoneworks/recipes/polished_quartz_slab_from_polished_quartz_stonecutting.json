@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:polished_quartz"
+  },
+  "result": "stoneworks:polished_quartz_slab",
+  "count": 2
+}

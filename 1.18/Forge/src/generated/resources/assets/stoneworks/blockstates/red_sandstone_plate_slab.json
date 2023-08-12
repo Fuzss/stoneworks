@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "stoneworks:block/red_sandstone_plate_slab_top"
+    },
+    "type=bottom": {
+      "model": "stoneworks:block/red_sandstone_plate_slab"
+    },
+    "type=double": {
+      "model": "stoneworks:block/red_sandstone_plates"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "stoneworks:block/calcite_shingle_slab_top"
+    },
+    "type=bottom": {
+      "model": "stoneworks:block/calcite_shingle_slab"
+    },
+    "type=double": {
+      "model": "stoneworks:block/calcite_shingles"
+    }
+  }
+}

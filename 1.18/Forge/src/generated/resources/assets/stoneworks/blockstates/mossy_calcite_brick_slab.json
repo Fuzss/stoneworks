@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "stoneworks:block/mossy_calcite_brick_slab_top"
+    },
+    "type=bottom": {
+      "model": "stoneworks:block/mossy_calcite_brick_slab"
+    },
+    "type=double": {
+      "model": "stoneworks:block/mossy_calcite_bricks"
+    }
+  }
+}

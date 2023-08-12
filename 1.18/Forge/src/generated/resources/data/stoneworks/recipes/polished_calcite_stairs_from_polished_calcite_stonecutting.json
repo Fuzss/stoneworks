@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:polished_calcite"
+  },
+  "result": "stoneworks:polished_calcite_stairs",
+  "count": 1
+}

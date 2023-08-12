@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:red_sandstone_shingles"
+  },
+  "result": "stoneworks:red_sandstone_shingle_stairs",
+  "count": 1
+}

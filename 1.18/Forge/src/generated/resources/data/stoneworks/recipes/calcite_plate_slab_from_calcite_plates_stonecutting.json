@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:calcite_plates"
+  },
+  "result": "stoneworks:calcite_plate_slab",
+  "count": 2
+}

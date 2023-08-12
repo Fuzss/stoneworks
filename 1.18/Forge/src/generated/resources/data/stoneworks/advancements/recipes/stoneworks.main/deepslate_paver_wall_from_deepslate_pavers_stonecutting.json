@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "stoneworks:deepslate_paver_wall_from_deepslate_pavers_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_deepslate_pavers": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "stoneworks:deepslate_pavers"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "stoneworks:deepslate_paver_wall_from_deepslate_pavers_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_deepslate_pavers",
+      "has_the_recipe"
+    ]
+  ]
+}

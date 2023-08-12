@@ -4,20 +4,20 @@ import fuzs.puzzleslib.api.data.v1.AbstractRecipeProvider;
 import fuzs.stoneworks.Stoneworks;
 import fuzs.stoneworks.world.block.variant.StoneBlockVariant;
 import fuzs.stoneworks.world.block.variant.StoneVariantsProvider;
-import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.data.event.GatherDataEvent;
 
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends AbstractRecipeProvider {
 
-    public ModRecipeProvider(PackOutput packOutput) {
-        super(packOutput);
+    public ModRecipeProvider(GatherDataEvent evt, String modId) {
+        super(evt, modId);
     }
 
     @Override

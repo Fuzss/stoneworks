@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "stoneworks:block/nether_brick_pillar_side",
+    "end": "stoneworks:block/nether_brick_pillar_top"
+  }
+}

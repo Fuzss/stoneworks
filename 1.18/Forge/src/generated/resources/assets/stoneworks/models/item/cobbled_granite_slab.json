@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "side": "stoneworks:block/cobbled_granite",
+    "bottom": "stoneworks:block/cobbled_granite",
+    "top": "stoneworks:block/cobbled_granite"
+  }
+}

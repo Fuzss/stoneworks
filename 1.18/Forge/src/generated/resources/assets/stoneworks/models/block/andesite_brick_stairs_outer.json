@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "side": "stoneworks:block/andesite_bricks",
+    "bottom": "stoneworks:block/andesite_bricks",
+    "top": "stoneworks:block/andesite_bricks"
+  }
+}

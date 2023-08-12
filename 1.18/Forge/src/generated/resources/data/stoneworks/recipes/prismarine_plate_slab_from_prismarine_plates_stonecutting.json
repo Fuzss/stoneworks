@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:prismarine_plates"
+  },
+  "result": "stoneworks:prismarine_plate_slab",
+  "count": 2
+}

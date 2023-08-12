@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:mossy_cobbled_diorite"
+  },
+  "result": "stoneworks:mossy_cobbled_diorite_stairs",
+  "count": 1
+}

@@ -3,15 +3,15 @@ package fuzs.stoneworks.data;
 import fuzs.puzzleslib.api.data.v1.AbstractLootProvider;
 import fuzs.stoneworks.world.block.variant.StoneBlockVariant;
 import fuzs.stoneworks.world.block.variant.StoneVariantsProvider;
-import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.data.event.GatherDataEvent;
 
 import java.util.Objects;
 
 public class ModBlockLootProvider extends AbstractLootProvider.Blocks {
 
-    public ModBlockLootProvider(PackOutput packOutput, String modId) {
-        super(packOutput, modId);
+    public ModBlockLootProvider(GatherDataEvent evt, String modId) {
+        super(evt, modId);
     }
 
     @Override

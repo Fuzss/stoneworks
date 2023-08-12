@@ -4,16 +4,15 @@ import fuzs.puzzleslib.api.data.v1.AbstractModelProvider;
 import fuzs.stoneworks.world.block.variant.BlockVariant;
 import fuzs.stoneworks.world.block.variant.StoneBlockVariant;
 import fuzs.stoneworks.world.block.variant.StoneVariantsProvider;
-import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.ModelProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.data.event.GatherDataEvent;
 
 public class ModModelProvider extends AbstractModelProvider {
 
-    public ModModelProvider(PackOutput packOutput, String modId, ExistingFileHelper fileHelper) {
-        super(packOutput, modId, fileHelper);
+    public ModModelProvider(GatherDataEvent evt, String modId) {
+        super(evt, modId);
     }
 
     @Override

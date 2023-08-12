@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "side": "stoneworks:block/mossy_cobbled_quartz",
+    "bottom": "stoneworks:block/mossy_cobbled_quartz",
+    "top": "stoneworks:block/mossy_cobbled_quartz"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "side": "stoneworks:block/cobbled_netherrack",
+    "bottom": "stoneworks:block/cobbled_netherrack",
+    "top": "stoneworks:block/cobbled_netherrack"
+  }
+}

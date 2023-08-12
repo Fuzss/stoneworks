@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "stoneworks:mossy_quartz_brick_wall_from_mossy_quartz_bricks_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_mossy_quartz_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "stoneworks:mossy_quartz_bricks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "stoneworks:mossy_quartz_brick_wall_from_mossy_quartz_bricks_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_mossy_quartz_bricks",
+      "has_the_recipe"
+    ]
+  ]
+}

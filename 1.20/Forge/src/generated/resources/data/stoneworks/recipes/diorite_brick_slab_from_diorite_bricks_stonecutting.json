@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "stoneworks:diorite_bricks"
-  },
-  "result": "stoneworks:diorite_brick_slab"
-}

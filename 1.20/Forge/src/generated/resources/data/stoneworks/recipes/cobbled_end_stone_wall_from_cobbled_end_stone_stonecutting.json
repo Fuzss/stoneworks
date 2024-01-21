@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "stoneworks:cobbled_end_stone"
-  },
-  "result": "stoneworks:cobbled_end_stone_wall"
-}

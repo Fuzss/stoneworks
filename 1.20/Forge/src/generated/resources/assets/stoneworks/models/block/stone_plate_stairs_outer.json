@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "stoneworks:block/stone_plates",
-    "side": "stoneworks:block/stone_plates",
-    "top": "stoneworks:block/stone_plates"
-  }
-}

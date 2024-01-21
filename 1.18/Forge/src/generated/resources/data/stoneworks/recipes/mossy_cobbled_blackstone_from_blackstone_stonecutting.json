@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:blackstone"
-  },
-  "result": "stoneworks:mossy_cobbled_blackstone",
-  "count": 1
-}

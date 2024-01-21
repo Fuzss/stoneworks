@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "stoneworks:polished_calcite"
-  },
-  "result": "stoneworks:polished_calcite_slab"
-}

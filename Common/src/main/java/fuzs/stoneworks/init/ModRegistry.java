@@ -9,6 +9,7 @@ import fuzs.stoneworks.world.block.variant.StoneBlockVariant;
 import fuzs.stoneworks.world.block.variant.StoneVariantsProvider;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -31,7 +32,7 @@ public class ModRegistry {
             }
             // stolen from XFactHD, thanks :)
             int index = (int) (System.currentTimeMillis() / 2000) % this.itemStacks.length;
-            return this.itemStacks[index];
+            return this.itemStacks[index].isEmpty() ? new ItemStack(Items.STONE) : this.itemStacks[index];
         }
     }).disableIconCache().appendItems((List<ItemStack> itemStacks, CreativeModeTab creativeModeTab) -> {
         itemStacks.addAll(StoneVariantsProvider.getSortedVariantItems());

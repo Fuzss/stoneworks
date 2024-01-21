@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "stoneworks:diorite_pavers"
+  },
+  "result": "stoneworks:diorite_paver_slab"
+}

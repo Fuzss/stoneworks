@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "stoneworks:red_sandstone_plates"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "stoneworks:blocks/red_sandstone_plates"
+}

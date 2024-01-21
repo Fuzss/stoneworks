@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_quartz_pavers": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "stoneworks:quartz_pavers"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "stoneworks:quartz_paver_wall_from_quartz_pavers_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_quartz_pavers",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "stoneworks:quartz_paver_wall_from_quartz_pavers_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

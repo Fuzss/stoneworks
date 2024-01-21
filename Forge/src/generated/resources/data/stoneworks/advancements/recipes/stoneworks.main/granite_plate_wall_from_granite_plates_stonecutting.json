@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "stoneworks:granite_plate_wall_from_granite_plates_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_granite_plates": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "stoneworks:granite_plates"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "stoneworks:granite_plate_wall_from_granite_plates_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_granite_plates",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "side": "stoneworks:block/mossy_deepslate_bricks",
+    "bottom": "stoneworks:block/mossy_deepslate_bricks",
+    "top": "stoneworks:block/mossy_deepslate_bricks"
+  }
+}

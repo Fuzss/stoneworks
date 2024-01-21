@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:dark_prismarine_shingles"
+  },
+  "result": "stoneworks:dark_prismarine_shingle_wall",
+  "count": 1
+}

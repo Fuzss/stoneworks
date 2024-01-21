@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "stoneworks:purpur_tile_wall_from_purpur_tiles_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_purpur_tiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "stoneworks:purpur_tiles"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "stoneworks:purpur_tile_wall_from_purpur_tiles_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_purpur_tiles",
+      "has_the_recipe"
+    ]
+  ]
+}

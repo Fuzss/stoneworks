@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:calcite_pavers"
+  },
+  "result": "stoneworks:calcite_paver_stairs",
+  "count": 1
+}

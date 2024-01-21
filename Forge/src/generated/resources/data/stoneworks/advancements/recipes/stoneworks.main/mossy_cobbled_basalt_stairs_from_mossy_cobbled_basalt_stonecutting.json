@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "stoneworks:mossy_cobbled_basalt_stairs_from_mossy_cobbled_basalt_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_mossy_cobbled_basalt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "stoneworks:mossy_cobbled_basalt"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "stoneworks:mossy_cobbled_basalt_stairs_from_mossy_cobbled_basalt_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_mossy_cobbled_basalt",
+      "has_the_recipe"
+    ]
+  ]
+}

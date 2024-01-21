@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:dark_prismarine_tiles"
+  },
+  "result": "stoneworks:dark_prismarine_tile_slab",
+  "count": 2
+}

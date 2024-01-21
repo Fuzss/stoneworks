@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "side": "stoneworks:block/cobbled_basalt",
+    "bottom": "stoneworks:block/cobbled_basalt",
+    "top": "stoneworks:block/cobbled_basalt"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "stoneworks:block/mossy_cobbled_prismarine_slab_top"
+    },
+    "type=bottom": {
+      "model": "stoneworks:block/mossy_cobbled_prismarine_slab"
+    },
+    "type=double": {
+      "model": "stoneworks:block/mossy_cobbled_prismarine"
+    }
+  }
+}

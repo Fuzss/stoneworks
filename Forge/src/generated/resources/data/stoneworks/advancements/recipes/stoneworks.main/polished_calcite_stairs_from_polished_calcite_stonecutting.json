@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "stoneworks:polished_calcite_stairs_from_polished_calcite_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_polished_calcite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "stoneworks:polished_calcite"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "stoneworks:polished_calcite_stairs_from_polished_calcite_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_polished_calcite",
+      "has_the_recipe"
+    ]
+  ]
+}

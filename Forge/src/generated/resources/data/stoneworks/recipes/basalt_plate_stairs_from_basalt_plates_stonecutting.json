@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:basalt_plates"
+  },
+  "result": "stoneworks:basalt_plate_stairs",
+  "count": 1
+}

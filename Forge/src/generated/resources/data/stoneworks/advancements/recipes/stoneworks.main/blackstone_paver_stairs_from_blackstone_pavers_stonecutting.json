@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "stoneworks:blackstone_paver_stairs_from_blackstone_pavers_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_blackstone_pavers": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "stoneworks:blackstone_pavers"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "stoneworks:blackstone_paver_stairs_from_blackstone_pavers_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_blackstone_pavers",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "stoneworks:block/cobbled_end_stone_slab_top"
+    },
+    "type=bottom": {
+      "model": "stoneworks:block/cobbled_end_stone_slab"
+    },
+    "type=double": {
+      "model": "stoneworks:block/cobbled_end_stone"
+    }
+  }
+}

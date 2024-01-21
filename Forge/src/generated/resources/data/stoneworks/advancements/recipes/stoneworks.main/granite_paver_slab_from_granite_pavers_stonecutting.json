@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "stoneworks:granite_paver_slab_from_granite_pavers_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_granite_pavers": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "stoneworks:granite_pavers"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "stoneworks:granite_paver_slab_from_granite_pavers_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_granite_pavers",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "stoneworks:block/dark_prismarine_pillar_side",
+    "end": "stoneworks:block/dark_prismarine_pillar_top"
+  }
+}

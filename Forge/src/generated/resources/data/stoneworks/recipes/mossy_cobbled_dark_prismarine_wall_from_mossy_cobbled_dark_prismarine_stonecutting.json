@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:mossy_cobbled_dark_prismarine"
+  },
+  "result": "stoneworks:mossy_cobbled_dark_prismarine_wall",
+  "count": 1
+}

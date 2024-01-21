@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "stoneworks:granite_tile_wall_from_granite_tiles_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_granite_tiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "stoneworks:granite_tiles"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "stoneworks:granite_tile_wall_from_granite_tiles_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_granite_tiles",
+      "has_the_recipe"
+    ]
+  ]
+}

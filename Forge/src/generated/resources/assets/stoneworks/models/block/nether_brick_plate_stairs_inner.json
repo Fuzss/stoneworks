@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "side": "stoneworks:block/nether_brick_plates",
+    "bottom": "stoneworks:block/nether_brick_plates",
+    "top": "stoneworks:block/nether_brick_plates"
+  }
+}

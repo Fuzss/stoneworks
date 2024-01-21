@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "side": "stoneworks:block/calcite_shingles",
+    "bottom": "stoneworks:block/calcite_shingles",
+    "top": "stoneworks:block/calcite_shingles"
+  }
+}

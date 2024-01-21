@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "stoneworks:block/polished_calcite_slab_top"
+    },
+    "type=bottom": {
+      "model": "stoneworks:block/polished_calcite_slab"
+    },
+    "type=double": {
+      "model": "stoneworks:block/polished_calcite"
+    }
+  }
+}

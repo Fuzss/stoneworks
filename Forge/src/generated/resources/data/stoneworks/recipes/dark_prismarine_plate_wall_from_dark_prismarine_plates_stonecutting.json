@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "stoneworks:dark_prismarine_plates"
+  },
+  "result": "stoneworks:dark_prismarine_plate_wall",
+  "count": 1
+}

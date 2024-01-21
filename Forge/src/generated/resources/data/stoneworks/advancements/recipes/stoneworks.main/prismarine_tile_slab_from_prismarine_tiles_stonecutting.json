@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "stoneworks:prismarine_tile_slab_from_prismarine_tiles_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_prismarine_tiles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "stoneworks:prismarine_tiles"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "stoneworks:prismarine_tile_slab_from_prismarine_tiles_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_prismarine_tiles",
+      "has_the_recipe"
+    ]
+  ]
+}

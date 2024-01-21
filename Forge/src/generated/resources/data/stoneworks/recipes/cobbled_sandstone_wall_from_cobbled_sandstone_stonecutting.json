@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "stoneworks:cobbled_sandstone"
+  },
+  "result": "stoneworks:cobbled_sandstone_wall"
+}

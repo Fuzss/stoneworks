@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_nether_brick_shingles": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "stoneworks:nether_brick_shingles"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "stoneworks:nether_brick_shingle_slab_from_nether_brick_shingles_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_nether_brick_shingles",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "stoneworks:nether_brick_shingle_slab_from_nether_brick_shingles_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

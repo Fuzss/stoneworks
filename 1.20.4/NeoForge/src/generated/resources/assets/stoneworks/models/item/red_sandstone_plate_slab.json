@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "stoneworks:block/red_sandstone_plates",
-    "side": "stoneworks:block/red_sandstone_plates",
-    "top": "stoneworks:block/red_sandstone_plates"
-  }
-}

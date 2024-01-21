@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "stoneworks:block/diorite_tiles",
-    "side": "stoneworks:block/diorite_tiles",
-    "top": "stoneworks:block/diorite_tiles"
-  }
-}

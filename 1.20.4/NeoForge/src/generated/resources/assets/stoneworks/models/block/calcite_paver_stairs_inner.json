@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "stoneworks:block/calcite_pavers",
-    "side": "stoneworks:block/calcite_pavers",
-    "top": "stoneworks:block/calcite_pavers"
-  }
-}

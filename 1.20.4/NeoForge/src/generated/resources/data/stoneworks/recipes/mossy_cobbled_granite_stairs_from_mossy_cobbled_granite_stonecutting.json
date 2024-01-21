@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "stoneworks:mossy_cobbled_granite"
-  },
-  "result": "stoneworks:mossy_cobbled_granite_stairs"
-}

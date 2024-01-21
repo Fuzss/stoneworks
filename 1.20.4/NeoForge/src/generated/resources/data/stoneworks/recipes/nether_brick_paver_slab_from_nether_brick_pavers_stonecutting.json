@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "stoneworks:nether_brick_pavers"
-  },
-  "result": "stoneworks:nether_brick_paver_slab"
-}

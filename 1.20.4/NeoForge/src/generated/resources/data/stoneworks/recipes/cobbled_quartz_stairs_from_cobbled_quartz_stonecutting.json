@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "stoneworks:cobbled_quartz"
-  },
-  "result": "stoneworks:cobbled_quartz_stairs"
-}

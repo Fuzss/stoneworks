@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/wall_inventory",
-  "textures": {
-    "wall": "stoneworks:block/nether_brick_plates"
-  }
-}

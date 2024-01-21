@@ -1,6 +1,6 @@
 package fuzs.stoneworks.init;
 
-import fuzs.puzzleslib.api.init.v2.RegistryManager;
+import fuzs.puzzleslib.api.init.v3.registry.RegistryManager;
 import fuzs.stoneworks.Stoneworks;
 import fuzs.stoneworks.world.block.variant.BlockVariant;
 import fuzs.stoneworks.world.block.variant.StoneBlockVariant;
@@ -8,7 +8,7 @@ import fuzs.stoneworks.world.block.variant.StoneVariantsProvider;
 import net.minecraft.world.level.block.*;
 
 public class ModRegistry {
-    static final RegistryManager REGISTRY = RegistryManager.instant(Stoneworks.MOD_ID);
+    static final RegistryManager REGISTRY = RegistryManager.from(Stoneworks.MOD_ID);
 
     public static void touch() {
         for (StoneBlockVariant variant : StoneVariantsProvider.getStoneBlockVariants().toList()) {

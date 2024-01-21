@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "stoneworks:block/cobbled_andesite",
-    "side": "stoneworks:block/cobbled_andesite",
-    "top": "stoneworks:block/cobbled_andesite"
-  }
-}

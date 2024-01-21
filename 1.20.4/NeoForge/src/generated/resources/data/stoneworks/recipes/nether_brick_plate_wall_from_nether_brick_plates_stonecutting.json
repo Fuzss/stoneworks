@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "stoneworks:nether_brick_plates"
-  },
-  "result": "stoneworks:nether_brick_plate_wall"
-}

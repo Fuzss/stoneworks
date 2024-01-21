@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "stoneworks:blackstone_plates"
-  },
-  "result": "stoneworks:blackstone_plate_wall"
-}

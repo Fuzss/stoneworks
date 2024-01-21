@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "stoneworks:block/polished_purpur",
-    "side": "stoneworks:block/polished_purpur",
-    "top": "stoneworks:block/polished_purpur"
-  }
-}

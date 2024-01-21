@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "stoneworks:block/mossy_cobbled_prismarine",
-    "side": "stoneworks:block/mossy_cobbled_prismarine",
-    "top": "stoneworks:block/mossy_cobbled_prismarine"
-  }
-}

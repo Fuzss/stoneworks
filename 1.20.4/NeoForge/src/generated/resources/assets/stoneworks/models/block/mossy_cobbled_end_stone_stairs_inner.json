@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "stoneworks:block/mossy_cobbled_end_stone",
-    "side": "stoneworks:block/mossy_cobbled_end_stone",
-    "top": "stoneworks:block/mossy_cobbled_end_stone"
-  }
-}

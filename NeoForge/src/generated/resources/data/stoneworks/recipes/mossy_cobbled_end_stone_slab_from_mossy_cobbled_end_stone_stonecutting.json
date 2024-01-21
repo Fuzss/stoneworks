@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "stoneworks:mossy_cobbled_end_stone"
-  },
-  "result": "stoneworks:mossy_cobbled_end_stone_slab"
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "stoneworks:block/dark_prismarine_tiles",
-    "side": "stoneworks:block/dark_prismarine_tiles",
-    "top": "stoneworks:block/dark_prismarine_tiles"
-  }
-}

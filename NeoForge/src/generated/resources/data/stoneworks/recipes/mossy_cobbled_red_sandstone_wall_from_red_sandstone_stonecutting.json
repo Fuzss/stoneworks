@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "minecraft:red_sandstone"
-  },
-  "result": "stoneworks:mossy_cobbled_red_sandstone_wall"
-}

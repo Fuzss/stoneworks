@@ -49,7 +49,7 @@ public enum StoneType {
 
     protected BlockBehaviour.Properties getBlockProperties(BlockVariant blockVariant) {
         Block baseBlock = this.getBaseBlock(blockVariant);
-        BlockBehaviour.Properties properties = BlockBehaviour.Properties.copy(baseBlock);
+        BlockBehaviour.Properties properties = BlockBehaviour.Properties.ofFullCopy(baseBlock);
         if (this.isCobbleHardened && blockVariant != BlockVariant.REGULAR) {
             properties.strength(baseBlock.defaultDestroyTime() + 0.5F, baseBlock.getExplosionResistance());
         }

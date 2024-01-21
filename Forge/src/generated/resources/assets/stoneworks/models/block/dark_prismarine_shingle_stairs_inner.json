@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "stoneworks:block/dark_prismarine_shingles",
+    "side": "stoneworks:block/dark_prismarine_shingles",
+    "top": "stoneworks:block/dark_prismarine_shingles"
+  }
+}

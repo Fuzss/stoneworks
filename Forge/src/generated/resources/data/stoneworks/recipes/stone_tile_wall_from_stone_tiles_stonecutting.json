@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "stoneworks:stone_tiles"
+  },
+  "result": "stoneworks:stone_tile_wall"
+}

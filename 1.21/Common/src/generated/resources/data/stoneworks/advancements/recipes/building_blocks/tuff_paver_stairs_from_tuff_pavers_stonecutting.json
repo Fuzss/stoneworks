@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "stoneworks:tuff_paver_stairs_from_tuff_pavers_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tuff_pavers": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "stoneworks:tuff_pavers"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tuff_pavers"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "stoneworks:tuff_paver_stairs_from_tuff_pavers_stonecutting"
+    ]
+  }
+}

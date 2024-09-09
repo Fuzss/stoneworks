@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "stoneworks:mossy_cobbled_sandstone"
+  },
+  "result": "stoneworks:mossy_cobbled_sandstone_stairs"
+}

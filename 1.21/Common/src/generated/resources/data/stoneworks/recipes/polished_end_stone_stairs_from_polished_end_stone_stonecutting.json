@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "stoneworks:polished_end_stone"
+  },
+  "result": "stoneworks:polished_end_stone_stairs"
+}

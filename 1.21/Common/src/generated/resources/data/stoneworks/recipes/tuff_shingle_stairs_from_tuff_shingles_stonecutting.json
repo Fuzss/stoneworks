@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "stoneworks:tuff_shingles"
+  },
+  "result": "stoneworks:tuff_shingle_stairs"
+}

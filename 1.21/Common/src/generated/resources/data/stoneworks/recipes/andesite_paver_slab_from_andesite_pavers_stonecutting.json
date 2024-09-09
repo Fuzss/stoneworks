@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "stoneworks:andesite_pavers"
+  },
+  "result": "stoneworks:andesite_paver_slab"
+}

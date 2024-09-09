@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sandstone_shingles": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "stoneworks:sandstone_shingles"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "stoneworks:sandstone_shingle_wall_from_sandstone_shingles_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sandstone_shingles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "stoneworks:sandstone_shingle_wall_from_sandstone_shingles_stonecutting"
+    ]
+  }
+}

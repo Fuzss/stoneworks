@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "stoneworks:tuff_pavers"
-  },
-  "result": "stoneworks:tuff_paver_wall"
-}

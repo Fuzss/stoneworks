@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_netherrack_or_polished_netherrack": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:netherrack",
+              "stoneworks:polished_netherrack"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "stoneworks:polished_netherrack_wall_from_netherrack_or_polished_netherrack_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_netherrack_or_polished_netherrack"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "stoneworks:polished_netherrack_wall_from_netherrack_or_polished_netherrack_stonecutting"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:calcite"
+    },
+    {
+      "item": "stoneworks:mossy_calcite_bricks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:mossy_calcite_brick_wall"
+  }
+}

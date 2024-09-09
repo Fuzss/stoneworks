@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "minecraft:prismarine"
-  },
-  "result": "stoneworks:mossy_prismarine_brick_slab"
-}

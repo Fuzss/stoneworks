@@ -1,6 +1,7 @@
 package fuzs.stoneworks.world.block.variant;
 
 import com.google.common.collect.Maps;
+import fuzs.puzzleslib.api.core.v1.utility.ResourceLocationHelper;
 import fuzs.stoneworks.Stoneworks;
 import fuzs.stoneworks.config.CommonConfig;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -63,7 +64,7 @@ public class StoneVariantsProvider {
 
     private static void registerStoneBlockVariant(StoneBlockVariant variant, boolean replace) {
         if (STONE_BLOCK_VARIANTS.put(variant.name(), variant) == null && replace) {
-            throw new IllegalStateException("unable to replace stone block variant %s".formatted(variant.name()));
+            throw new IllegalStateException("Duplicate stone block variant: " + variant.name());
         }
     }
 
@@ -96,6 +97,9 @@ public class StoneVariantsProvider {
         registerVanillaOverride(StoneType.DEEPSLATE, BlockVariant.CRACKED_TILES, Blocks.CRACKED_DEEPSLATE_TILES);
         registerVanillaOverride(StoneType.CALCITE, BlockVariant.REGULAR, Blocks.CALCITE);
         registerVanillaOverride(StoneType.TUFF, BlockVariant.REGULAR, Blocks.TUFF);
+        registerVanillaOverride(StoneType.TUFF, BlockVariant.BRICKS, Blocks.TUFF_BRICKS);
+        registerVanillaOverride(StoneType.TUFF, BlockVariant.POLISHED, Blocks.POLISHED_TUFF);
+        registerVanillaOverride(StoneType.TUFF, BlockVariant.CHISELED, Blocks.CHISELED_TUFF);
         registerVanillaOverride(StoneType.BASALT, BlockVariant.REGULAR, Blocks.BASALT);
         registerVanillaOverride(StoneType.BASALT, BlockVariant.POLISHED, Blocks.SMOOTH_BASALT);
         registerVanillaOverride(StoneType.BASALT, BlockVariant.PILLAR, Blocks.POLISHED_BASALT);
@@ -137,7 +141,9 @@ public class StoneVariantsProvider {
 
         VanillaStoneBlockVariant(StoneType stoneType, BlockVariant blockVariant, Block... blocks) {
             super(stoneType, blockVariant, Arrays.copyOf(blocks, 4));
-            if (blocks.length < 1 || blocks.length > 4) throw new IllegalStateException("wrong number of blocks provided");
+            if (blocks.length < 1 || blocks.length > 4) {
+                throw new IllegalStateException("Wrong number of blocks provided!");
+            }
             this.block = BuiltInRegistries.BLOCK.getKey(blocks[0]).getPath();
             this.deviates = !this.blockName().equals(this.name());
         }
@@ -164,7 +170,7 @@ public class StoneVariantsProvider {
 
         @Override
         public ResourceLocation id(String key) {
-            return new ResourceLocation(key);
+            return ResourceLocationHelper.withDefaultNamespace(key);
         }
 
         @Override

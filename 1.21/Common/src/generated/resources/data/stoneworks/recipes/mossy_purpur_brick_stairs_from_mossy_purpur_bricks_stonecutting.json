@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "stoneworks:mossy_purpur_bricks"
-  },
-  "result": "stoneworks:mossy_purpur_brick_stairs"
-}

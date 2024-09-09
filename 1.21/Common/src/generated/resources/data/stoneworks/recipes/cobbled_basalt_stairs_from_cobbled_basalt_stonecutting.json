@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "stoneworks:cobbled_basalt"
-  },
-  "result": "stoneworks:cobbled_basalt_stairs"
-}

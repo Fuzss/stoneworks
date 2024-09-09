@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:granite"
+    },
+    {
+      "item": "stoneworks:granite_bricks"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "stoneworks:granite_brick_slab"
+  }
+}

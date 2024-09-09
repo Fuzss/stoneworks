@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "stoneworks:sandstone_plates"
-  },
-  "result": "stoneworks:sandstone_plate_wall"
-}

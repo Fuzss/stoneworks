@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:calcite"
+    },
+    {
+      "item": "stoneworks:polished_calcite"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:polished_calcite_wall"
+  }
+}

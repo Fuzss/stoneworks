@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:basalt"
+    },
+    {
+      "item": "stoneworks:mossy_cobbled_basalt"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:mossy_cobbled_basalt_wall"
+  }
+}

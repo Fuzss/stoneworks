@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_granite_or_cobbled_granite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:granite",
+              "stoneworks:cobbled_granite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "stoneworks:cobbled_granite_slab_from_granite_or_cobbled_granite_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_granite_or_cobbled_granite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "stoneworks:cobbled_granite_slab_from_granite_or_cobbled_granite_stonecutting"
+    ]
+  }
+}

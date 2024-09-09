@@ -1,5 +1,6 @@
 package fuzs.stoneworks.world.block.variant;
 
+import fuzs.puzzleslib.api.core.v1.utility.ResourceLocationHelper;
 import fuzs.stoneworks.Stoneworks;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -82,7 +83,7 @@ public class StoneBlockVariant {
 
     @NotNull
     public Block block() {
-        return Objects.requireNonNull(this.block(0, this.blockName()), "base block was null");
+        return Objects.requireNonNull(this.block(0, this.blockName()), "base block is null");
     }
 
     @Nullable
@@ -107,11 +108,9 @@ public class StoneBlockVariant {
             if (!BuiltInRegistries.BLOCK.containsKey(id)) {
                 if (this.isVanillaVariant()) {
                     // stupid hack so this does not run every time when the vanilla variant simply doesn't have the block type
-                    // could also just let the call to Registry.BLOCK::get go through, as air is default entry,
-                    // but not trusting that with all the registry stuff Forge does
                     this.blocks[index] = Blocks.AIR;
                 } else {
-                    throw new IllegalArgumentException("%s is not a valid block".formatted(id));
+                    throw new IllegalArgumentException("Not a valid block: " + id);
                 }
             } else {
                 this.blocks[index] = BuiltInRegistries.BLOCK.get(id);
@@ -121,7 +120,7 @@ public class StoneBlockVariant {
     }
 
     public ResourceLocation id(String key) {
-        return new ResourceLocation(Stoneworks.MOD_ID, key);
+        return ResourceLocationHelper.fromNamespaceAndPath(Stoneworks.MOD_ID, key);
     }
 
     public BlockState baseBlockState() {

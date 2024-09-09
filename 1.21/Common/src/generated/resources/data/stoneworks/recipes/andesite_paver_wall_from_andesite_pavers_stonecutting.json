@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "stoneworks:andesite_pavers"
-  },
-  "result": "stoneworks:andesite_paver_wall"
-}

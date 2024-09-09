@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "stoneworks:raw_dark_prismarine"
-  },
-  "result": "stoneworks:raw_dark_prismarine_stairs"
-}

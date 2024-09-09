@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "stoneworks:deepslate_plates"
-  },
-  "result": "stoneworks:deepslate_plate_slab"
-}

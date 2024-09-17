@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "stoneworks:block/cobbled_netherrack",
-    "side": "stoneworks:block/cobbled_netherrack",
-    "top": "stoneworks:block/cobbled_netherrack"
-  }
-}

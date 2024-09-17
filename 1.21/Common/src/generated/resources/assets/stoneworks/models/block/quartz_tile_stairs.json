@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "stoneworks:block/quartz_tiles",
-    "side": "stoneworks:block/quartz_tiles",
-    "top": "stoneworks:block/quartz_tiles"
-  }
-}

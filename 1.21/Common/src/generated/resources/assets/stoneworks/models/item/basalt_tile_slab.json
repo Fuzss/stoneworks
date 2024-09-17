@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "stoneworks:block/basalt_tiles",
-    "side": "stoneworks:block/basalt_tiles",
-    "top": "stoneworks:block/basalt_tiles"
-  }
-}

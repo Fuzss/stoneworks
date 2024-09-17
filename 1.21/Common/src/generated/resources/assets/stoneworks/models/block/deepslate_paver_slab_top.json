@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "stoneworks:block/deepslate_pavers",
-    "side": "stoneworks:block/deepslate_pavers",
-    "top": "stoneworks:block/deepslate_pavers"
-  }
-}

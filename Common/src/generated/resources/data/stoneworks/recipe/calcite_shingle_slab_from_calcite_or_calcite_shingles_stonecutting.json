@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:calcite"
+    },
+    {
+      "item": "stoneworks:calcite_shingles"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "stoneworks:calcite_shingle_slab"
+  }
+}

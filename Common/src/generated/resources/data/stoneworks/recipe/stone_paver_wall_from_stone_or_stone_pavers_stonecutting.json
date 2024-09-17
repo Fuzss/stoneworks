@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:stone"
+    },
+    {
+      "item": "stoneworks:stone_pavers"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:stone_paver_wall"
+  }
+}

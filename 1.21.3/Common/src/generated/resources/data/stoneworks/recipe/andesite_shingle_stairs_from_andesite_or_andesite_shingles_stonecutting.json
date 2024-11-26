@@ -1,12 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": [
-    {
-      "item": "minecraft:andesite"
-    },
-    {
-      "item": "stoneworks:andesite_shingles"
-    }
+    "minecraft:andesite",
+    "stoneworks:andesite_shingles"
   ],
   "result": {
     "count": 1,

@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:tuff_plate_wall_from_tuff_or_tuff_plates_stonecutting"
+        "recipe": "minecraft:tuff_plate_wall_from_tuff_or_tuff_plates_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:tuff_plate_wall_from_tuff_or_tuff_plates_stonecutting"
+      "minecraft:tuff_plate_wall_from_tuff_or_tuff_plates_stonecutting"
     ]
   }
 }

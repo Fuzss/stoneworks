@@ -1,12 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": [
-    {
-      "item": "minecraft:blackstone"
-    },
-    {
-      "item": "stoneworks:blackstone_pavers"
-    }
+    "minecraft:blackstone",
+    "stoneworks:blackstone_pavers"
   ],
   "result": {
     "count": 2,

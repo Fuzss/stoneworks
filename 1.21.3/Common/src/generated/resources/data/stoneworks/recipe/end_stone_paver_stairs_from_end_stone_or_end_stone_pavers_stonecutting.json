@@ -1,12 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": [
-    {
-      "item": "minecraft:end_stone"
-    },
-    {
-      "item": "stoneworks:end_stone_pavers"
-    }
+    "minecraft:end_stone",
+    "stoneworks:end_stone_pavers"
   ],
   "result": {
     "count": 1,

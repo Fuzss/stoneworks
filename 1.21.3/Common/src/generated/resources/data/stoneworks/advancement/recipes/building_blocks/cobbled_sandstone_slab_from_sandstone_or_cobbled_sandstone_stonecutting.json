@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:cobbled_sandstone_slab_from_sandstone_or_cobbled_sandstone_stonecutting"
+        "recipe": "minecraft:cobbled_sandstone_slab_from_sandstone_or_cobbled_sandstone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:cobbled_sandstone_slab_from_sandstone_or_cobbled_sandstone_stonecutting"
+      "minecraft:cobbled_sandstone_slab_from_sandstone_or_cobbled_sandstone_stonecutting"
     ]
   }
 }

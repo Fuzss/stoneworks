@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:deepslate_plate_wall_from_deepslate_or_deepslate_plates_stonecutting"
+        "recipe": "minecraft:deepslate_plate_wall_from_deepslate_or_deepslate_plates_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:deepslate_plate_wall_from_deepslate_or_deepslate_plates_stonecutting"
+      "minecraft:deepslate_plate_wall_from_deepslate_or_deepslate_plates_stonecutting"
     ]
   }
 }

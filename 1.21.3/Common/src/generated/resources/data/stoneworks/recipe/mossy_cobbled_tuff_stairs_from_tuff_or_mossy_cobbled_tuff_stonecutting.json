@@ -1,12 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": [
-    {
-      "item": "minecraft:tuff"
-    },
-    {
-      "item": "stoneworks:mossy_cobbled_tuff"
-    }
+    "minecraft:tuff",
+    "stoneworks:mossy_cobbled_tuff"
   ],
   "result": {
     "count": 1,

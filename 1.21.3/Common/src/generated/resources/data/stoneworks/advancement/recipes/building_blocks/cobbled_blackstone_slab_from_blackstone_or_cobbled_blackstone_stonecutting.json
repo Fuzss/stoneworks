@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:cobbled_blackstone_slab_from_blackstone_or_cobbled_blackstone_stonecutting"
+        "recipe": "minecraft:cobbled_blackstone_slab_from_blackstone_or_cobbled_blackstone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:cobbled_blackstone_slab_from_blackstone_or_cobbled_blackstone_stonecutting"
+      "minecraft:cobbled_blackstone_slab_from_blackstone_or_cobbled_blackstone_stonecutting"
     ]
   }
 }

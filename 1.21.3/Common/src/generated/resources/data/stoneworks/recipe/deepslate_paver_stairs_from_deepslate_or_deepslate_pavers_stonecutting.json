@@ -1,12 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": [
-    {
-      "item": "minecraft:deepslate"
-    },
-    {
-      "item": "stoneworks:deepslate_pavers"
-    }
+    "minecraft:deepslate",
+    "stoneworks:deepslate_pavers"
   ],
   "result": {
     "count": 1,

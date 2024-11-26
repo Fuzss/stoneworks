@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:chiseled_calcite_from_calcite_stonecutting"
+        "recipe": "minecraft:chiseled_calcite_from_calcite_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:chiseled_calcite_from_calcite_stonecutting"
+      "minecraft:chiseled_calcite_from_calcite_stonecutting"
     ]
   }
 }

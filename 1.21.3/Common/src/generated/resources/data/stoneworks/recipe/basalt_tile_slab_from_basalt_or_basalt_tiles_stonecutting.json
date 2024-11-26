@@ -1,12 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": [
-    {
-      "item": "minecraft:basalt"
-    },
-    {
-      "item": "stoneworks:basalt_tiles"
-    }
+    "minecraft:basalt",
+    "stoneworks:basalt_tiles"
   ],
   "result": {
     "count": 2,

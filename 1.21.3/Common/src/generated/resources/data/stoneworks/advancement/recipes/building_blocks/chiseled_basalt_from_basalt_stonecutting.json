@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:chiseled_basalt_from_basalt_stonecutting"
+        "recipe": "minecraft:chiseled_basalt_from_basalt_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:chiseled_basalt_from_basalt_stonecutting"
+      "minecraft:chiseled_basalt_from_basalt_stonecutting"
     ]
   }
 }

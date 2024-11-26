@@ -1,12 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": [
-    {
-      "item": "minecraft:purpur_block"
-    },
-    {
-      "item": "stoneworks:mossy_cobbled_purpur"
-    }
+    "minecraft:purpur_block",
+    "stoneworks:mossy_cobbled_purpur"
   ],
   "result": {
     "count": 1,

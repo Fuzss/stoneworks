@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:basalt_tile_stairs_from_basalt_or_basalt_tiles_stonecutting"
+        "recipe": "minecraft:basalt_tile_stairs_from_basalt_or_basalt_tiles_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:basalt_tile_stairs_from_basalt_or_basalt_tiles_stonecutting"
+      "minecraft:basalt_tile_stairs_from_basalt_or_basalt_tiles_stonecutting"
     ]
   }
 }

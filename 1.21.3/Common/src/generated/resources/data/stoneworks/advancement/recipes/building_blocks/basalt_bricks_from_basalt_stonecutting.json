@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:basalt_bricks_from_basalt_stonecutting"
+        "recipe": "minecraft:basalt_bricks_from_basalt_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:basalt_bricks_from_basalt_stonecutting"
+      "minecraft:basalt_bricks_from_basalt_stonecutting"
     ]
   }
 }

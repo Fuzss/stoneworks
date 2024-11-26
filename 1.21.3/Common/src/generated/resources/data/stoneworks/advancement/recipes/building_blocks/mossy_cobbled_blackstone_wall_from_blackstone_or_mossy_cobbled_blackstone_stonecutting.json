@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:mossy_cobbled_blackstone_wall_from_blackstone_or_mossy_cobbled_blackstone_stonecutting"
+        "recipe": "minecraft:mossy_cobbled_blackstone_wall_from_blackstone_or_mossy_cobbled_blackstone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:mossy_cobbled_blackstone_wall_from_blackstone_or_mossy_cobbled_blackstone_stonecutting"
+      "minecraft:mossy_cobbled_blackstone_wall_from_blackstone_or_mossy_cobbled_blackstone_stonecutting"
     ]
   }
 }

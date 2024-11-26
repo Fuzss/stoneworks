@@ -1,12 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": [
-    {
-      "item": "minecraft:red_sandstone"
-    },
-    {
-      "item": "stoneworks:mossy_red_sandstone_bricks"
-    }
+    "minecraft:red_sandstone",
+    "stoneworks:mossy_red_sandstone_bricks"
   ],
   "result": {
     "count": 2,

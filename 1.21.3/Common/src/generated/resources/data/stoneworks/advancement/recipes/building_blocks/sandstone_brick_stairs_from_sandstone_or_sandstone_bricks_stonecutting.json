@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:sandstone_brick_stairs_from_sandstone_or_sandstone_bricks_stonecutting"
+        "recipe": "minecraft:sandstone_brick_stairs_from_sandstone_or_sandstone_bricks_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:sandstone_brick_stairs_from_sandstone_or_sandstone_bricks_stonecutting"
+      "minecraft:sandstone_brick_stairs_from_sandstone_or_sandstone_bricks_stonecutting"
     ]
   }
 }

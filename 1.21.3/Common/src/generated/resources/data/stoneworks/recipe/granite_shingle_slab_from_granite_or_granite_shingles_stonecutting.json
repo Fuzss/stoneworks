@@ -1,12 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": [
-    {
-      "item": "minecraft:granite"
-    },
-    {
-      "item": "stoneworks:granite_shingles"
-    }
+    "minecraft:granite",
+    "stoneworks:granite_shingles"
   ],
   "result": {
     "count": 2,

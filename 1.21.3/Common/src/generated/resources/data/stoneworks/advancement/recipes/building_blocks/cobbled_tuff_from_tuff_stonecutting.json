@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:cobbled_tuff_from_tuff_stonecutting"
+        "recipe": "minecraft:cobbled_tuff_from_tuff_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:cobbled_tuff_from_tuff_stonecutting"
+      "minecraft:cobbled_tuff_from_tuff_stonecutting"
     ]
   }
 }

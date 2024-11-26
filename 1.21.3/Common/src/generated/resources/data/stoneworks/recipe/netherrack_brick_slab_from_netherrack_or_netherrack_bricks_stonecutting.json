@@ -1,12 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": [
-    {
-      "item": "minecraft:netherrack"
-    },
-    {
-      "item": "stoneworks:netherrack_bricks"
-    }
+    "minecraft:netherrack",
+    "stoneworks:netherrack_bricks"
   ],
   "result": {
     "count": 2,

@@ -1,12 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": [
-    {
-      "item": "minecraft:quartz_block"
-    },
-    {
-      "item": "stoneworks:mossy_quartz_bricks"
-    }
+    "minecraft:quartz_block",
+    "stoneworks:mossy_quartz_bricks"
   ],
   "result": {
     "count": 1,

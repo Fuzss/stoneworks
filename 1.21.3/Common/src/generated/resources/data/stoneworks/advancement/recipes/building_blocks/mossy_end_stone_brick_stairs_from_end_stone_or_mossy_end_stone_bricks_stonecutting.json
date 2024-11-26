@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:mossy_end_stone_brick_stairs_from_end_stone_or_mossy_end_stone_bricks_stonecutting"
+        "recipe": "minecraft:mossy_end_stone_brick_stairs_from_end_stone_or_mossy_end_stone_bricks_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:mossy_end_stone_brick_stairs_from_end_stone_or_mossy_end_stone_bricks_stonecutting"
+      "minecraft:mossy_end_stone_brick_stairs_from_end_stone_or_mossy_end_stone_bricks_stonecutting"
     ]
   }
 }

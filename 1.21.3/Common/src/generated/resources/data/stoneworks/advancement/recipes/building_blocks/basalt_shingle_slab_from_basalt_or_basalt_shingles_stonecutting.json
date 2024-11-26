@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:basalt_shingle_slab_from_basalt_or_basalt_shingles_stonecutting"
+        "recipe": "minecraft:basalt_shingle_slab_from_basalt_or_basalt_shingles_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:basalt_shingle_slab_from_basalt_or_basalt_shingles_stonecutting"
+      "minecraft:basalt_shingle_slab_from_basalt_or_basalt_shingles_stonecutting"
     ]
   }
 }

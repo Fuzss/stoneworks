@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:stone_tile_stairs_from_stone_or_stone_tiles_stonecutting"
+        "recipe": "minecraft:stone_tile_stairs_from_stone_or_stone_tiles_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:stone_tile_stairs_from_stone_or_stone_tiles_stonecutting"
+      "minecraft:stone_tile_stairs_from_stone_or_stone_tiles_stonecutting"
     ]
   }
 }

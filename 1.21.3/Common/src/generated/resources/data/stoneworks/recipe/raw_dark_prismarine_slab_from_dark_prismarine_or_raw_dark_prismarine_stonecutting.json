@@ -1,12 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": [
-    {
-      "item": "minecraft:dark_prismarine"
-    },
-    {
-      "item": "stoneworks:raw_dark_prismarine"
-    }
+    "minecraft:dark_prismarine",
+    "stoneworks:raw_dark_prismarine"
   ],
   "result": {
     "count": 2,

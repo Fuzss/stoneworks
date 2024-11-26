@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:polished_calcite_slab_from_calcite_or_polished_calcite_stonecutting"
+        "recipe": "minecraft:polished_calcite_slab_from_calcite_or_polished_calcite_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:polished_calcite_slab_from_calcite_or_polished_calcite_stonecutting"
+      "minecraft:polished_calcite_slab_from_calcite_or_polished_calcite_stonecutting"
     ]
   }
 }

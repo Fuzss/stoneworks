@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:red_sandstone_paver_wall_from_red_sandstone_or_red_sandstone_pavers_stonecutting"
+        "recipe": "minecraft:red_sandstone_paver_wall_from_red_sandstone_or_red_sandstone_pavers_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:red_sandstone_paver_wall_from_red_sandstone_or_red_sandstone_pavers_stonecutting"
+      "minecraft:red_sandstone_paver_wall_from_red_sandstone_or_red_sandstone_pavers_stonecutting"
     ]
   }
 }

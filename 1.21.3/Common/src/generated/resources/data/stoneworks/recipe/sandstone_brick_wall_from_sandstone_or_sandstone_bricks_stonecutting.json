@@ -1,12 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": [
-    {
-      "item": "minecraft:sandstone"
-    },
-    {
-      "item": "stoneworks:sandstone_bricks"
-    }
+    "minecraft:sandstone",
+    "stoneworks:sandstone_bricks"
   ],
   "result": {
     "count": 1,

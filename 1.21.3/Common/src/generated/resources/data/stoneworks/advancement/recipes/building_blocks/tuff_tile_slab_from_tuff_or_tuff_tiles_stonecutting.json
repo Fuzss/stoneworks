@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:tuff_tile_slab_from_tuff_or_tuff_tiles_stonecutting"
+        "recipe": "minecraft:tuff_tile_slab_from_tuff_or_tuff_tiles_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:tuff_tile_slab_from_tuff_or_tuff_tiles_stonecutting"
+      "minecraft:tuff_tile_slab_from_tuff_or_tuff_tiles_stonecutting"
     ]
   }
 }

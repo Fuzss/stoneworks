@@ -1,12 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": [
-    {
-      "item": "minecraft:deepslate"
-    },
-    {
-      "item": "stoneworks:mossy_cobbled_deepslate"
-    }
+    "minecraft:deepslate",
+    "stoneworks:mossy_cobbled_deepslate"
   ],
   "result": {
     "count": 1,

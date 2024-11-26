@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:raw_dark_prismarine_stairs_from_dark_prismarine_or_raw_dark_prismarine_stonecutting"
+        "recipe": "minecraft:raw_dark_prismarine_stairs_from_dark_prismarine_or_raw_dark_prismarine_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:raw_dark_prismarine_stairs_from_dark_prismarine_or_raw_dark_prismarine_stonecutting"
+      "minecraft:raw_dark_prismarine_stairs_from_dark_prismarine_or_raw_dark_prismarine_stonecutting"
     ]
   }
 }

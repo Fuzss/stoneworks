@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_quartz_block_or_polished_quartz": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:quartz_block",
+              "stoneworks:polished_quartz"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "stoneworks:polished_quartz_stairs_from_quartz_block_or_polished_quartz_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_quartz_block_or_polished_quartz"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "stoneworks:polished_quartz_stairs_from_quartz_block_or_polished_quartz_stonecutting"
+    ]
+  }
+}

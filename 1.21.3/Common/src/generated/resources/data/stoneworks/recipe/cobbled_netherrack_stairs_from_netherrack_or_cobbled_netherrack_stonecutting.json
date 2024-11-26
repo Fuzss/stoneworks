@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:netherrack"
+    },
+    {
+      "item": "stoneworks:cobbled_netherrack"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:cobbled_netherrack_stairs"
+  }
+}

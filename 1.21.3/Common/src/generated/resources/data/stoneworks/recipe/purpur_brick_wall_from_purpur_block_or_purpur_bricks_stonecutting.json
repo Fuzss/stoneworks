@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:purpur_block"
+    },
+    {
+      "item": "stoneworks:purpur_bricks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:purpur_brick_wall"
+  }
+}

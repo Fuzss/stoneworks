@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:nether_bricks"
+    },
+    {
+      "item": "stoneworks:nether_brick_shingles"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:nether_brick_shingle_wall"
+  }
+}

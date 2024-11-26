@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_granite_or_granite_shingles": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:granite",
+              "stoneworks:granite_shingles"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "stoneworks:granite_shingle_wall_from_granite_or_granite_shingles_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_granite_or_granite_shingles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "stoneworks:granite_shingle_wall_from_granite_or_granite_shingles_stonecutting"
+    ]
+  }
+}

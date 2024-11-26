@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:red_sandstone"
+    },
+    {
+      "item": "stoneworks:cobbled_red_sandstone"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:cobbled_red_sandstone_stairs"
+  }
+}

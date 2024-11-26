@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:diorite"
+    },
+    {
+      "item": "stoneworks:cobbled_diorite"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:cobbled_diorite_wall"
+  }
+}

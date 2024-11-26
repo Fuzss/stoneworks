@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:stone"
+    },
+    {
+      "item": "stoneworks:stone_plates"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "stoneworks:stone_plate_slab"
+  }
+}

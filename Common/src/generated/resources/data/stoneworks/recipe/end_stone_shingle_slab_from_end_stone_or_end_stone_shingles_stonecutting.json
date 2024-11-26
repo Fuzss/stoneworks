@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "item": "stoneworks:end_stone_shingles"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "stoneworks:end_stone_shingle_slab"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:granite"
+    },
+    {
+      "item": "stoneworks:granite_pavers"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:granite_paver_stairs"
+  }
+}

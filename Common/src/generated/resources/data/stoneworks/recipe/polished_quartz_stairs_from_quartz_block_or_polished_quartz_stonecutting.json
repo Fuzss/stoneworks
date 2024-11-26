@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "minecraft:quartz_block"
+    },
+    {
+      "item": "stoneworks:polished_quartz"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:polished_quartz_stairs"
+  }
+}

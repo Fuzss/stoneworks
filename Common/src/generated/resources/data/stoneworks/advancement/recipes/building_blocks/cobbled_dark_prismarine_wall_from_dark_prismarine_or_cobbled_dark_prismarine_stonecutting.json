@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:cobbled_dark_prismarine_wall_from_dark_prismarine_or_cobbled_dark_prismarine_stonecutting"
+        "recipe": "minecraft:cobbled_dark_prismarine_wall_from_dark_prismarine_or_cobbled_dark_prismarine_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:cobbled_dark_prismarine_wall_from_dark_prismarine_or_cobbled_dark_prismarine_stonecutting"
+      "minecraft:cobbled_dark_prismarine_wall_from_dark_prismarine_or_cobbled_dark_prismarine_stonecutting"
     ]
   }
 }

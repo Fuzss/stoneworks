@@ -1,12 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": [
-    {
-      "item": "minecraft:diorite"
-    },
-    {
-      "item": "stoneworks:mossy_cobbled_diorite"
-    }
+    "minecraft:diorite",
+    "stoneworks:mossy_cobbled_diorite"
   ],
   "result": {
     "count": 2,

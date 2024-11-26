@@ -1,12 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": [
-    {
-      "item": "minecraft:purpur_block"
-    },
-    {
-      "item": "stoneworks:purpur_shingles"
-    }
+    "minecraft:purpur_block",
+    "stoneworks:purpur_shingles"
   ],
   "result": {
     "count": 1,

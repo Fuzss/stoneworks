@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:mossy_dark_prismarine_bricks_from_dark_prismarine_stonecutting"
+        "recipe": "minecraft:mossy_dark_prismarine_bricks_from_dark_prismarine_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:mossy_dark_prismarine_bricks_from_dark_prismarine_stonecutting"
+      "minecraft:mossy_dark_prismarine_bricks_from_dark_prismarine_stonecutting"
     ]
   }
 }

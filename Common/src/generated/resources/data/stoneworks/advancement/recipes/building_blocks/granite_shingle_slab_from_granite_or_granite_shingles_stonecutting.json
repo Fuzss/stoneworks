@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:granite_shingle_slab_from_granite_or_granite_shingles_stonecutting"
+        "recipe": "minecraft:granite_shingle_slab_from_granite_or_granite_shingles_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:granite_shingle_slab_from_granite_or_granite_shingles_stonecutting"
+      "minecraft:granite_shingle_slab_from_granite_or_granite_shingles_stonecutting"
     ]
   }
 }

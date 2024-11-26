@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:polished_prismarine_slab_from_prismarine_or_polished_prismarine_stonecutting"
+        "recipe": "minecraft:polished_prismarine_slab_from_prismarine_or_polished_prismarine_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:polished_prismarine_slab_from_prismarine_or_polished_prismarine_stonecutting"
+      "minecraft:polished_prismarine_slab_from_prismarine_or_polished_prismarine_stonecutting"
     ]
   }
 }

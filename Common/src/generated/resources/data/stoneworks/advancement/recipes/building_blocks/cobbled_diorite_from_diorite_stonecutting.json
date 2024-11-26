@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:cobbled_diorite_from_diorite_stonecutting"
+        "recipe": "minecraft:cobbled_diorite_from_diorite_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:cobbled_diorite_from_diorite_stonecutting"
+      "minecraft:cobbled_diorite_from_diorite_stonecutting"
     ]
   }
 }

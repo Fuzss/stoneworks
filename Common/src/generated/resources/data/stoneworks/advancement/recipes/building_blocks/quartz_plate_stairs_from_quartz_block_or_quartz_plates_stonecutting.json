@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:quartz_plate_stairs_from_quartz_block_or_quartz_plates_stonecutting"
+        "recipe": "minecraft:quartz_plate_stairs_from_quartz_block_or_quartz_plates_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:quartz_plate_stairs_from_quartz_block_or_quartz_plates_stonecutting"
+      "minecraft:quartz_plate_stairs_from_quartz_block_or_quartz_plates_stonecutting"
     ]
   }
 }

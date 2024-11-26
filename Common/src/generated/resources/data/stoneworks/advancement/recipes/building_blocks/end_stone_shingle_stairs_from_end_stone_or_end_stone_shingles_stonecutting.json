@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:end_stone_shingle_stairs_from_end_stone_or_end_stone_shingles_stonecutting"
+        "recipe": "minecraft:end_stone_shingle_stairs_from_end_stone_or_end_stone_shingles_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:end_stone_shingle_stairs_from_end_stone_or_end_stone_shingles_stonecutting"
+      "minecraft:end_stone_shingle_stairs_from_end_stone_or_end_stone_shingles_stonecutting"
     ]
   }
 }

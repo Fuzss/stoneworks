@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:purpur_shingle_stairs_from_purpur_block_or_purpur_shingles_stonecutting"
+        "recipe": "minecraft:purpur_shingle_stairs_from_purpur_block_or_purpur_shingles_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:purpur_shingle_stairs_from_purpur_block_or_purpur_shingles_stonecutting"
+      "minecraft:purpur_shingle_stairs_from_purpur_block_or_purpur_shingles_stonecutting"
     ]
   }
 }

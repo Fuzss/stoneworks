@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:nether_brick_pillar_from_nether_bricks_stonecutting"
+        "recipe": "minecraft:nether_brick_pillar_from_nether_bricks_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:nether_brick_pillar_from_nether_bricks_stonecutting"
+      "minecraft:nether_brick_pillar_from_nether_bricks_stonecutting"
     ]
   }
 }

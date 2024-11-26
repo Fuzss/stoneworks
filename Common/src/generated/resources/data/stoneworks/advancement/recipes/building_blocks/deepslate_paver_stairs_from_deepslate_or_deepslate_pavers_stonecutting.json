@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:deepslate_paver_stairs_from_deepslate_or_deepslate_pavers_stonecutting"
+        "recipe": "minecraft:deepslate_paver_stairs_from_deepslate_or_deepslate_pavers_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:deepslate_paver_stairs_from_deepslate_or_deepslate_pavers_stonecutting"
+      "minecraft:deepslate_paver_stairs_from_deepslate_or_deepslate_pavers_stonecutting"
     ]
   }
 }

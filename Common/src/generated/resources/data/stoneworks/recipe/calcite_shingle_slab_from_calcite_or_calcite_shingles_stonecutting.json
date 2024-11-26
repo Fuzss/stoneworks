@@ -1,12 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": [
-    {
-      "item": "minecraft:calcite"
-    },
-    {
-      "item": "stoneworks:calcite_shingles"
-    }
+    "minecraft:calcite",
+    "stoneworks:calcite_shingles"
   ],
   "result": {
     "count": 2,

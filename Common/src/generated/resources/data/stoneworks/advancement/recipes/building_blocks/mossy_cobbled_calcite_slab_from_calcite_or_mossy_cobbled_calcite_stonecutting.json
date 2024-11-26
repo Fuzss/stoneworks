@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:mossy_cobbled_calcite_slab_from_calcite_or_mossy_cobbled_calcite_stonecutting"
+        "recipe": "minecraft:mossy_cobbled_calcite_slab_from_calcite_or_mossy_cobbled_calcite_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:mossy_cobbled_calcite_slab_from_calcite_or_mossy_cobbled_calcite_stonecutting"
+      "minecraft:mossy_cobbled_calcite_slab_from_calcite_or_mossy_cobbled_calcite_stonecutting"
     ]
   }
 }

@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:calcite_shingle_wall_from_calcite_or_calcite_shingles_stonecutting"
+        "recipe": "minecraft:calcite_shingle_wall_from_calcite_or_calcite_shingles_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:calcite_shingle_wall_from_calcite_or_calcite_shingles_stonecutting"
+      "minecraft:calcite_shingle_wall_from_calcite_or_calcite_shingles_stonecutting"
     ]
   }
 }

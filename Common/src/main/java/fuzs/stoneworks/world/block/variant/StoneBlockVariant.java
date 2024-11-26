@@ -113,7 +113,7 @@ public class StoneBlockVariant {
                     throw new IllegalArgumentException("Not a valid block: " + id);
                 }
             } else {
-                this.blocks[index] = BuiltInRegistries.BLOCK.get(id);
+                this.blocks[index] = BuiltInRegistries.BLOCK.getValue(id);
             }
         }
         return this.blocks[index] == Blocks.AIR ? null : this.blocks[index];

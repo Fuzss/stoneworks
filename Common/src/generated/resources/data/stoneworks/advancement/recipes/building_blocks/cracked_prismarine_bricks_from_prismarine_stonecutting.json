@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:cracked_prismarine_bricks_from_prismarine_stonecutting"
+        "recipe": "minecraft:cracked_prismarine_bricks_from_prismarine_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:cracked_prismarine_bricks_from_prismarine_stonecutting"
+      "minecraft:cracked_prismarine_bricks_from_prismarine_stonecutting"
     ]
   }
 }

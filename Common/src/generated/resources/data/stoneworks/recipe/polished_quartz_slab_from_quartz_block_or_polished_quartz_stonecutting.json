@@ -1,12 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": [
-    {
-      "item": "minecraft:quartz_block"
-    },
-    {
-      "item": "stoneworks:polished_quartz"
-    }
+    "minecraft:quartz_block",
+    "stoneworks:polished_quartz"
   ],
   "result": {
     "count": 2,

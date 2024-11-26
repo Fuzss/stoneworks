@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:stone_tiles_from_stone_stonecutting"
+        "recipe": "minecraft:stone_tiles_from_stone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:stone_tiles_from_stone_stonecutting"
+      "minecraft:stone_tiles_from_stone_stonecutting"
     ]
   }
 }

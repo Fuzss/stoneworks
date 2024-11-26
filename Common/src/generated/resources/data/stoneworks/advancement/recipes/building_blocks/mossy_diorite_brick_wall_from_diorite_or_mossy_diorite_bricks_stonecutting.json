@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:mossy_diorite_brick_wall_from_diorite_or_mossy_diorite_bricks_stonecutting"
+        "recipe": "minecraft:mossy_diorite_brick_wall_from_diorite_or_mossy_diorite_bricks_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:mossy_diorite_brick_wall_from_diorite_or_mossy_diorite_bricks_stonecutting"
+      "minecraft:mossy_diorite_brick_wall_from_diorite_or_mossy_diorite_bricks_stonecutting"
     ]
   }
 }

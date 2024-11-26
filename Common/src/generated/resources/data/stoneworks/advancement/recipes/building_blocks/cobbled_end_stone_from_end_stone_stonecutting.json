@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:cobbled_end_stone_from_end_stone_stonecutting"
+        "recipe": "minecraft:cobbled_end_stone_from_end_stone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:cobbled_end_stone_from_end_stone_stonecutting"
+      "minecraft:cobbled_end_stone_from_end_stone_stonecutting"
     ]
   }
 }

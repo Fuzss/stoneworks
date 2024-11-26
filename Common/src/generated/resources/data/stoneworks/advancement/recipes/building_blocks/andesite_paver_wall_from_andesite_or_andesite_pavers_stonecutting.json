@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:andesite_paver_wall_from_andesite_or_andesite_pavers_stonecutting"
+        "recipe": "minecraft:andesite_paver_wall_from_andesite_or_andesite_pavers_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:andesite_paver_wall_from_andesite_or_andesite_pavers_stonecutting"
+      "minecraft:andesite_paver_wall_from_andesite_or_andesite_pavers_stonecutting"
     ]
   }
 }

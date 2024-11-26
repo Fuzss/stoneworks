@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:andesite_tile_slab_from_andesite_or_andesite_tiles_stonecutting"
+        "recipe": "minecraft:andesite_tile_slab_from_andesite_or_andesite_tiles_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:andesite_tile_slab_from_andesite_or_andesite_tiles_stonecutting"
+      "minecraft:andesite_tile_slab_from_andesite_or_andesite_tiles_stonecutting"
     ]
   }
 }

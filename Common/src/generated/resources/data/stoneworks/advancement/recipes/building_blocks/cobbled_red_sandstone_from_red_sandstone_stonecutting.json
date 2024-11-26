@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:cobbled_red_sandstone_from_red_sandstone_stonecutting"
+        "recipe": "minecraft:cobbled_red_sandstone_from_red_sandstone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:cobbled_red_sandstone_from_red_sandstone_stonecutting"
+      "minecraft:cobbled_red_sandstone_from_red_sandstone_stonecutting"
     ]
   }
 }

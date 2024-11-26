@@ -16,7 +16,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:cobbled_calcite_wall_from_calcite_or_cobbled_calcite_stonecutting"
+        "recipe": "minecraft:cobbled_calcite_wall_from_calcite_or_cobbled_calcite_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -29,7 +29,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:cobbled_calcite_wall_from_calcite_or_cobbled_calcite_stonecutting"
+      "minecraft:cobbled_calcite_wall_from_calcite_or_cobbled_calcite_stonecutting"
     ]
   }
 }

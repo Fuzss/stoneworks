@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:mossy_granite_bricks_from_granite_stonecutting"
+        "recipe": "minecraft:mossy_granite_bricks_from_granite_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "stoneworks:mossy_granite_bricks_from_granite_stonecutting"
+      "minecraft:mossy_granite_bricks_from_granite_stonecutting"
     ]
   }
 }

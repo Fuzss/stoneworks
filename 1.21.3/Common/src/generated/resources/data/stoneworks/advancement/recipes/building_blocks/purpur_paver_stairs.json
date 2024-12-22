@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_purpur_pavers": {
+      "conditions": {
+        "items": [
+          {
+            "items": "stoneworks:purpur_pavers"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "stoneworks:purpur_paver_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_purpur_pavers"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "stoneworks:purpur_paver_stairs"
+    ]
+  }
+}

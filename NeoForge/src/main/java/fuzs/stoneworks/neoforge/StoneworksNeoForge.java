@@ -13,8 +13,9 @@ public class StoneworksNeoForge {
 
     public StoneworksNeoForge() {
         ModConstructor.construct(Stoneworks.MOD_ID, Stoneworks::new);
-        DataProviderHelper.registerDataProviders(Stoneworks.MOD_ID, ModBlockLootProvider::new,
-                ModBlockTagsProvider::new, ModRecipeProvider::new
-        );
+        DataProviderHelper.registerDataProviders(Stoneworks.MOD_ID,
+                ModBlockLootProvider::new,
+                ModBlockTagsProvider::new,
+                ModRecipeProvider::new);
     }
 }

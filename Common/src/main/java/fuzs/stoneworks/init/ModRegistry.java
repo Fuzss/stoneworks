@@ -5,6 +5,10 @@ import fuzs.stoneworks.Stoneworks;
 import fuzs.stoneworks.world.block.variant.BlockVariant;
 import fuzs.stoneworks.world.block.variant.StoneBlockVariant;
 import fuzs.stoneworks.world.block.variant.StoneVariantsProvider;
+import net.minecraft.core.Holder;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
@@ -13,6 +17,12 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 
 public class ModRegistry {
     static final RegistryManager REGISTRIES = RegistryManager.from(Stoneworks.MOD_ID);
+    public static final Holder.Reference<CreativeModeTab> CREATIVE_MODE_TAB = REGISTRIES.registerCreativeModeTab("main",
+            () -> new ItemStack(Items.STONE),
+            (CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output output) -> {
+                output.acceptAll(StoneVariantsProvider.getSortedVariantItems());
+            },
+            true);
 
     public static void bootstrap() {
         for (StoneBlockVariant variant : StoneVariantsProvider.getStoneBlockVariants().toList()) {

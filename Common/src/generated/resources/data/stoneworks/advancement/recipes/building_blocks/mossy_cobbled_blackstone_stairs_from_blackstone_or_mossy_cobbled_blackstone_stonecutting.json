@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blackstone_or_mossy_cobbled_blackstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:blackstone",
+              "stoneworks:mossy_cobbled_blackstone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:mossy_cobbled_blackstone_stairs_from_blackstone_or_mossy_cobbled_blackstone_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_blackstone_or_mossy_cobbled_blackstone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:mossy_cobbled_blackstone_stairs_from_blackstone_or_mossy_cobbled_blackstone_stonecutting"
+    ]
+  }
+}

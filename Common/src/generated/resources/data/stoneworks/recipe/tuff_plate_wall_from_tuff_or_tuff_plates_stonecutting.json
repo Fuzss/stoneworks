@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    "minecraft:tuff",
+    "stoneworks:tuff_plates"
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:tuff_plate_wall"
+  }
+}

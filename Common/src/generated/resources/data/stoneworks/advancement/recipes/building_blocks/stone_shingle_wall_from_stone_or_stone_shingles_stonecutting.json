@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stone_or_stone_shingles": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stone",
+              "stoneworks:stone_shingles"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:stone_shingle_wall_from_stone_or_stone_shingles_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stone_or_stone_shingles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:stone_shingle_wall_from_stone_or_stone_shingles_stonecutting"
+    ]
+  }
+}

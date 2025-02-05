@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    "minecraft:blackstone",
+    "stoneworks:mossy_blackstone_bricks"
+  ],
+  "result": {
+    "count": 2,
+    "id": "stoneworks:mossy_blackstone_brick_slab"
+  }
+}

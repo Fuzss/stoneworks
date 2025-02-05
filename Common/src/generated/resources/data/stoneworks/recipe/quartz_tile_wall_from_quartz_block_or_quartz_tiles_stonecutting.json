@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    "minecraft:quartz_block",
+    "stoneworks:quartz_tiles"
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:quartz_tile_wall"
+  }
+}

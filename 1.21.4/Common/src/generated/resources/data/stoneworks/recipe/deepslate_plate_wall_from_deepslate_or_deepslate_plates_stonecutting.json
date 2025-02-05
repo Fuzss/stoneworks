@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    "minecraft:deepslate",
+    "stoneworks:deepslate_plates"
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:deepslate_plate_wall"
+  }
+}

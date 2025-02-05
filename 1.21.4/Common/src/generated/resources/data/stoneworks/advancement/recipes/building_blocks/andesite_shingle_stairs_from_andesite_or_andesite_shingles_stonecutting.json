@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_andesite_or_andesite_shingles": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:andesite",
+              "stoneworks:andesite_shingles"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:andesite_shingle_stairs_from_andesite_or_andesite_shingles_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_andesite_or_andesite_shingles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:andesite_shingle_stairs_from_andesite_or_andesite_shingles_stonecutting"
+    ]
+  }
+}

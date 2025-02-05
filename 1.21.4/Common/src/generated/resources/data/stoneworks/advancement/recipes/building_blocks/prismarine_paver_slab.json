@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_prismarine_pavers": {
+      "conditions": {
+        "items": [
+          {
+            "items": "stoneworks:prismarine_pavers"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "stoneworks:prismarine_paver_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_prismarine_pavers"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "stoneworks:prismarine_paver_slab"
+    ]
+  }
+}

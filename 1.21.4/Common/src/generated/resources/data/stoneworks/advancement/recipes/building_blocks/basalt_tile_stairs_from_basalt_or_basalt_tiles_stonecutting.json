@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_basalt_or_basalt_tiles": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:basalt",
+              "stoneworks:basalt_tiles"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:basalt_tile_stairs_from_basalt_or_basalt_tiles_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_basalt_or_basalt_tiles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:basalt_tile_stairs_from_basalt_or_basalt_tiles_stonecutting"
+    ]
+  }
+}

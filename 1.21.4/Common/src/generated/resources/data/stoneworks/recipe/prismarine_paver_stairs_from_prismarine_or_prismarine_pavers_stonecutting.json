@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    "minecraft:prismarine",
+    "stoneworks:prismarine_pavers"
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:prismarine_paver_stairs"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sandstone_or_sandstone_plates": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:sandstone",
+              "stoneworks:sandstone_plates"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:sandstone_plate_slab_from_sandstone_or_sandstone_plates_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sandstone_or_sandstone_plates"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:sandstone_plate_slab_from_sandstone_or_sandstone_plates_stonecutting"
+    ]
+  }
+}

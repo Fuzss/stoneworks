@@ -5,7 +5,7 @@ import fuzs.puzzleslib.neoforge.api.data.v2.core.DataProviderHelper;
 import fuzs.stoneworks.Stoneworks;
 import fuzs.stoneworks.client.StoneworksClient;
 import fuzs.stoneworks.data.client.ModLanguageProvider;
-import fuzs.stoneworks.neoforge.data.client.ModModelProvider;
+import fuzs.stoneworks.data.client.ModModelProvider;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.Mod;
 

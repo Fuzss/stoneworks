@@ -19,13 +19,20 @@ public class ModBlockTagsProvider extends AbstractTagProvider<Block> {
 
     @Override
     public void addTags(HolderLookup.Provider provider) {
-        StoneVariantsProvider.getStoneBlockVariants().flatMap(StoneBlockVariant::allBlocks).forEach(
-                this.add(BlockTags.MINEABLE_WITH_PICKAXE)::add);
-        StoneVariantsProvider.getStoneBlockVariants().map(StoneBlockVariant::stairs).filter(Objects::nonNull).forEach(
-                this.add(BlockTags.STAIRS)::add);
-        StoneVariantsProvider.getStoneBlockVariants().map(StoneBlockVariant::slab).filter(Objects::nonNull).forEach(
-                this.add(BlockTags.SLABS)::add);
-        StoneVariantsProvider.getStoneBlockVariants().map(StoneBlockVariant::wall).filter(Objects::nonNull).forEach(
-                this.add(BlockTags.WALLS)::add);
+        StoneVariantsProvider.getStoneBlockVariants()
+                .flatMap(StoneBlockVariant::allBlocks)
+                .forEach(this.tag(BlockTags.MINEABLE_WITH_PICKAXE)::add);
+        StoneVariantsProvider.getStoneBlockVariants()
+                .map(StoneBlockVariant::stairs)
+                .filter(Objects::nonNull)
+                .forEach(this.tag(BlockTags.STAIRS)::add);
+        StoneVariantsProvider.getStoneBlockVariants()
+                .map(StoneBlockVariant::slab)
+                .filter(Objects::nonNull)
+                .forEach(this.tag(BlockTags.SLABS)::add);
+        StoneVariantsProvider.getStoneBlockVariants()
+                .map(StoneBlockVariant::wall)
+                .filter(Objects::nonNull)
+                .forEach(this.tag(BlockTags.WALLS)::add);
     }
 }

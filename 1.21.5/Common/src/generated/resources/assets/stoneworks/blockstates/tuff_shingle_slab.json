@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "stoneworks:block/tuff_shingle_slab"
+    },
+    "type=double": {
+      "model": "stoneworks:block/tuff_shingles"
+    },
+    "type=top": {
+      "model": "stoneworks:block/tuff_shingle_slab_top"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_andesite_plates": {
+      "conditions": {
+        "items": [
+          {
+            "items": "stoneworks:andesite_plates"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "stoneworks:andesite_plate_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_andesite_plates"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "stoneworks:andesite_plate_wall"
+    ]
+  }
+}

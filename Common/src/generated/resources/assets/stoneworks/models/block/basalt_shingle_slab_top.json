@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "stoneworks:block/basalt_shingles",
+    "side": "stoneworks:block/basalt_shingles",
+    "top": "stoneworks:block/basalt_shingles"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    "minecraft:red_sandstone",
+    "stoneworks:red_sandstone_tiles"
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:red_sandstone_tile_stairs"
+  }
+}

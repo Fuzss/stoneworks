@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    "minecraft:sandstone",
+    "stoneworks:sandstone_bricks"
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:sandstone_brick_wall"
+  }
+}

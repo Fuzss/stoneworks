@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    "minecraft:prismarine",
+    "stoneworks:mossy_prismarine_bricks"
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:mossy_prismarine_brick_stairs"
+  }
+}

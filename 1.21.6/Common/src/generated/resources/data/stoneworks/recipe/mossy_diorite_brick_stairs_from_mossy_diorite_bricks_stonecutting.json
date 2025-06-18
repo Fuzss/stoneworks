@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    "minecraft:diorite",
+    "stoneworks:mossy_diorite_bricks"
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:mossy_diorite_brick_stairs"
+  }
+}

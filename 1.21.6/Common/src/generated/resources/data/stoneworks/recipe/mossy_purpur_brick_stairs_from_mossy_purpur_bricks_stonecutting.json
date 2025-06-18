@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    "minecraft:purpur_block",
+    "stoneworks:mossy_purpur_bricks"
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:mossy_purpur_brick_stairs"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_granite_pavers": {
+      "conditions": {
+        "items": [
+          {
+            "items": "stoneworks:granite_pavers"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "stoneworks:granite_paver_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_granite_pavers"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "stoneworks:granite_paver_stairs"
+    ]
+  }
+}

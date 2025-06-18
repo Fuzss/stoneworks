@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "stoneworks:block/quartz_plate_slab"
+    },
+    "type=double": {
+      "model": "stoneworks:block/quartz_plates"
+    },
+    "type=top": {
+      "model": "stoneworks:block/quartz_plate_slab_top"
+    }
+  }
+}

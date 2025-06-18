@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "stoneworks:block/end_stone_shingle_slab"
+    },
+    "type=double": {
+      "model": "stoneworks:block/end_stone_shingles"
+    },
+    "type=top": {
+      "model": "stoneworks:block/end_stone_shingle_slab_top"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    "minecraft:tuff",
+    "stoneworks:tuff_pavers"
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:tuff_paver_wall"
+  }
+}

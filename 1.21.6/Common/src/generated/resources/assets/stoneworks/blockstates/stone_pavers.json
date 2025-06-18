@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "stoneworks:block/stone_pavers"
+    }
+  }
+}

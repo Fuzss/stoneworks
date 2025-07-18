@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "stoneworks:block/prismarine_pavers",
+    "side": "stoneworks:block/prismarine_pavers",
+    "top": "stoneworks:block/prismarine_pavers"
+  }
+}

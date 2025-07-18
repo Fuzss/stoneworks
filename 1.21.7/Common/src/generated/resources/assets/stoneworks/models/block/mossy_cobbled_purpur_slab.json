@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "stoneworks:block/mossy_cobbled_purpur",
-    "side": "stoneworks:block/mossy_cobbled_purpur",
-    "top": "stoneworks:block/mossy_cobbled_purpur"
-  }
-}

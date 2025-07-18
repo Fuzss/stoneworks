@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "stoneworks:block/polished_end_stone",
-    "side": "stoneworks:block/polished_end_stone",
-    "top": "stoneworks:block/polished_end_stone"
-  }
-}

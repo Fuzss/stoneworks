@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "stoneworks:block/polished_prismarine",
-    "side": "stoneworks:block/polished_prismarine",
-    "top": "stoneworks:block/polished_prismarine"
-  }
-}

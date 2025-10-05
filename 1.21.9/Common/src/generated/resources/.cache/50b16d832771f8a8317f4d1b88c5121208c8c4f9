@@ -1,5 +1,5 @@
-// 1.21.8	2025-07-18T13:28:08.774946	Tags for minecraft:block mod id vanilla
-695c7eab792f062c27ea8b9a191d2d52732ca402 data/minecraft/tags/block/mineable/pickaxe.json
-22dd1882329a2354030dd7038503d9484443f4a9 data/minecraft/tags/block/slabs.json
-9457f8a274a7ac2132bfcdc0a19768d80d019233 data/minecraft/tags/block/stairs.json
-01f132688ac1ebd51e86db93ed0e505f24b71d7b data/minecraft/tags/block/walls.json
+// 1.21.9	2025-10-05T11:35:49.404891	Tags for minecraft:block mod id vanilla
+b53345de26b7f40119186a7ab96ee8cd2684d56f data/minecraft/tags/block/mineable/pickaxe.json
+f38d4357085f21523dd3010cf8f95a548c0b24f0 data/minecraft/tags/block/slabs.json
+20b676126f496e8b95202859dc2b94abf4b06b01 data/minecraft/tags/block/stairs.json
+c945f9276cdc41bd1ab662a46b157e7c0b7667a9 data/minecraft/tags/block/walls.json

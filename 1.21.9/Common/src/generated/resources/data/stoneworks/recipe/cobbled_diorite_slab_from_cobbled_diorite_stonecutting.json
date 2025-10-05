@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    "minecraft:diorite",
+    "stoneworks:cobbled_diorite"
+  ],
+  "result": {
+    "count": 2,
+    "id": "stoneworks:cobbled_diorite_slab"
+  }
+}

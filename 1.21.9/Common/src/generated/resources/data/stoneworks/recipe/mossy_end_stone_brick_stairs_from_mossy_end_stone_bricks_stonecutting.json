@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    "minecraft:end_stone",
+    "stoneworks:mossy_end_stone_bricks"
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:mossy_end_stone_brick_stairs"
+  }
+}

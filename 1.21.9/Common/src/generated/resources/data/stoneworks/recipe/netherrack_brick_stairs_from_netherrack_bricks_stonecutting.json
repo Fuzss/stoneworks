@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    "minecraft:netherrack",
+    "stoneworks:netherrack_bricks"
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:netherrack_brick_stairs"
+  }
+}

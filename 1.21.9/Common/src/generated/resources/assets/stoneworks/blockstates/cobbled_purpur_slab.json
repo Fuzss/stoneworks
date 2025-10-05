@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "stoneworks:block/cobbled_purpur_slab"
+    },
+    "type=double": {
+      "model": "stoneworks:block/cobbled_purpur"
+    },
+    "type=top": {
+      "model": "stoneworks:block/cobbled_purpur_slab_top"
+    }
+  }
+}

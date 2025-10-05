@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "stoneworks:block/blackstone_plates",
+    "side": "stoneworks:block/blackstone_plates",
+    "top": "stoneworks:block/blackstone_plates"
+  }
+}

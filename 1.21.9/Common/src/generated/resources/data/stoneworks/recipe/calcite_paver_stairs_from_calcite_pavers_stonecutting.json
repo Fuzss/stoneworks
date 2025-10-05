@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    "minecraft:calcite",
+    "stoneworks:calcite_pavers"
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:calcite_paver_stairs"
+  }
+}

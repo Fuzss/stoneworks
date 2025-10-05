@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    "minecraft:granite",
+    "stoneworks:mossy_cobbled_granite"
+  ],
+  "result": {
+    "count": 2,
+    "id": "stoneworks:mossy_cobbled_granite_slab"
+  }
+}

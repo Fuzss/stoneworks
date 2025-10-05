@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "stoneworks:block/mossy_dark_prismarine_bricks"
+  }
+}

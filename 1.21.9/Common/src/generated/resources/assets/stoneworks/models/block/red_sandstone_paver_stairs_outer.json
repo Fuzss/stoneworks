@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "stoneworks:block/red_sandstone_pavers",
-    "side": "stoneworks:block/red_sandstone_pavers",
-    "top": "stoneworks:block/red_sandstone_pavers"
-  }
-}

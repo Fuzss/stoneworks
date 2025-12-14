@@ -1,15 +1,15 @@
 package fuzs.stoneworks.world.block.variant;
 
 import com.google.common.collect.Maps;
-import fuzs.puzzleslib.api.core.v1.utility.ResourceLocationHelper;
+import net.minecraft.resources.Identifier;
 import fuzs.stoneworks.Stoneworks;
 import fuzs.stoneworks.config.CommonConfig;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import org.jetbrains.annotations.Nullable;
+import org.jspecify.annotations.Nullable;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -20,8 +20,7 @@ import java.util.stream.Stream;
 
 public class StoneVariantsProvider {
     private static final Map<String, StoneBlockVariant> STONE_BLOCK_VARIANTS = Maps.newLinkedHashMap();
-    @Nullable
-    private static Collection<ItemStack> sortedVariantItems;
+    @Nullable private static Collection<ItemStack> sortedVariantItems;
 
     static {
         registerAllStoneBlockVariants();
@@ -169,8 +168,8 @@ public class StoneVariantsProvider {
         }
 
         @Override
-        public ResourceLocation id(String key) {
-            return ResourceLocationHelper.withDefaultNamespace(key);
+        public Identifier id(String key) {
+            return Identifier.withDefaultNamespace(key);
         }
 
         @Override

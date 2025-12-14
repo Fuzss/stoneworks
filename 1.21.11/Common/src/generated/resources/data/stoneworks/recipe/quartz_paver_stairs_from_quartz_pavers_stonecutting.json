@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    "minecraft:quartz_block",
+    "stoneworks:quartz_pavers"
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:quartz_paver_stairs"
+  }
+}

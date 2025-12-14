@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "stoneworks:block/granite_tile_slab"
+    },
+    "type=double": {
+      "model": "stoneworks:block/granite_tiles"
+    },
+    "type=top": {
+      "model": "stoneworks:block/granite_tile_slab_top"
+    }
+  }
+}

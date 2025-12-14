@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    "minecraft:calcite",
+    "stoneworks:calcite_shingles"
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:calcite_shingle_wall"
+  }
+}

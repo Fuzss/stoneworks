@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    "minecraft:diorite",
+    "stoneworks:diorite_pavers"
+  ],
+  "result": {
+    "count": 1,
+    "id": "stoneworks:diorite_paver_wall"
+  }
+}

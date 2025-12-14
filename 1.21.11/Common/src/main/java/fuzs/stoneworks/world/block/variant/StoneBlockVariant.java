@@ -1,15 +1,13 @@
 package fuzs.stoneworks.world.block.variant;
 
-import fuzs.puzzleslib.api.core.v1.utility.ResourceLocationHelper;
 import fuzs.stoneworks.Stoneworks;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import org.jspecify.annotations.Nullable;
 
 import java.util.Map;
 import java.util.Objects;
@@ -81,7 +79,6 @@ public class StoneBlockVariant {
         return Stream.of(this.block(), this.stairs(), this.slab(), this.wall()).filter(Objects::nonNull);
     }
 
-    @NotNull
     public Block block() {
         return Objects.requireNonNull(this.block(0, this.blockName()), "base block is null");
     }
@@ -103,8 +100,9 @@ public class StoneBlockVariant {
 
     @Nullable
     private Block block(int index, String key) {
-        if (this.blocks[index] == null && (this.isVanillaVariant() || index == 0 || this.blockVariant.supportsAdditionalBlocks())) {
-            ResourceLocation id = this.id(key);
+        if (this.blocks[index] == null && (this.isVanillaVariant() || index == 0
+                || this.blockVariant.supportsAdditionalBlocks())) {
+            Identifier id = this.id(key);
             if (!BuiltInRegistries.BLOCK.containsKey(id)) {
                 if (this.isVanillaVariant()) {
                     // stupid hack so this does not run every time when the vanilla variant simply doesn't have the block type
@@ -119,8 +117,8 @@ public class StoneBlockVariant {
         return this.blocks[index] == Blocks.AIR ? null : this.blocks[index];
     }
 
-    public ResourceLocation id(String key) {
-        return ResourceLocationHelper.fromNamespaceAndPath(Stoneworks.MOD_ID, key);
+    public Identifier id(String key) {
+        return Identifier.fromNamespaceAndPath(Stoneworks.MOD_ID, key);
     }
 
     public BlockState baseBlockState() {

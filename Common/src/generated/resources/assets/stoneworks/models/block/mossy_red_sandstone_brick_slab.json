@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "stoneworks:block/mossy_red_sandstone_bricks",
+    "side": "stoneworks:block/mossy_red_sandstone_bricks",
+    "top": "stoneworks:block/mossy_red_sandstone_bricks"
+  }
+}

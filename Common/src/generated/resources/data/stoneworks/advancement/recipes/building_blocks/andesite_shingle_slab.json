@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_andesite_shingles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "stoneworks:andesite_shingles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "stoneworks:andesite_shingle_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_andesite_shingles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "stoneworks:andesite_shingle_slab"
+    ]
+  }
+}

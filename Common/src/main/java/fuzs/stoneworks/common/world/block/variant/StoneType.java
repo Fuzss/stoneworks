@@ -1,4 +1,4 @@
-package fuzs.stoneworks.world.block.variant;
+package fuzs.stoneworks.common.world.block.variant;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;

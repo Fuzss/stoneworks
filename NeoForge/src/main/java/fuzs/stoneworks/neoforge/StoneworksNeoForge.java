@@ -1,11 +1,11 @@
 package fuzs.stoneworks.neoforge;
 
-import fuzs.puzzleslib.api.core.v1.ModConstructor;
+import fuzs.puzzleslib.common.api.core.v1.ModConstructor;
 import fuzs.puzzleslib.neoforge.api.data.v2.core.DataProviderHelper;
-import fuzs.stoneworks.Stoneworks;
-import fuzs.stoneworks.data.ModBlockLootProvider;
-import fuzs.stoneworks.data.ModBlockTagsProvider;
-import fuzs.stoneworks.data.ModRecipeProvider;
+import fuzs.stoneworks.common.Stoneworks;
+import fuzs.stoneworks.common.data.ModBlockLootProvider;
+import fuzs.stoneworks.common.data.ModBlockTagsProvider;
+import fuzs.stoneworks.common.data.ModRecipeProvider;
 import net.neoforged.fml.common.Mod;
 
 @Mod(Stoneworks.MOD_ID)

@@ -1,8 +1,8 @@
 package fuzs.stoneworks.fabric.client;
 
-import fuzs.puzzleslib.api.client.core.v1.ClientModConstructor;
-import fuzs.stoneworks.Stoneworks;
-import fuzs.stoneworks.client.StoneworksClient;
+import fuzs.puzzleslib.common.api.client.core.v1.ClientModConstructor;
+import fuzs.stoneworks.common.Stoneworks;
+import fuzs.stoneworks.common.client.StoneworksClient;
 import net.fabricmc.api.ClientModInitializer;
 
 public class StoneworksFabricClient implements ClientModInitializer {

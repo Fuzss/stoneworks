@@ -1,10 +1,10 @@
-package fuzs.stoneworks.init;
+package fuzs.stoneworks.common.init;
 
-import fuzs.puzzleslib.api.init.v3.registry.RegistryManager;
-import fuzs.stoneworks.Stoneworks;
-import fuzs.stoneworks.world.block.variant.BlockVariant;
-import fuzs.stoneworks.world.block.variant.StoneBlockVariant;
-import fuzs.stoneworks.world.block.variant.StoneVariantsProvider;
+import fuzs.puzzleslib.common.api.init.v3.registry.RegistryManager;
+import fuzs.stoneworks.common.Stoneworks;
+import fuzs.stoneworks.common.world.block.variant.BlockVariant;
+import fuzs.stoneworks.common.world.block.variant.StoneBlockVariant;
+import fuzs.stoneworks.common.world.block.variant.StoneVariantsProvider;
 import net.minecraft.core.Holder;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;

@@ -1,4 +1,4 @@
-package fuzs.stoneworks.world.block.variant;
+package fuzs.stoneworks.common.world.block.variant;
 
 public enum BlockVariant {
     REGULAR("raw_%s"),

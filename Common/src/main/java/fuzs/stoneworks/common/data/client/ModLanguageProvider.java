@@ -1,12 +1,12 @@
-package fuzs.stoneworks.data.client;
+package fuzs.stoneworks.common.data.client;
 
 import com.google.common.collect.Maps;
-import fuzs.puzzleslib.api.client.data.v2.AbstractLanguageProvider;
-import fuzs.puzzleslib.api.data.v2.core.DataProviderContext;
-import fuzs.stoneworks.Stoneworks;
-import fuzs.stoneworks.init.ModRegistry;
-import fuzs.stoneworks.world.block.variant.StoneBlockVariant;
-import fuzs.stoneworks.world.block.variant.StoneVariantsProvider;
+import fuzs.puzzleslib.common.api.client.data.v2.AbstractLanguageProvider;
+import fuzs.puzzleslib.common.api.data.v2.core.DataProviderContext;
+import fuzs.stoneworks.common.Stoneworks;
+import fuzs.stoneworks.common.init.ModRegistry;
+import fuzs.stoneworks.common.world.block.variant.StoneBlockVariant;
+import fuzs.stoneworks.common.world.block.variant.StoneVariantsProvider;
 import net.minecraft.world.level.block.Block;
 
 import java.util.Map;

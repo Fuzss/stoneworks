@@ -1,9 +1,9 @@
-package fuzs.stoneworks.data;
+package fuzs.stoneworks.common.data;
 
-import fuzs.puzzleslib.api.data.v2.AbstractLootProvider;
-import fuzs.puzzleslib.api.data.v2.core.DataProviderContext;
-import fuzs.stoneworks.world.block.variant.StoneBlockVariant;
-import fuzs.stoneworks.world.block.variant.StoneVariantsProvider;
+import fuzs.puzzleslib.common.api.data.v2.AbstractLootProvider;
+import fuzs.puzzleslib.common.api.data.v2.core.DataProviderContext;
+import fuzs.stoneworks.common.world.block.variant.StoneBlockVariant;
+import fuzs.stoneworks.common.world.block.variant.StoneVariantsProvider;
 import net.minecraft.world.level.block.Block;
 
 import java.util.Objects;

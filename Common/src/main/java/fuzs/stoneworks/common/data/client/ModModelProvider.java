@@ -1,11 +1,11 @@
-package fuzs.stoneworks.data.client;
+package fuzs.stoneworks.common.data.client;
 
-import fuzs.puzzleslib.api.client.data.v2.AbstractModelProvider;
-import fuzs.puzzleslib.api.client.data.v2.models.ModelLocationHelper;
-import fuzs.puzzleslib.api.data.v2.core.DataProviderContext;
-import fuzs.stoneworks.world.block.variant.BlockVariant;
-import fuzs.stoneworks.world.block.variant.StoneBlockVariant;
-import fuzs.stoneworks.world.block.variant.StoneVariantsProvider;
+import fuzs.puzzleslib.common.api.client.data.v2.AbstractModelProvider;
+import fuzs.puzzleslib.common.api.client.data.v2.models.ModelLocationHelper;
+import fuzs.puzzleslib.common.api.data.v2.core.DataProviderContext;
+import fuzs.stoneworks.common.world.block.variant.BlockVariant;
+import fuzs.stoneworks.common.world.block.variant.StoneBlockVariant;
+import fuzs.stoneworks.common.world.block.variant.StoneVariantsProvider;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplate;

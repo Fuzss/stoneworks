@@ -1,11 +1,10 @@
-package fuzs.stoneworks.world.block.variant;
+package fuzs.stoneworks.common.world.block.variant;
 
 import com.google.common.collect.Maps;
 import net.minecraft.resources.Identifier;
-import fuzs.stoneworks.Stoneworks;
-import fuzs.stoneworks.config.CommonConfig;
+import fuzs.stoneworks.common.Stoneworks;
+import fuzs.stoneworks.common.config.CommonConfig;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;

@@ -1,4 +1,4 @@
-package fuzs.stoneworks.common.data;
+package fuzs.stoneworks.common.data.loot;
 
 import fuzs.puzzleslib.common.api.data.v2.AbstractLootProvider;
 import fuzs.puzzleslib.common.api.data.v2.core.DataProviderContext;

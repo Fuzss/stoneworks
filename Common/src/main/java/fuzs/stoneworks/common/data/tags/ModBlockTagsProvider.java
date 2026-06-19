@@ -1,4 +1,4 @@
-package fuzs.stoneworks.common.data;
+package fuzs.stoneworks.common.data.tags;
 
 import fuzs.puzzleslib.common.api.data.v2.core.DataProviderContext;
 import fuzs.puzzleslib.common.api.data.v2.tags.AbstractTagProvider;
@@ -21,18 +21,22 @@ public class ModBlockTagsProvider extends AbstractTagProvider<Block> {
     public void addTags(HolderLookup.Provider provider) {
         StoneVariantsProvider.getStoneBlockVariants()
                 .flatMap(StoneBlockVariant::allBlocks)
+                .map(Block::builtInRegistryHolder)
                 .forEach(this.tag(BlockTags.MINEABLE_WITH_PICKAXE)::add);
         StoneVariantsProvider.getStoneBlockVariants()
                 .map(StoneBlockVariant::stairs)
                 .filter(Objects::nonNull)
+                .map(Block::builtInRegistryHolder)
                 .forEach(this.tag(BlockTags.STAIRS)::add);
         StoneVariantsProvider.getStoneBlockVariants()
                 .map(StoneBlockVariant::slab)
                 .filter(Objects::nonNull)
+                .map(Block::builtInRegistryHolder)
                 .forEach(this.tag(BlockTags.SLABS)::add);
         StoneVariantsProvider.getStoneBlockVariants()
                 .map(StoneBlockVariant::wall)
                 .filter(Objects::nonNull)
+                .map(Block::builtInRegistryHolder)
                 .forEach(this.tag(BlockTags.WALLS)::add);
     }
 }

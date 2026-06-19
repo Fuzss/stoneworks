@@ -19,8 +19,10 @@ public class ModRegistry {
     static final RegistryManager REGISTRIES = RegistryManager.from(Stoneworks.MOD_ID);
     public static final Holder.Reference<CreativeModeTab> CREATIVE_MODE_TAB = REGISTRIES.registerCreativeModeTab("main",
             () -> new ItemStack(Items.STONE),
-            (CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output output) -> {
-                output.acceptAll(StoneVariantsProvider.getSortedVariantItems());
+            (CreativeModeTab.DisplayItemsGenerator generator) -> {
+                return (CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output output) -> {
+                    output.acceptAll(StoneVariantsProvider.getSortedVariantItems());
+                };
             },
             true);
 

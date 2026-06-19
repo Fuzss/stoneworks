@@ -3,8 +3,8 @@ package fuzs.stoneworks.neoforge;
 import fuzs.puzzleslib.common.api.core.v1.ModConstructor;
 import fuzs.puzzleslib.neoforge.api.data.v2.core.DataProviderHelper;
 import fuzs.stoneworks.common.Stoneworks;
-import fuzs.stoneworks.common.data.ModBlockLootProvider;
-import fuzs.stoneworks.common.data.ModBlockTagsProvider;
+import fuzs.stoneworks.common.data.loot.ModBlockLootProvider;
+import fuzs.stoneworks.common.data.tags.ModBlockTagsProvider;
 import fuzs.stoneworks.common.data.ModRecipeProvider;
 import net.neoforged.fml.common.Mod;
 

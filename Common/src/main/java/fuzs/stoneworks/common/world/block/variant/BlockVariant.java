@@ -37,13 +37,13 @@ public enum BlockVariant {
     }
 
     public boolean supportsAdditionalBlocks() {
-        return this == REGULAR || this == COBBLED || this == MOSSY_COBBLED || this == BRICKS || this == MOSSY_BRICKS ||
-                this == POLISHED || this == TILES || this == SHINGLES || this == PAVERS || this == PLATES;
+        return this == REGULAR || this == COBBLED || this == MOSSY_COBBLED || this == BRICKS || this == MOSSY_BRICKS
+                || this == POLISHED || this == TILES || this == SHINGLES || this == PAVERS || this == PLATES;
     }
 
     public boolean usesNetherbricksMaterial() {
-        return this == BlockVariant.CHISELED || this == BlockVariant.TILES || this == BlockVariant.CRACKED_TILES ||
-                this == BlockVariant.PILLAR || this == BlockVariant.SHINGLES || this == BlockVariant.PAVERS ||
-                this == BlockVariant.PLATES;
+        return this == BlockVariant.CHISELED || this == BlockVariant.TILES || this == BlockVariant.CRACKED_TILES
+                || this == BlockVariant.PILLAR || this == BlockVariant.SHINGLES || this == BlockVariant.PAVERS
+                || this == BlockVariant.PLATES;
     }
 }

@@ -6,11 +6,17 @@
     "26.1.x": "maintained",
     "26.2.x": "primary"
   },
-  "properties": {
-    "distributions.curseforge.id": "852663",
-    "distributions.curseforge.slug": "stoneworks",
-    "distributions.github.slug": "stoneworks",
-    "distributions.modrinth.id": "FzyTKtVF",
-    "distributions.modrinth.slug": "stoneworks"
+  "distributions": {
+    "curseforge": {
+      "id": "852663",
+      "slug": "stoneworks"
+    },
+    "github": {
+      "slug": "stoneworks"
+    },
+    "modrinth": {
+      "id": "FzyTKtVF",
+      "slug": "stoneworks"
+    }
   }
 }

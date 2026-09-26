@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:mossy_cobbled_netherrack_wall"
+        "recipes": "stoneworks:mossy_cobbled_netherrack_wall"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

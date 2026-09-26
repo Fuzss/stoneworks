@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:mossy_cobbled_red_sandstone_stairs"
+        "recipes": "stoneworks:mossy_cobbled_red_sandstone_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:diorite_shingle_slab_from_diorite_shingles_stonecutting"
+        "recipes": "stoneworks:diorite_shingle_slab_from_diorite_shingles_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:diorite_shingle_slab_from_diorite_shingles_stonecutting"
+      "stoneworks:diorite_shingle_slab_from_diorite_shingles_stonecutting"
     ]
   }
 }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:stone_paver_wall_from_stone_pavers_stonecutting"
+        "recipes": "stoneworks:stone_paver_wall_from_stone_pavers_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:stone_paver_wall_from_stone_pavers_stonecutting"
+      "stoneworks:stone_paver_wall_from_stone_pavers_stonecutting"
     ]
   }
 }

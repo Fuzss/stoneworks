@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:tuff_plate_slab"
+        "recipes": "stoneworks:tuff_plate_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

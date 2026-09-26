@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:calcite_brick_slab"
+        "recipes": "stoneworks:calcite_brick_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

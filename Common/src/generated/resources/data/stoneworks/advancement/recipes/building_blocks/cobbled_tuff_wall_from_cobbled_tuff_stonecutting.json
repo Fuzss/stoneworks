@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:cobbled_tuff_wall_from_cobbled_tuff_stonecutting"
+        "recipes": "stoneworks:cobbled_tuff_wall_from_cobbled_tuff_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:cobbled_tuff_wall_from_cobbled_tuff_stonecutting"
+      "stoneworks:cobbled_tuff_wall_from_cobbled_tuff_stonecutting"
     ]
   }
 }

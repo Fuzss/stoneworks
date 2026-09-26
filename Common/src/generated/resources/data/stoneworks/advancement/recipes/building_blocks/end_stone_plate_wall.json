@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:end_stone_plate_wall"
+        "recipes": "stoneworks:end_stone_plate_wall"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

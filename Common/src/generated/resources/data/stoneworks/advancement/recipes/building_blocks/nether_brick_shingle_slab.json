@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:nether_brick_shingle_slab"
+        "recipes": "stoneworks:nether_brick_shingle_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

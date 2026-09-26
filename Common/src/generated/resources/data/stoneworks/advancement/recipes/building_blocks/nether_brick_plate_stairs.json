@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:nether_brick_plate_stairs"
+        "recipes": "stoneworks:nether_brick_plate_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

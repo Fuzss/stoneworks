@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:granite_paver_slab_from_granite_pavers_stonecutting"
+        "recipes": "stoneworks:granite_paver_slab_from_granite_pavers_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:granite_paver_slab_from_granite_pavers_stonecutting"
+      "stoneworks:granite_paver_slab_from_granite_pavers_stonecutting"
     ]
   }
 }

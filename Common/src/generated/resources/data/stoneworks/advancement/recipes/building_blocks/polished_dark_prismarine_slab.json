@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:polished_dark_prismarine_slab"
+        "recipes": "stoneworks:polished_dark_prismarine_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:raw_purpur_stairs_from_raw_purpur_stonecutting"
+        "recipes": "stoneworks:raw_purpur_stairs_from_raw_purpur_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:raw_purpur_stairs_from_raw_purpur_stonecutting"
+      "stoneworks:raw_purpur_stairs_from_raw_purpur_stonecutting"
     ]
   }
 }

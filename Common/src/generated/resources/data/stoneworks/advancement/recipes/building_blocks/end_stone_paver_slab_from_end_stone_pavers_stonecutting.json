@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:end_stone_paver_slab_from_end_stone_pavers_stonecutting"
+        "recipes": "stoneworks:end_stone_paver_slab_from_end_stone_pavers_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:end_stone_paver_slab_from_end_stone_pavers_stonecutting"
+      "stoneworks:end_stone_paver_slab_from_end_stone_pavers_stonecutting"
     ]
   }
 }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:andesite_shingle_slab"
+        "recipes": "stoneworks:andesite_shingle_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

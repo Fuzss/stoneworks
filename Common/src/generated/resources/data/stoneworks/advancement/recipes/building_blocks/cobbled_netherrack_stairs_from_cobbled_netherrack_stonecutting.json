@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:cobbled_netherrack_stairs_from_cobbled_netherrack_stonecutting"
+        "recipes": "stoneworks:cobbled_netherrack_stairs_from_cobbled_netherrack_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:cobbled_netherrack_stairs_from_cobbled_netherrack_stonecutting"
+      "stoneworks:cobbled_netherrack_stairs_from_cobbled_netherrack_stonecutting"
     ]
   }
 }

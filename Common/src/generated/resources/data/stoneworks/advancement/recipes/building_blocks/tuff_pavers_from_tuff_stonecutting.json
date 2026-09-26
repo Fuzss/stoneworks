@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:tuff_pavers_from_tuff_stonecutting"
+        "recipes": "stoneworks:tuff_pavers_from_tuff_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:tuff_pavers_from_tuff_stonecutting"
+      "stoneworks:tuff_pavers_from_tuff_stonecutting"
     ]
   }
 }

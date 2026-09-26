@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:cobbled_purpur_stairs"
+        "recipes": "stoneworks:cobbled_purpur_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

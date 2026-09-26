@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:purpur_paver_wall_from_purpur_pavers_stonecutting"
+        "recipes": "stoneworks:purpur_paver_wall_from_purpur_pavers_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:purpur_paver_wall_from_purpur_pavers_stonecutting"
+      "stoneworks:purpur_paver_wall_from_purpur_pavers_stonecutting"
     ]
   }
 }

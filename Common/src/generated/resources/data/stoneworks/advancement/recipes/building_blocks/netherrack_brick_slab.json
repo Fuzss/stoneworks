@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:netherrack_brick_slab"
+        "recipes": "stoneworks:netherrack_brick_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

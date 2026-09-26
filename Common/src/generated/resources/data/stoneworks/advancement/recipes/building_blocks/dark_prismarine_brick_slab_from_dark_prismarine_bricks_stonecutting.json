@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:dark_prismarine_brick_slab_from_dark_prismarine_bricks_stonecutting"
+        "recipes": "stoneworks:dark_prismarine_brick_slab_from_dark_prismarine_bricks_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:dark_prismarine_brick_slab_from_dark_prismarine_bricks_stonecutting"
+      "stoneworks:dark_prismarine_brick_slab_from_dark_prismarine_bricks_stonecutting"
     ]
   }
 }

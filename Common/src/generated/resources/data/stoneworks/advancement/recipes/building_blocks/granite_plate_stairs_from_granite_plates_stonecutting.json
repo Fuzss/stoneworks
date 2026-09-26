@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:granite_plate_stairs_from_granite_plates_stonecutting"
+        "recipes": "stoneworks:granite_plate_stairs_from_granite_plates_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:granite_plate_stairs_from_granite_plates_stonecutting"
+      "stoneworks:granite_plate_stairs_from_granite_plates_stonecutting"
     ]
   }
 }

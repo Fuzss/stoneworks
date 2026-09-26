@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:diorite_shingle_stairs"
+        "recipes": "stoneworks:diorite_shingle_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

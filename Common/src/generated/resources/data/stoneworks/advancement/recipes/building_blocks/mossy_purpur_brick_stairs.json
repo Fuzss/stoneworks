@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:mossy_purpur_brick_stairs"
+        "recipes": "stoneworks:mossy_purpur_brick_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

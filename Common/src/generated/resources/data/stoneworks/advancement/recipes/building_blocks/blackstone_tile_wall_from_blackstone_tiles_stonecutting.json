@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:blackstone_tile_wall_from_blackstone_tiles_stonecutting"
+        "recipes": "stoneworks:blackstone_tile_wall_from_blackstone_tiles_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:blackstone_tile_wall_from_blackstone_tiles_stonecutting"
+      "stoneworks:blackstone_tile_wall_from_blackstone_tiles_stonecutting"
     ]
   }
 }

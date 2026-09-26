@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:calcite_shingle_wall"
+        "recipes": "stoneworks:calcite_shingle_wall"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

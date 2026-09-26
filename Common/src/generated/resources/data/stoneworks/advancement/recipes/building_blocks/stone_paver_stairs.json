@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:stone_paver_stairs"
+        "recipes": "stoneworks:stone_paver_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

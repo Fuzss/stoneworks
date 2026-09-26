@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:quartz_tile_stairs_from_quartz_tiles_stonecutting"
+        "recipes": "stoneworks:quartz_tile_stairs_from_quartz_tiles_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:quartz_tile_stairs_from_quartz_tiles_stonecutting"
+      "stoneworks:quartz_tile_stairs_from_quartz_tiles_stonecutting"
     ]
   }
 }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:cobbled_granite_stairs"
+        "recipes": "stoneworks:cobbled_granite_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

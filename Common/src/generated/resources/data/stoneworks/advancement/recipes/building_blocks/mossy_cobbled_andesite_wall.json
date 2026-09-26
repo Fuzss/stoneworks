@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:mossy_cobbled_andesite_wall"
+        "recipes": "stoneworks:mossy_cobbled_andesite_wall"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

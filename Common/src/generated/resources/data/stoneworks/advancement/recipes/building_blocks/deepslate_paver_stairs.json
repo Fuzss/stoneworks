@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:deepslate_paver_stairs"
+        "recipes": "stoneworks:deepslate_paver_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

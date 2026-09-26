@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:cobbled_basalt_slab"
+        "recipes": "stoneworks:cobbled_basalt_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

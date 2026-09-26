@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:polished_netherrack_stairs"
+        "recipes": "stoneworks:polished_netherrack_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

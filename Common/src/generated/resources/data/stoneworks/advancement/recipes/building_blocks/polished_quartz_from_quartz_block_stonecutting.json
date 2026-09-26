@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:polished_quartz_from_quartz_block_stonecutting"
+        "recipes": "stoneworks:polished_quartz_from_quartz_block_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:polished_quartz_from_quartz_block_stonecutting"
+      "stoneworks:polished_quartz_from_quartz_block_stonecutting"
     ]
   }
 }

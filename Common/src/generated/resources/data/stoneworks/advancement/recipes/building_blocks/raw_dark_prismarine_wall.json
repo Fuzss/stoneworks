@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:raw_dark_prismarine_wall"
+        "recipes": "stoneworks:raw_dark_prismarine_wall"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

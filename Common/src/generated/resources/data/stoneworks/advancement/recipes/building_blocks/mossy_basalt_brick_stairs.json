@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "stoneworks:mossy_basalt_brick_stairs"
+        "recipes": "stoneworks:mossy_basalt_brick_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

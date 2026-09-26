@@ -1,22 +1,22 @@
 package fuzs.stoneworks.common.data.loot;
 
-import fuzs.puzzleslib.common.api.data.v2.AbstractLootProvider;
-import fuzs.puzzleslib.common.api.data.v2.core.DataProviderContext;
+import fuzs.puzzleslib.common.api.data.v3.loot.AbstractBlockLootSubProvider;
 import fuzs.stoneworks.common.world.block.variant.StoneBlockVariant;
 import fuzs.stoneworks.common.world.block.variant.StoneVariantsProvider;
+import net.minecraft.data.loot.LootTableSubProvider;
 import net.minecraft.world.level.block.Block;
 
 import java.util.Objects;
 import java.util.function.Consumer;
 
-public class ModBlockLootProvider extends AbstractLootProvider.Blocks {
+public class ModBlockLootProvider extends AbstractBlockLootSubProvider {
 
-    public ModBlockLootProvider(DataProviderContext context) {
+    public ModBlockLootProvider(LootTableSubProvider.Context context) {
         super(context);
     }
 
     @Override
-    public void addLootTables() {
+    public void generate() {
         StoneVariantsProvider.getStoneBlockVariants().<Block>mapMulti((StoneBlockVariant variant, Consumer<Block> consumer) -> {
             consumer.accept(variant.block());
             consumer.accept(variant.stairs());

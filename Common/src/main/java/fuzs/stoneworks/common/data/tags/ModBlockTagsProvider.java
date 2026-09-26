@@ -1,7 +1,7 @@
 package fuzs.stoneworks.common.data.tags;
 
-import fuzs.puzzleslib.common.api.data.v2.core.DataProviderContext;
-import fuzs.puzzleslib.common.api.data.v2.tags.AbstractTagProvider;
+import fuzs.puzzleslib.common.api.data.v3.core.DataProviderContext;
+import fuzs.puzzleslib.common.api.data.v3.tags.AbstractTagsProvider;
 import fuzs.stoneworks.common.world.block.variant.StoneBlockVariant;
 import fuzs.stoneworks.common.world.block.variant.StoneVariantsProvider;
 import net.minecraft.core.HolderLookup;
@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.Block;
 
 import java.util.Objects;
 
-public class ModBlockTagsProvider extends AbstractTagProvider<Block> {
+public class ModBlockTagsProvider extends AbstractTagsProvider<Block> {
 
     public ModBlockTagsProvider(DataProviderContext context) {
         super(Registries.BLOCK, context);

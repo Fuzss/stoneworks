@@ -1,8 +1,8 @@
 package fuzs.stoneworks.common.data.client;
 
-import fuzs.puzzleslib.common.api.client.data.v2.AbstractModelProvider;
-import fuzs.puzzleslib.common.api.client.data.v2.models.ModelLocationHelper;
-import fuzs.puzzleslib.common.api.data.v2.core.DataProviderContext;
+import fuzs.puzzleslib.common.api.client.data.v3.models.AbstractModelProvider;
+import fuzs.puzzleslib.common.api.client.data.v3.models.ModelLocationHelper;
+import fuzs.puzzleslib.common.api.data.v3.core.DataProviderContext;
 import fuzs.stoneworks.common.world.block.variant.BlockVariant;
 import fuzs.stoneworks.common.world.block.variant.StoneBlockVariant;
 import fuzs.stoneworks.common.world.block.variant.StoneVariantsProvider;

@@ -1,7 +1,7 @@
 package fuzs.stoneworks.neoforge.client;
 
 import fuzs.puzzleslib.common.api.client.core.v1.ClientModConstructor;
-import fuzs.puzzleslib.neoforge.api.data.v2.core.DataProviderHelper;
+import fuzs.puzzleslib.neoforge.api.data.v3.core.DataProviderBuilder;
 import fuzs.stoneworks.common.Stoneworks;
 import fuzs.stoneworks.common.client.StoneworksClient;
 import fuzs.stoneworks.common.data.client.ModLanguageProvider;
@@ -14,6 +14,6 @@ public class StoneworksNeoForgeClient {
 
     public StoneworksNeoForgeClient() {
         ClientModConstructor.construct(Stoneworks.MOD_ID, StoneworksClient::new);
-        DataProviderHelper.registerDataProviders(Stoneworks.MOD_ID, ModLanguageProvider::new, ModModelProvider::new);
+        DataProviderBuilder.of(Stoneworks.MOD_ID).addProvider(ModLanguageProvider::new, ModModelProvider::new);
     }
 }

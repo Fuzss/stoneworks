@@ -1,8 +1,8 @@
 package fuzs.stoneworks.common.data.client;
 
 import com.google.common.collect.Maps;
-import fuzs.puzzleslib.common.api.client.data.v2.AbstractLanguageProvider;
-import fuzs.puzzleslib.common.api.data.v2.core.DataProviderContext;
+import fuzs.puzzleslib.common.api.client.data.v3.language.AbstractLanguageProvider;
+import fuzs.puzzleslib.common.api.data.v3.core.DataProviderContext;
 import fuzs.stoneworks.common.Stoneworks;
 import fuzs.stoneworks.common.init.ModRegistry;
 import fuzs.stoneworks.common.world.block.variant.StoneBlockVariant;
@@ -18,14 +18,14 @@ public class ModLanguageProvider extends AbstractLanguageProvider {
     }
 
     @Override
-    public void addTranslations(TranslationBuilder builder) {
-        builder.add(ModRegistry.CREATIVE_MODE_TAB.value(), Stoneworks.MOD_NAME);
+    public void addTranslations() {
+        this.add(ModRegistry.CREATIVE_MODE_TAB.value(), Stoneworks.MOD_NAME);
         Map<Block, String> translations = Maps.newHashMap();
         for (StoneBlockVariant variant : StoneVariantsProvider.getStoneBlockVariants().toList()) {
             variant.addTranslations(translations);
         }
         for (Map.Entry<Block, String> entry : translations.entrySet()) {
-            builder.add(entry.getKey(), entry.getValue());
+            this.add(entry.getKey(), entry.getValue());
         }
     }
 }

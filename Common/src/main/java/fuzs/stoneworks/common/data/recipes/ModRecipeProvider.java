@@ -1,4 +1,4 @@
-package fuzs.stoneworks.common.data;
+package fuzs.stoneworks.common.data.recipes;
 
 import fuzs.puzzleslib.common.api.data.v3.recipes.AbstractRecipeProvider;
 import fuzs.stoneworks.common.world.block.variant.StoneBlockVariant;

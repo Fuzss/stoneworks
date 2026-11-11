@@ -5,7 +5,7 @@ import fuzs.puzzleslib.neoforge.api.data.v3.core.DataProviderBuilder;
 import fuzs.stoneworks.common.Stoneworks;
 import fuzs.stoneworks.common.data.loot.ModBlockLootProvider;
 import fuzs.stoneworks.common.data.tags.ModBlockTagsProvider;
-import fuzs.stoneworks.common.data.ModRecipeProvider;
+import fuzs.stoneworks.common.data.recipes.ModRecipeProvider;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.fml.common.Mod;
 

@@ -1,6 +1,5 @@
 package fuzs.stoneworks.common.data.client;
 
-import com.google.common.collect.Maps;
 import fuzs.puzzleslib.common.api.client.data.v3.language.AbstractLanguageProvider;
 import fuzs.puzzleslib.common.api.data.v3.core.DataProviderContext;
 import fuzs.stoneworks.common.Stoneworks;
@@ -9,6 +8,7 @@ import fuzs.stoneworks.common.world.block.variant.StoneBlockVariant;
 import fuzs.stoneworks.common.world.block.variant.StoneVariantsProvider;
 import net.minecraft.world.level.block.Block;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class ModLanguageProvider extends AbstractLanguageProvider {
@@ -20,7 +20,7 @@ public class ModLanguageProvider extends AbstractLanguageProvider {
     @Override
     public void addTranslations() {
         this.add(ModRegistry.CREATIVE_MODE_TAB.value(), Stoneworks.MOD_NAME);
-        Map<Block, String> translations = Maps.newHashMap();
+        Map<Block, String> translations = new HashMap<>();
         for (StoneBlockVariant variant : StoneVariantsProvider.getStoneBlockVariants().toList()) {
             variant.addTranslations(translations);
         }

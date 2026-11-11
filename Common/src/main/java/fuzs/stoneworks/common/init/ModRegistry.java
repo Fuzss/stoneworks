@@ -21,7 +21,7 @@ public class ModRegistry {
             () -> new ItemStack(Items.STONE),
             (CreativeModeTab.DisplayItemsGenerator generator) -> {
                 return (CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output output) -> {
-                    output.acceptAll(StoneVariantsProvider.getSortedVariantItems());
+                    StoneVariantsProvider.getSortedVariantItems().forEach(output::accept);
                 };
             },
             true);

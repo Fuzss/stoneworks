@@ -9,15 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Added crafting table recipes for all stone brick, tile, paver, plate, shingle, and pillar variants
-- Added smelting recipes for cracked bricks and cracked tiles
+- Add missing crafting and smelting recipes
 
 ### Changed
 
 - Reworked stone variant registration around block set families
 - Stone variant recipes are now generated in line with vanilla block families
-- Added the previously missing vanilla stairs, slabs, and walls for nether bricks, prismarine bricks,
-  polished blackstone bricks, and quartz to the creative tab
+- The previously missing vanilla stairs, slabs, and walls are now found in the creative tab (nether bricks, prismarine
+  bricks, polished blackstone bricks, and quartz)
 
 ## [v26.3.1-mc26.3.x] - 2026-09-27
 

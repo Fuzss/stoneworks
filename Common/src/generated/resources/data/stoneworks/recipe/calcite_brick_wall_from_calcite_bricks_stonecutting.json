@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:calcite",
-    "stoneworks:calcite_bricks"
-  ],
+  "ingredient": "stoneworks:calcite_bricks",
   "result": {
     "id": "stoneworks:calcite_brick_wall"
   }

@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:end_stone",
-    "stoneworks:end_stone_shingles"
-  ],
+  "ingredient": "stoneworks:end_stone_shingles",
   "result": {
     "id": "stoneworks:end_stone_shingle_stairs"
   }

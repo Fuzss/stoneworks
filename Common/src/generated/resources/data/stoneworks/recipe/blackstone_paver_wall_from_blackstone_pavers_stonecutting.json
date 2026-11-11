@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:blackstone",
-    "stoneworks:blackstone_pavers"
-  ],
+  "ingredient": "stoneworks:blackstone_pavers",
   "result": {
     "id": "stoneworks:blackstone_paver_wall"
   }

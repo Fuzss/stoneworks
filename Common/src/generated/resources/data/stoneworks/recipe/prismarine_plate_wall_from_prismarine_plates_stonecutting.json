@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:prismarine",
-    "stoneworks:prismarine_plates"
-  ],
+  "ingredient": "stoneworks:prismarine_plates",
   "result": {
     "id": "stoneworks:prismarine_plate_wall"
   }

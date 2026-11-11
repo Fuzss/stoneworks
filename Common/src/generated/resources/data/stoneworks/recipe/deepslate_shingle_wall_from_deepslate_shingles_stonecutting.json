@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:deepslate",
-    "stoneworks:deepslate_shingles"
-  ],
+  "ingredient": "stoneworks:deepslate_shingles",
   "result": {
     "id": "stoneworks:deepslate_shingle_wall"
   }

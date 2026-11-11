@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:prismarine",
-    "stoneworks:mossy_prismarine_bricks"
-  ],
+  "ingredient": "stoneworks:mossy_prismarine_bricks",
   "result": {
     "id": "stoneworks:mossy_prismarine_brick_wall"
   }

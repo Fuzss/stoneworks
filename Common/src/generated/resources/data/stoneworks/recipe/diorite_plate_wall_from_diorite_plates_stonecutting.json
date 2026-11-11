@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:diorite",
-    "stoneworks:diorite_plates"
-  ],
+  "ingredient": "stoneworks:diorite_plates",
   "result": {
     "id": "stoneworks:diorite_plate_wall"
   }

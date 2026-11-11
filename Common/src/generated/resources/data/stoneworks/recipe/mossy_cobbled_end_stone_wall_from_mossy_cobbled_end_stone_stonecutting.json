@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:end_stone",
-    "stoneworks:mossy_cobbled_end_stone"
-  ],
+  "ingredient": "stoneworks:mossy_cobbled_end_stone",
   "result": {
     "id": "stoneworks:mossy_cobbled_end_stone_wall"
   }

@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:tuff",
-    "stoneworks:cobbled_tuff"
-  ],
+  "ingredient": "stoneworks:cobbled_tuff",
   "result": {
     "id": "stoneworks:cobbled_tuff_wall"
   }

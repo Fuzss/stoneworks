@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "building",
   "key": {
     "#": "stoneworks:mossy_dark_prismarine_bricks"
   },

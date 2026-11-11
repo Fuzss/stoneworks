@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:netherrack",
-    "stoneworks:mossy_netherrack_bricks"
-  ],
+  "ingredient": "stoneworks:mossy_netherrack_bricks",
   "result": {
     "id": "stoneworks:mossy_netherrack_brick_stairs"
   }

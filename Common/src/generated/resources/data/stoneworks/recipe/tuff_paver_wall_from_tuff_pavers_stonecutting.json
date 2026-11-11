@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:tuff",
-    "stoneworks:tuff_pavers"
-  ],
+  "ingredient": "stoneworks:tuff_pavers",
   "result": {
     "id": "stoneworks:tuff_paver_wall"
   }

@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:basalt",
-    "stoneworks:basalt_bricks"
-  ],
+  "ingredient": "stoneworks:basalt_bricks",
   "result": {
     "id": "stoneworks:basalt_brick_wall"
   }

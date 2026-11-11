@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:prismarine",
-    "stoneworks:polished_prismarine"
-  ],
+  "ingredient": "stoneworks:polished_prismarine",
   "result": {
     "id": "stoneworks:polished_prismarine_stairs"
   }

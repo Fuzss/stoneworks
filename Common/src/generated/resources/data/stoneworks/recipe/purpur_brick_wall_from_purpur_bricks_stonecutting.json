@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:purpur_block",
-    "stoneworks:purpur_bricks"
-  ],
+  "ingredient": "stoneworks:purpur_bricks",
   "result": {
     "id": "stoneworks:purpur_brick_wall"
   }

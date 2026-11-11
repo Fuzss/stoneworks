@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:deepslate",
-    "stoneworks:deepslate_plates"
-  ],
+  "ingredient": "stoneworks:deepslate_plates",
   "result": {
     "id": "stoneworks:deepslate_plate_wall"
   }

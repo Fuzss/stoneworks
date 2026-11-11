@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:basalt",
-    "stoneworks:mossy_cobbled_basalt"
-  ],
+  "ingredient": "stoneworks:mossy_cobbled_basalt",
   "result": {
     "count": 2,
     "id": "stoneworks:mossy_cobbled_basalt_slab"

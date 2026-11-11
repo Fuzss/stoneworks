@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:tuff",
-    "stoneworks:mossy_cobbled_tuff"
-  ],
+  "ingredient": "stoneworks:mossy_cobbled_tuff",
   "result": {
     "id": "stoneworks:mossy_cobbled_tuff_stairs"
   }

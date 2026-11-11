@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:red_sandstone",
-    "stoneworks:mossy_red_sandstone_bricks"
-  ],
+  "ingredient": "stoneworks:mossy_red_sandstone_bricks",
   "result": {
     "id": "stoneworks:mossy_red_sandstone_brick_stairs"
   }

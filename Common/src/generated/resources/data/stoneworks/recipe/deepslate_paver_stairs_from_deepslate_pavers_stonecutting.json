@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:deepslate",
-    "stoneworks:deepslate_pavers"
-  ],
+  "ingredient": "stoneworks:deepslate_pavers",
   "result": {
     "id": "stoneworks:deepslate_paver_stairs"
   }

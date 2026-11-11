@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:quartz_block",
-    "stoneworks:quartz_pavers"
-  ],
+  "ingredient": "stoneworks:quartz_pavers",
   "result": {
     "id": "stoneworks:quartz_paver_wall"
   }

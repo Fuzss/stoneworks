@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:blackstone",
-    "stoneworks:blackstone_plates"
-  ],
+  "ingredient": "stoneworks:blackstone_plates",
   "result": {
     "id": "stoneworks:blackstone_plate_stairs"
   }

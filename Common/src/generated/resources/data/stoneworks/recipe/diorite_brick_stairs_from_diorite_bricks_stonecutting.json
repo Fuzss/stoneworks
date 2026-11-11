@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:diorite",
-    "stoneworks:diorite_bricks"
-  ],
+  "ingredient": "stoneworks:diorite_bricks",
   "result": {
     "id": "stoneworks:diorite_brick_stairs"
   }

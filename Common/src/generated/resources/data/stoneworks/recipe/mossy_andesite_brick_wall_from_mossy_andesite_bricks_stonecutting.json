@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:andesite",
-    "stoneworks:mossy_andesite_bricks"
-  ],
+  "ingredient": "stoneworks:mossy_andesite_bricks",
   "result": {
     "id": "stoneworks:mossy_andesite_brick_wall"
   }

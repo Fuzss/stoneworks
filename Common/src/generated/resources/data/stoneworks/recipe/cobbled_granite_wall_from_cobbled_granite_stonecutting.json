@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:granite",
-    "stoneworks:cobbled_granite"
-  ],
+  "ingredient": "stoneworks:cobbled_granite",
   "result": {
     "id": "stoneworks:cobbled_granite_wall"
   }

@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:end_stone",
-    "stoneworks:mossy_end_stone_bricks"
-  ],
+  "ingredient": "stoneworks:mossy_end_stone_bricks",
   "result": {
     "id": "stoneworks:mossy_end_stone_brick_stairs"
   }

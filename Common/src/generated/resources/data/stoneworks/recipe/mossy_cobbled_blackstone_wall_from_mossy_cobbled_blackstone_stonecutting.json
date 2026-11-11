@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:blackstone",
-    "stoneworks:mossy_cobbled_blackstone"
-  ],
+  "ingredient": "stoneworks:mossy_cobbled_blackstone",
   "result": {
     "id": "stoneworks:mossy_cobbled_blackstone_wall"
   }

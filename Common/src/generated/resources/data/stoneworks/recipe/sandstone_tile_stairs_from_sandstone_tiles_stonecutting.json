@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:sandstone",
-    "stoneworks:sandstone_tiles"
-  ],
+  "ingredient": "stoneworks:sandstone_tiles",
   "result": {
     "id": "stoneworks:sandstone_tile_stairs"
   }

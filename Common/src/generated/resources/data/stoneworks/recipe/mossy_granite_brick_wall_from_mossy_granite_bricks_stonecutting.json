@@ -1,9 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": [
-    "minecraft:granite",
-    "stoneworks:mossy_granite_bricks"
-  ],
+  "ingredient": "stoneworks:mossy_granite_bricks",
   "result": {
     "id": "stoneworks:mossy_granite_brick_wall"
   }

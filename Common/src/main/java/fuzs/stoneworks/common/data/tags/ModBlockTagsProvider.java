@@ -2,14 +2,13 @@ package fuzs.stoneworks.common.data.tags;
 
 import fuzs.puzzleslib.common.api.data.v3.core.DataProviderContext;
 import fuzs.puzzleslib.common.api.data.v3.tags.AbstractTagsProvider;
-import fuzs.stoneworks.common.world.block.variant.StoneBlockVariant;
-import fuzs.stoneworks.common.world.block.variant.StoneVariantsProvider;
+import fuzs.puzzleslib.common.api.init.v3.family.BlockSetFamily;
+import fuzs.stoneworks.common.init.ModBlockFamilies;
+import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
-
-import java.util.Objects;
 
 public class ModBlockTagsProvider extends AbstractTagsProvider<Block> {
 
@@ -19,24 +18,13 @@ public class ModBlockTagsProvider extends AbstractTagsProvider<Block> {
 
     @Override
     public void addTags(HolderLookup.Provider provider) {
-        StoneVariantsProvider.getStoneBlockVariants()
-                .flatMap(StoneBlockVariant::allBlocks)
-                .map(Block::builtInRegistryHolder)
-                .forEach(this.tag(BlockTags.MINEABLE_WITH_PICKAXE)::add);
-        StoneVariantsProvider.getStoneBlockVariants()
-                .map(StoneBlockVariant::stairs)
-                .filter(Objects::nonNull)
-                .map(Block::builtInRegistryHolder)
-                .forEach(this.tag(BlockTags.STAIRS)::add);
-        StoneVariantsProvider.getStoneBlockVariants()
-                .map(StoneBlockVariant::slab)
-                .filter(Objects::nonNull)
-                .map(Block::builtInRegistryHolder)
-                .forEach(this.tag(BlockTags.SLABS)::add);
-        StoneVariantsProvider.getStoneBlockVariants()
-                .map(StoneBlockVariant::wall)
-                .filter(Objects::nonNull)
-                .map(Block::builtInRegistryHolder)
-                .forEach(this.tag(BlockTags.WALLS)::add);
+        ModBlockFamilies.getAllBlockSetFamilies().flatMap((BlockSetFamily family) -> {
+            return family.getGeneratedBlockVariants().values().stream();
+        }).forEach((Holder.Reference<Block> holder) -> {
+            this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(holder);
+        });
+        ModBlockFamilies.getChildFamilies().forEach((BlockSetFamily family) -> {
+            this.generateFor(family.getGeneratedBlockVariants(), VARIANT_STONE_BLOCK_TAGS);
+        });
     }
 }

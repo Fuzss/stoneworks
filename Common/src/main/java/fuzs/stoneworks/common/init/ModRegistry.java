@@ -2,51 +2,27 @@ package fuzs.stoneworks.common.init;
 
 import fuzs.puzzleslib.common.api.init.v3.registry.RegistryManager;
 import fuzs.stoneworks.common.Stoneworks;
-import fuzs.stoneworks.common.world.block.variant.BlockVariant;
-import fuzs.stoneworks.common.world.block.variant.StoneBlockVariant;
-import fuzs.stoneworks.common.world.block.variant.StoneVariantsProvider;
 import net.minecraft.core.Holder;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.WallBlock;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 
-public class ModRegistry {
+public final class ModRegistry {
     static final RegistryManager REGISTRIES = RegistryManager.from(Stoneworks.MOD_ID);
     public static final Holder.Reference<CreativeModeTab> CREATIVE_MODE_TAB = REGISTRIES.registerCreativeModeTab("main",
             () -> new ItemStack(Items.STONE),
             (CreativeModeTab.DisplayItemsGenerator generator) -> {
                 return (CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output output) -> {
-                    StoneVariantsProvider.getSortedVariantItems().forEach(output::accept);
+                    ModBlockFamilies.getSortedVariantItems().forEach(output::accept);
                 };
             },
             true);
 
+    private ModRegistry() {
+        // NO-OP
+    }
+
     public static void bootstrap() {
-        for (StoneBlockVariant variant : StoneVariantsProvider.getStoneBlockVariants().toList()) {
-            if (variant.blockVariant() == BlockVariant.PILLAR) {
-                REGISTRIES.registerBlockItem(REGISTRIES.registerBlock(variant.name(),
-                        RotatedPillarBlock::new,
-                        variant::baseBlockProperties));
-            } else {
-                REGISTRIES.registerBlockItem(REGISTRIES.registerBlock(variant.name(), variant::baseBlockProperties));
-                if (variant.blockVariant().supportsAdditionalBlocks()) {
-                    REGISTRIES.registerBlockItem(REGISTRIES.registerBlock(variant.stairsName(),
-                            (BlockBehaviour.Properties properties) -> new StairBlock(variant.baseBlockState(),
-                                    properties),
-                            variant::baseBlockProperties));
-                    REGISTRIES.registerBlockItem(REGISTRIES.registerBlock(variant.slabName(),
-                            SlabBlock::new,
-                            variant::baseBlockProperties));
-                    REGISTRIES.registerBlockItem(REGISTRIES.registerBlock(variant.wallName(),
-                            WallBlock::new,
-                            variant::baseBlockProperties));
-                }
-            }
-        }
+        ModBlockFamilies.bootstrap();
     }
 }

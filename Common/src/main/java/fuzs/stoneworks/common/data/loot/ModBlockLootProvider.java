@@ -1,13 +1,11 @@
 package fuzs.stoneworks.common.data.loot;
 
 import fuzs.puzzleslib.common.api.data.v3.loot.AbstractBlockLootSubProvider;
-import fuzs.stoneworks.common.world.block.variant.StoneBlockVariant;
-import fuzs.stoneworks.common.world.block.variant.StoneVariantsProvider;
+import fuzs.puzzleslib.common.api.init.v3.family.BlockSetFamily;
+import fuzs.stoneworks.common.init.ModBlockFamilies;
+import net.minecraft.core.Holder;
 import net.minecraft.data.loot.LootTableSubProvider;
 import net.minecraft.world.level.block.Block;
-
-import java.util.Objects;
-import java.util.function.Consumer;
 
 public class ModBlockLootProvider extends AbstractBlockLootSubProvider {
 
@@ -17,12 +15,11 @@ public class ModBlockLootProvider extends AbstractBlockLootSubProvider {
 
     @Override
     public void generate() {
-        StoneVariantsProvider.getStoneBlockVariants().<Block>mapMulti((StoneBlockVariant variant, Consumer<Block> consumer) -> {
-            consumer.accept(variant.block());
-            consumer.accept(variant.stairs());
-            consumer.accept(variant.wall());
-        }).filter(Objects::nonNull).forEach(this::dropSelf);
-        StoneVariantsProvider.getStoneBlockVariants().map(StoneBlockVariant::slab).filter(Objects::nonNull)
-                .forEach(block -> this.add(block, this.createSlabItemTable(block)));
+        ModBlockFamilies.ROOT_FAMILIES.stream().flatMap((BlockSetFamily family) -> {
+            return family.getGeneratedBlockVariants().values().stream();
+        }).forEach((Holder.Reference<Block> holder) -> {
+            this.dropSelf(holder.value());
+        });
+        ModBlockFamilies.getChildFamilies().forEach(this::generateFor);
     }
 }

@@ -1,17 +1,23 @@
 package fuzs.stoneworks.common.data.client;
 
+import com.google.common.collect.ImmutableMap;
 import fuzs.puzzleslib.common.api.client.data.v3.models.AbstractModelProvider;
 import fuzs.puzzleslib.common.api.client.data.v3.models.ModelLocationHelper;
 import fuzs.puzzleslib.common.api.data.v3.core.DataProviderContext;
-import fuzs.stoneworks.common.world.block.variant.BlockVariant;
-import fuzs.stoneworks.common.world.block.variant.StoneBlockVariant;
-import fuzs.stoneworks.common.world.block.variant.StoneVariantsProvider;
+import fuzs.puzzleslib.common.api.init.v3.family.BlockSetFamily;
+import fuzs.puzzleslib.common.api.init.v3.family.BlockSetVariant;
+import fuzs.stoneworks.common.init.ModBlockFamilies;
+import fuzs.stoneworks.common.init.ModBlockVariants;
 import net.minecraft.client.data.models.BlockModelGenerators;
-import net.minecraft.client.data.models.ItemModelGenerators;
-import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.client.data.models.model.TexturedModel;
+import net.minecraft.core.Holder;
+import net.minecraft.world.level.block.Block;
+
+import java.util.Map;
+import java.util.Objects;
+import java.util.function.BiConsumer;
 
 public class ModModelProvider extends AbstractModelProvider {
 
@@ -20,36 +26,54 @@ public class ModModelProvider extends AbstractModelProvider {
     }
 
     @Override
-    public void addBlockModels(BlockModelGenerators blockModelGenerators) {
-        for (StoneBlockVariant variant : StoneVariantsProvider.getStoneBlockVariants().toList()) {
-            if (variant.blockVariant() == BlockVariant.PILLAR) {
-                blockModelGenerators.createRotatedPillarWithHorizontalVariant(variant.block(),
-                        TexturedModel.COLUMN,
-                        TexturedModel.COLUMN_HORIZONTAL);
-            } else {
-                ModelTemplate modelTemplate;
-                TextureMapping textureMapping;
-                if (variant.blockVariant() == BlockVariant.CHISELED && variant.stoneType().hasChiseledMotif()) {
-                    StoneBlockVariant polishedVariant = StoneVariantsProvider.getStoneVariant(variant.stoneType(),
-                            BlockVariant.POLISHED);
-                    modelTemplate = ModelTemplates.CUBE_COLUMN;
-                    textureMapping = TextureMapping.column(ModelLocationHelper.getBlockTexture(variant.block()),
-                            ModelLocationHelper.getBlockTexture(polishedVariant.block()));
-                } else {
-                    modelTemplate = ModelTemplates.CUBE_ALL;
-                    textureMapping = TextureMapping.cube(variant.block());
+    public void addBlockModels(BlockModelGenerators generators) {
+        for (BlockSetFamily family : ModBlockFamilies.ROOT_FAMILIES) {
+            Map<BlockSetVariant, BiConsumer<BlockModelGenerators, Block>> variantProviders = this.getVariantProviders(
+                    family);
+            for (BlockSetVariant variant : ModBlockVariants.VALUES) {
+                Holder.Reference<Block> holder = family.getGeneratedBlockVariants().get(variant);
+                if (holder == null) {
+                    continue;
                 }
-                BlockModelGenerators.BlockFamilyProvider blockFamilyProvider = blockModelGenerators.new BlockFamilyProvider(
-                        textureMapping).fullBlock(variant.block(), modelTemplate);
-                if (variant.blockVariant().supportsAdditionalBlocks()) {
-                    blockFamilyProvider.stairs(variant.stairs()).slab(variant.slab()).wall(variant.wall());
+
+                Block block = holder.value();
+                variantProviders.getOrDefault(variant, this::createCube).accept(generators, block);
+
+                BlockSetFamily childFamily = ModBlockFamilies.getChildFamily(family, variant);
+                if (childFamily != null) {
+                    this.generateForBlocks(generators, childFamily);
                 }
             }
         }
     }
 
-    @Override
-    public void addItemModels(ItemModelGenerators itemModelGenerators) {
-        super.addItemModels(itemModelGenerators);
+    private Map<BlockSetVariant, BiConsumer<BlockModelGenerators, Block>> getVariantProviders(BlockSetFamily family) {
+        ImmutableMap.Builder<BlockSetVariant, BiConsumer<BlockModelGenerators, Block>> builder = ImmutableMap.builder();
+        builder.put(ModBlockVariants.PILLAR, this::createPillar);
+        if (ModBlockFamilies.hasChiseledMotif(family)) {
+            Block polishedBlock = Objects.requireNonNull(family.getBlock(ModBlockVariants.POLISHED),
+                    "polished block is null").value();
+            builder.put(ModBlockVariants.CHISELED, (BlockModelGenerators generators, Block block) -> {
+                this.createChiseled(generators, block, polishedBlock);
+            });
+        }
+
+        return builder.build();
+    }
+
+    private void createPillar(BlockModelGenerators generators, Block block) {
+        generators.createRotatedPillarWithHorizontalVariant(block,
+                TexturedModel.COLUMN,
+                TexturedModel.COLUMN_HORIZONTAL);
+    }
+
+    private void createChiseled(BlockModelGenerators generators, Block block, Block polishedBlock) {
+        TextureMapping textureMapping = TextureMapping.column(ModelLocationHelper.getBlockTexture(block),
+                ModelLocationHelper.getBlockTexture(polishedBlock));
+        generators.new BlockFamilyProvider(textureMapping).fullBlock(block, ModelTemplates.CUBE_COLUMN);
+    }
+
+    private void createCube(BlockModelGenerators generators, Block block) {
+        generators.new BlockFamilyProvider(TextureMapping.cube(block)).fullBlock(block, ModelTemplates.CUBE_ALL);
     }
 }

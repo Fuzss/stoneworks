@@ -20,7 +20,7 @@ public class ModLanguageProvider extends AbstractLanguageProvider {
     @Override
     public void addTranslations() {
         this.addCreativeModeTab(ModRegistry.CREATIVE_MODE_TAB, Stoneworks.MOD_NAME);
-        ModBlockFamilies.getAllBlockSetFamilies().flatMap((BlockSetFamily family) -> {
+        ModBlockFamilies.getAllFamilies().flatMap((BlockSetFamily family) -> {
             return family.getGeneratedBlockVariants().values().stream();
         }).forEach((Holder.Reference<Block> holder) -> {
             Identifier blockId = holder.key().identifier();

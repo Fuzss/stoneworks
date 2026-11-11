@@ -15,7 +15,7 @@ public class ModBlockLootProvider extends AbstractBlockLootSubProvider {
 
     @Override
     public void generate() {
-        ModBlockFamilies.ROOT_FAMILIES.stream().flatMap((BlockSetFamily family) -> {
+        ModBlockFamilies.getBaseFamilies().stream().flatMap((BlockSetFamily family) -> {
             return family.getGeneratedBlockVariants().values().stream();
         }).forEach((Holder.Reference<Block> holder) -> {
             this.dropSelf(holder.value());

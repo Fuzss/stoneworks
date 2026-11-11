@@ -27,7 +27,7 @@ public class ModModelProvider extends AbstractModelProvider {
 
     @Override
     public void addBlockModels(BlockModelGenerators generators) {
-        for (BlockSetFamily family : ModBlockFamilies.ROOT_FAMILIES) {
+        for (BlockSetFamily family : ModBlockFamilies.getBaseFamilies()) {
             Map<BlockSetVariant, BiConsumer<BlockModelGenerators, Block>> variantProviders = this.getVariantProviders(
                     family);
             for (BlockSetVariant variant : ModBlockVariants.VALUES) {

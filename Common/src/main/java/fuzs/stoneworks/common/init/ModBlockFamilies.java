@@ -13,11 +13,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import org.jspecify.annotations.Nullable;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.function.Consumer;
+import java.util.*;
+import java.util.function.BiConsumer;
 import java.util.stream.Stream;
 
 public final class ModBlockFamilies {
@@ -102,54 +99,34 @@ public final class ModBlockFamilies {
             .provideFor(ModBlockVariants.BRICKS, Blocks.QUARTZ_BRICKS)
             .provideFor(ModBlockVariants.CHISELED, Blocks.CHISELED_QUARTZ_BLOCK)
             .provideFor(ModBlockVariants.PILLAR, Blocks.QUARTZ_PILLAR);
-    public static final List<BlockSetFamily> ROOT_FAMILIES = List.of(STONE,
-            ANDESITE,
-            GRANITE,
-            DIORITE,
-            DEEPSLATE,
-            CALCITE,
-            TUFF,
-            BASALT,
-            BLACKSTONE,
-            NETHERRACK,
-            NETHER_BRICK,
-            END_STONE,
-            PURPUR,
-            PRISMARINE,
-            DARK_PRISMARINE,
-            SANDSTONE,
-            RED_SANDSTONE,
-            QUARTZ);
     private static final Set<BlockSetFamily> CHISELED_MOTIF_FAMILIES = Set.of(DIORITE,
             CALCITE,
             PRISMARINE,
             DARK_PRISMARINE);
-    private static final ImmutableMap<BlockSetFamily, Map<BlockSetVariant, BlockSetFamily>> CHILD_FAMILIES;
+    private static final ImmutableMap<BlockSetFamily, Map<BlockSetVariant, BlockSetFamily>> ALL_FAMILIES;
 
     static {
-        ImmutableMap.Builder<BlockSetFamily, Map<BlockSetVariant, BlockSetFamily>> childFamilies = ImmutableMap.builder();
-        Consumer<Map.Entry<BlockSetFamily, Map<BlockSetVariant, BlockSetFamily>>> childRegistrar = (Map.Entry<BlockSetFamily, Map<BlockSetVariant, BlockSetFamily>> entry) -> {
-            childFamilies.put(entry.getKey(), entry.getValue());
-        };
-        setupFamily(STONE, ModBlockVariants.VALUES, childRegistrar);
-        setupFamily(ANDESITE, ModBlockVariants.VALUES, childRegistrar);
-        setupFamily(GRANITE, ModBlockVariants.VALUES, childRegistrar);
-        setupFamily(DIORITE, ModBlockVariants.VALUES, childRegistrar);
-        setupFamily(DEEPSLATE, ModBlockVariants.VALUES, childRegistrar);
-        setupFamily(CALCITE, ModBlockVariants.VALUES, childRegistrar);
-        setupFamily(TUFF, ModBlockVariants.VALUES, childRegistrar);
-        setupFamily(BASALT, ModBlockVariants.VALUES, childRegistrar);
-        setupFamily(BLACKSTONE, ModBlockVariants.VALUES, childRegistrar);
-        setupFamily(NETHERRACK, ModBlockVariants.NETHERRACK_VARIANTS, childRegistrar);
-        setupFamily(NETHER_BRICK, ModBlockVariants.NETHER_BRICK_VARIANTS, childRegistrar);
-        setupFamily(END_STONE, ModBlockVariants.VALUES, childRegistrar);
-        setupFamily(PURPUR, ModBlockVariants.VALUES, childRegistrar);
-        setupFamily(PRISMARINE, ModBlockVariants.VALUES, childRegistrar);
-        setupFamily(DARK_PRISMARINE, ModBlockVariants.VALUES, childRegistrar);
-        setupFamily(SANDSTONE, ModBlockVariants.VALUES, childRegistrar);
-        setupFamily(RED_SANDSTONE, ModBlockVariants.VALUES, childRegistrar);
-        setupFamily(QUARTZ, ModBlockVariants.VALUES, childRegistrar);
-        CHILD_FAMILIES = childFamilies.build();
+        ImmutableMap.Builder<BlockSetFamily, Map<BlockSetVariant, BlockSetFamily>> allFamilies = ImmutableMap.builder();
+        BiConsumer<BlockSetFamily, Map<BlockSetVariant, BlockSetFamily>> registrar = allFamilies::put;
+        setupFamily(STONE, ModBlockVariants.VALUES, registrar);
+        setupFamily(ANDESITE, ModBlockVariants.VALUES, registrar);
+        setupFamily(GRANITE, ModBlockVariants.VALUES, registrar);
+        setupFamily(DIORITE, ModBlockVariants.VALUES, registrar);
+        setupFamily(DEEPSLATE, ModBlockVariants.VALUES, registrar);
+        setupFamily(CALCITE, ModBlockVariants.VALUES, registrar);
+        setupFamily(TUFF, ModBlockVariants.VALUES, registrar);
+        setupFamily(BASALT, ModBlockVariants.VALUES, registrar);
+        setupFamily(BLACKSTONE, ModBlockVariants.VALUES, registrar);
+        setupFamily(NETHERRACK, ModBlockVariants.NETHERRACK_VARIANTS, registrar);
+        setupFamily(NETHER_BRICK, ModBlockVariants.NETHER_BRICK_VARIANTS, registrar);
+        setupFamily(END_STONE, ModBlockVariants.VALUES, registrar);
+        setupFamily(PURPUR, ModBlockVariants.VALUES, registrar);
+        setupFamily(PRISMARINE, ModBlockVariants.VALUES, registrar);
+        setupFamily(DARK_PRISMARINE, ModBlockVariants.VALUES, registrar);
+        setupFamily(SANDSTONE, ModBlockVariants.VALUES, registrar);
+        setupFamily(RED_SANDSTONE, ModBlockVariants.VALUES, registrar);
+        setupFamily(QUARTZ, ModBlockVariants.VALUES, registrar);
+        ALL_FAMILIES = allFamilies.build();
     }
 
     private ModBlockFamilies() {
@@ -167,18 +144,19 @@ public final class ModBlockFamilies {
                 });
     }
 
-    private static void setupFamily(BlockSetFamily.Writable family, List<BlockSetVariant> variants, Consumer<Map.Entry<BlockSetFamily, Map<BlockSetVariant, BlockSetFamily>>> childRegistrar) {
+    private static void setupFamily(BlockSetFamily.Writable family, List<BlockSetVariant> variants, BiConsumer<BlockSetFamily, Map<BlockSetVariant, BlockSetFamily>> registrar) {
         ImmutableMap.Builder<BlockSetVariant, BlockSetFamily> childFamilies = ImmutableMap.builder();
         for (BlockSetVariant variant : variants) {
             if (!family.getAllBlockVariants().containsKey(variant)) {
                 family.generateFor(variant);
             }
+
             if (ModBlockVariants.PROVIDES_SHAPE_BLOCKS.contains(variant)) {
                 childFamilies.put(variant, createChildFamily(family, variant));
             }
         }
 
-        childRegistrar.accept(Map.entry(family, childFamilies.build()));
+        registrar.accept(family, childFamilies.build());
     }
 
     private static BlockSetFamily createChildFamily(BlockSetFamily family, BlockSetVariant variant) {
@@ -211,23 +189,27 @@ public final class ModBlockFamilies {
         }
     }
 
+    public static Stream<BlockSetFamily> getAllFamilies() {
+        return Stream.concat(getBaseFamilies().stream(), getChildFamilies());
+    }
+
+    public static Collection<BlockSetFamily> getBaseFamilies() {
+        return ALL_FAMILIES.keySet();
+    }
+
     public static Stream<BlockSetFamily> getChildFamilies() {
-        return CHILD_FAMILIES.values().stream().flatMap((Map<BlockSetVariant, BlockSetFamily> map) -> {
+        return ALL_FAMILIES.values().stream().flatMap((Map<BlockSetVariant, BlockSetFamily> map) -> {
             return map.values().stream();
         });
     }
 
     public static Stream<BlockSetFamily> getChildFamilies(BlockSetFamily family) {
-        return CHILD_FAMILIES.getOrDefault(family, ImmutableMap.of()).values().stream();
-    }
-
-    public static Stream<BlockSetFamily> getAllBlockSetFamilies() {
-        return Stream.concat(ROOT_FAMILIES.stream(), getChildFamilies());
+        return ALL_FAMILIES.getOrDefault(family, ImmutableMap.of()).values().stream();
     }
 
     @Nullable
     public static BlockSetFamily getChildFamily(BlockSetFamily family, BlockSetVariant variant) {
-        Map<BlockSetVariant, BlockSetFamily> childFamilies = CHILD_FAMILIES.get(family);
+        Map<BlockSetVariant, BlockSetFamily> childFamilies = ALL_FAMILIES.get(family);
         return childFamilies != null ? childFamilies.get(variant) : null;
     }
 
@@ -238,13 +220,13 @@ public final class ModBlockFamilies {
     public static Stream<? extends ItemLike> getSortedVariantItems() {
         boolean includeVanilla = Stoneworks.CONFIG.getHolder(CommonConfig.class).isAvailable() && Stoneworks.CONFIG.get(
                 CommonConfig.class).vanillaVariantsInCreativeTab;
-        return ROOT_FAMILIES.stream().flatMap((BlockSetFamily family) -> {
+        return getBaseFamilies().stream().flatMap((BlockSetFamily family) -> {
             return getVariantItems(family, includeVanilla);
         });
     }
 
     private static Stream<? extends ItemLike> getVariantItems(BlockSetFamily family, boolean includeVanilla) {
-        List<ItemLike> items = new ArrayList<>();
+        List<ItemLike> variantItems = new ArrayList<>();
         for (BlockSetVariant variant : ModBlockVariants.VALUES) {
             Holder.Reference<Block> block = family.getBlock(variant);
             if (block == null) {
@@ -256,15 +238,15 @@ public final class ModBlockFamilies {
                 continue;
             }
 
-            items.add(block.value());
+            variantItems.add(block.value());
             BlockSetFamily childFamily = getChildFamily(family, variant);
             if (childFamily != null) {
                 childFamily.getAllBlockVariants().values().forEach((Holder.Reference<Block> holder) -> {
-                    items.add(holder.value());
+                    variantItems.add(holder.value());
                 });
             }
         }
 
-        return items.stream();
+        return variantItems.stream();
     }
 }

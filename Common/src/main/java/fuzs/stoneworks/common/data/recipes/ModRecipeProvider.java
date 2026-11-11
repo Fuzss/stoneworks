@@ -22,7 +22,7 @@ public class ModRecipeProvider extends AbstractRecipeProvider {
 
     @Override
     public void buildRecipes() {
-        for (BlockSetFamily family : ModBlockFamilies.ROOT_FAMILIES) {
+        for (BlockSetFamily family : ModBlockFamilies.getBaseFamilies()) {
             this.generateFor(family);
             for (BlockSetVariant variant : ModBlockVariants.STONECUTTER_VARIANTS) {
                 Holder.Reference<Block> holder = family.getGeneratedBlockVariants().get(variant);
@@ -30,18 +30,18 @@ public class ModRecipeProvider extends AbstractRecipeProvider {
                     continue;
                 }
 
-                Block block = holder.value();
-                Block baseBlock = family.getBaseBlock().value();
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, block, baseBlock);
+                Block resultBlock = holder.value();
+                Block inputBlock = family.getBaseBlock().value();
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, resultBlock, inputBlock);
                 if (ModBlockVariants.CRAFTING_VARIANTS.contains(variant)) {
-                    this.twoByTwo(block, baseBlock);
+                    this.twoByTwo(resultBlock, inputBlock);
                 }
             }
 
             ModBlockFamilies.getChildFamilies(family).forEach(this::generateFor);
         }
 
-        for (BlockSetFamily family : ModBlockFamilies.ROOT_FAMILIES) {
+        for (BlockSetFamily family : ModBlockFamilies.getBaseFamilies()) {
             ModBlockVariants.SMELTING_VARIANTS.forEach((BlockSetVariant result, BlockSetVariant base) -> {
                 this.generateSmeltingRecipe(family, result, base);
             });

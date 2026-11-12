@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cobbled_andesite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "stoneworks:cobbled_andesite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "stoneworks:andesite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cobbled_andesite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "stoneworks:andesite"
+    ]
+  }
+}

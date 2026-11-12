@@ -140,10 +140,12 @@ public final class ModBlockFamilies {
     }
 
     private static BlockSetFamily.Writable stoneFamily(Block baseBlock, String baseName) {
-        return BlockSetFamily.base(ModRegistry.REGISTRIES, baseBlock.builtInRegistryHolder(), baseName)
-                .configureBlockFamily((BlockFamily.Builder builder) -> {
-                    builder.dontGenerateSmeltingRecipe().generateStonecutterRecipe();
-                });
+        return stoneFamily(baseBlock.builtInRegistryHolder(), baseName);
+    }
+
+    private static BlockSetFamily.Writable stoneFamily(Holder.Reference<Block> baseBlock, String baseName) {
+        return BlockSetFamily.base(ModRegistry.REGISTRIES, baseBlock, baseName)
+                .configureBlockFamily(BlockFamily.Builder::generateStonecutterRecipe);
     }
 
     private static void setupFamily(BlockSetFamily.Writable family, List<BlockSetVariant> variants, BiConsumer<BlockSetFamily, Map<BlockSetVariant, BlockSetFamily>> registrar) {
@@ -166,12 +168,9 @@ public final class ModBlockFamilies {
         boolean generated = family.getGeneratedBlockVariants().containsKey(variant);
         String childName = generated ? ModBlockVariants.FAMILY_NAMES.get(variant).apply(family.getBaseName()) :
                 mainBlock.key().identifier().getPath();
-        BlockSetFamily.Writable childFamily = BlockSetFamily.base(ModRegistry.REGISTRIES,
-                        mainBlock,
-                        childName)
-                .configureBlockFamily(BlockFamily.Builder::generateStonecutterRecipe);
-        boolean generateShapes = generated || variant == ModBlockVariants.REGULAR && GENERATED_SHAPE_FAMILIES.contains(
-                family);
+        BlockSetFamily.Writable childFamily = stoneFamily(mainBlock, childName);
+        boolean generateShapes =
+                generated || variant == ModBlockVariants.REGULAR && GENERATED_SHAPE_FAMILIES.contains(family);
         if (generateShapes) {
             childFamily.generateFor(BlockSetVariant.STAIRS)
                     .generateFor(BlockSetVariant.SLAB)
@@ -247,9 +246,9 @@ public final class ModBlockFamilies {
                 variantItems.add(block.value());
             }
             if (childFamily != null) {
-                Collection<Holder.Reference<Block>> childBlocks = includeVanilla ?
-                        childFamily.getAllBlockVariants().values() :
-                        childFamily.getGeneratedBlockVariants().values();
+                Collection<Holder.Reference<Block>> childBlocks =
+                        includeVanilla ? childFamily.getAllBlockVariants().values() :
+                                childFamily.getGeneratedBlockVariants().values();
                 childBlocks.forEach((Holder.Reference<Block> holder) -> {
                     variantItems.add(holder.value());
                 });

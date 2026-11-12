@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "mossy_cobbled_andesite",
+  "ingredients": [
+    "stoneworks:cobbled_andesite",
+    "minecraft:moss_block"
+  ],
+  "result": {
+    "id": "stoneworks:mossy_cobbled_andesite"
+  }
+}

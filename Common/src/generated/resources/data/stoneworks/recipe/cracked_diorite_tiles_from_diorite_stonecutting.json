@@ -1,7 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": "minecraft:diorite",
-  "result": {
-    "id": "stoneworks:cracked_diorite_tiles"
-  }
-}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "mossy_netherrack_bricks",
+  "ingredients": [
+    "stoneworks:netherrack_bricks",
+    "minecraft:vine"
+  ],
+  "result": {
+    "id": "stoneworks:mossy_netherrack_bricks"
+  }
+}

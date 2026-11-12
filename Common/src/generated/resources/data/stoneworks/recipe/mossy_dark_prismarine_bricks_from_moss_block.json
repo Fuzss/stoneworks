@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "mossy_dark_prismarine_bricks",
+  "ingredients": [
+    "stoneworks:dark_prismarine_bricks",
+    "minecraft:moss_block"
+  ],
+  "result": {
+    "id": "stoneworks:mossy_dark_prismarine_bricks"
+  }
+}

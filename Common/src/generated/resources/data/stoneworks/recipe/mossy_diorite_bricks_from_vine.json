@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "mossy_diorite_bricks",
+  "ingredients": [
+    "stoneworks:diorite_bricks",
+    "minecraft:vine"
+  ],
+  "result": {
+    "id": "stoneworks:mossy_diorite_bricks"
+  }
+}

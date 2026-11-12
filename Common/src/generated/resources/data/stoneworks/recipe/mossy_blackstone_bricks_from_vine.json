@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "mossy_blackstone_bricks",
+  "ingredients": [
+    "minecraft:polished_blackstone_bricks",
+    "minecraft:vine"
+  ],
+  "result": {
+    "id": "stoneworks:mossy_blackstone_bricks"
+  }
+}

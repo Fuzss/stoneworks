@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "mossy_cobbled_dark_prismarine",
+  "ingredients": [
+    "stoneworks:cobbled_dark_prismarine",
+    "minecraft:vine"
+  ],
+  "result": {
+    "id": "stoneworks:mossy_cobbled_dark_prismarine"
+  }
+}

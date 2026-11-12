@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "mossy_cobbled_red_sandstone",
+  "ingredients": [
+    "stoneworks:cobbled_red_sandstone",
+    "minecraft:moss_block"
+  ],
+  "result": {
+    "id": "stoneworks:mossy_cobbled_red_sandstone"
+  }
+}

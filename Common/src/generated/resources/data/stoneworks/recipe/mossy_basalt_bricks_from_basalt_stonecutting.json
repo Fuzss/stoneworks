@@ -1,7 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": "minecraft:basalt",
-  "result": {
-    "id": "stoneworks:mossy_basalt_bricks"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": "minecraft:netherrack",
-  "result": {
-    "id": "stoneworks:mossy_cobbled_netherrack"
-  }
-}

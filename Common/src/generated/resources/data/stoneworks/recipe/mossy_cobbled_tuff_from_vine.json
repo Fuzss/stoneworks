@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "mossy_cobbled_tuff",
+  "ingredients": [
+    "stoneworks:cobbled_tuff",
+    "minecraft:vine"
+  ],
+  "result": {
+    "id": "stoneworks:mossy_cobbled_tuff"
+  }
+}

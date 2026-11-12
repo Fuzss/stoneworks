@@ -1,7 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": "minecraft:end_stone",
-  "result": {
-    "id": "stoneworks:cracked_end_stone_tiles"
-  }
-}

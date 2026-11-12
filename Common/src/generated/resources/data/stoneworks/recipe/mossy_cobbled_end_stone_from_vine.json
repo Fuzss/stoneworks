@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "mossy_cobbled_end_stone",
+  "ingredients": [
+    "stoneworks:cobbled_end_stone",
+    "minecraft:vine"
+  ],
+  "result": {
+    "id": "stoneworks:mossy_cobbled_end_stone"
+  }
+}

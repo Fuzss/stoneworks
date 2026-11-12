@@ -18,12 +18,10 @@ public class ModBlockTagsProvider extends AbstractTagsProvider<Block> {
 
     @Override
     public void addTags(HolderLookup.Provider provider) {
-        ModBlockFamilies.getAllFamilies().flatMap((BlockSetFamily family) -> {
-            return family.getGeneratedBlockVariants().values().stream();
-        }).forEach((Holder.Reference<Block> holder) -> {
-            this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(holder);
-        });
-        ModBlockFamilies.getChildFamilies().forEach((BlockSetFamily family) -> {
+        ModBlockFamilies.getAllFamilies().forEach((BlockSetFamily family) -> {
+            family.getGeneratedBlockVariants().values().forEach((Holder.Reference<Block> holder) -> {
+                this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(holder);
+            });
             this.generateFor(family.getGeneratedBlockVariants(), VARIANT_STONE_BLOCK_TAGS);
         });
     }

@@ -8,11 +8,9 @@ import fuzs.stoneworks.common.init.ModBlockFamilies;
 import fuzs.stoneworks.common.init.ModBlockVariants;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.core.Holder;
-import net.minecraft.data.BlockFamily;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.worldgen.BootstrapContext;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
@@ -22,15 +20,18 @@ import java.util.Map;
 import java.util.Optional;
 
 public class ModRecipeProvider extends AbstractRecipeProvider {
-    private static final FamilyRecipeProvider TWO_BY_TWO = (RecipeProvider recipeProvider, ItemLike result, ItemLike input, Optional<String> recipeGroupPrefix, Optional<String> recipeUnlockedBy) -> {
-        ((ModRecipeProvider) recipeProvider).twoByTwo(result, input);
-    };
     private static final Map<BlockSetVariant, FamilyRecipeProvider> CRAFTING_VARIANTS = ImmutableMap.of(ModBlockVariants.SHINGLES,
-            TWO_BY_TWO,
+            (RecipeProvider recipeProvider, ItemLike result, ItemLike input, Optional<String> recipeGroupPrefix, Optional<String> recipeUnlockedBy) -> {
+                ((ModRecipeProvider) recipeProvider).twoByTwo(result, input);
+            },
             ModBlockVariants.PAVERS,
-            TWO_BY_TWO,
+            (RecipeProvider recipeProvider, ItemLike result, ItemLike input, Optional<String> recipeGroupPrefix, Optional<String> recipeUnlockedBy) -> {
+                ((ModRecipeProvider) recipeProvider).twoByTwo(result, input);
+            },
             ModBlockVariants.PLATES,
-            TWO_BY_TWO);
+            (RecipeProvider recipeProvider, ItemLike result, ItemLike input, Optional<String> recipeGroupPrefix, Optional<String> recipeUnlockedBy) -> {
+                ((ModRecipeProvider) recipeProvider).twoByTwo(result, input);
+            });
     private static final Map<BlockSetVariant, FamilyRecipeProvider> STONECUTTING_VARIANTS = ImmutableMap.<BlockSetVariant, FamilyRecipeProvider>builder()
             .put(ModBlockVariants.REGULAR, FamilyRecipeProvider.stonecutting())
             .put(ModBlockVariants.CHISELED, FamilyRecipeProvider.stonecutting())
@@ -90,26 +91,10 @@ public class ModRecipeProvider extends AbstractRecipeProvider {
 
     @Override
     public void buildRecipes() {
-        for (BlockSetFamily family : ModBlockFamilies.getBaseFamilies()) {
-            this.generateFor(family, getCraftingVariants(family), STONECUTTING_VARIANTS);
-            this.generateSmeltingFor(family, getSmeltingVariants(family));
-            ModBlockFamilies.getChildFamilies(family).forEach(this::generateFor);
-        }
-    }
-
-    // TODO replace with method from puzzles lib
-    @Deprecated
-    private void generateSmeltingFor(BlockSetFamily family, Map<BlockSetVariant, FamilyRecipeProvider> smeltingVariants) {
-        BlockFamily blockFamily = family.getBlockFamily();
-        family.getGeneratedItemVariants().forEach((BlockSetVariant variant, Holder.Reference<Item> holder) -> {
-            FamilyRecipeProvider recipeProvider = smeltingVariants.get(variant);
-            if (recipeProvider != null) {
-                recipeProvider.create(this,
-                        holder.value(),
-                        family.getBaseBlock().value(),
-                        blockFamily.getRecipeGroupPrefix(),
-                        blockFamily.getRecipeUnlockedBy());
-            }
+        ModBlockFamilies.getAllFamilies().forEach((BlockSetFamily family) -> {
+            Map<BlockSetVariant, FamilyRecipeProvider> craftingVariants = getCraftingVariants(family);
+            Map<BlockSetVariant, FamilyRecipeProvider> smeltingVariants = getSmeltingVariants(family);
+            this.generateFor(family, craftingVariants, STONECUTTING_VARIANTS, smeltingVariants);
         });
     }
 

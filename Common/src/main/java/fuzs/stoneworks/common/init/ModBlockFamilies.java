@@ -198,14 +198,10 @@ public final class ModBlockFamilies {
         return ALL_FAMILIES.keySet();
     }
 
-    public static Stream<BlockSetFamily> getChildFamilies() {
+    private static Stream<BlockSetFamily> getChildFamilies() {
         return ALL_FAMILIES.values().stream().flatMap((Map<BlockSetVariant, BlockSetFamily> map) -> {
             return map.values().stream();
         });
-    }
-
-    public static Stream<BlockSetFamily> getChildFamilies(BlockSetFamily family) {
-        return ALL_FAMILIES.getOrDefault(family, ImmutableMap.of()).values().stream();
     }
 
     @Nullable

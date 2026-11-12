@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:basalt",
+  "result": {
+    "id": "stoneworks:basalt_wall"
+  }
+}

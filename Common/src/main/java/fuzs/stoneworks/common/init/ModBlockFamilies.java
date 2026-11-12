@@ -99,10 +99,12 @@ public final class ModBlockFamilies {
             .provideFor(ModBlockVariants.BRICKS, Blocks.QUARTZ_BRICKS)
             .provideFor(ModBlockVariants.CHISELED, Blocks.CHISELED_QUARTZ_BLOCK)
             .provideFor(ModBlockVariants.PILLAR, Blocks.QUARTZ_PILLAR);
-    private static final Set<BlockSetFamily> CHISELED_MOTIF_FAMILIES = Set.of(DIORITE,
+    public static final Set<BlockSetFamily> CHISELED_MOTIF_FAMILIES = Set.of(DIORITE,
             CALCITE,
             PRISMARINE,
             DARK_PRISMARINE);
+    public static final Set<BlockSetFamily> COLUMN_SHAPE_FAMILIES = Set.of(BASALT);
+    private static final Set<BlockSetFamily> GENERATED_SHAPE_FAMILIES = Set.of(CALCITE, BASALT, END_STONE);
     private static final ImmutableMap<BlockSetFamily, Map<BlockSetVariant, BlockSetFamily>> ALL_FAMILIES;
 
     static {
@@ -161,11 +163,16 @@ public final class ModBlockFamilies {
 
     private static BlockSetFamily createChildFamily(BlockSetFamily family, BlockSetVariant variant) {
         Holder.Reference<Block> mainBlock = family.getBlock(variant);
+        boolean generated = family.getGeneratedBlockVariants().containsKey(variant);
+        String childName = generated ? ModBlockVariants.FAMILY_NAMES.get(variant).apply(family.getBaseName()) :
+                mainBlock.key().identifier().getPath();
         BlockSetFamily.Writable childFamily = BlockSetFamily.base(ModRegistry.REGISTRIES,
                         mainBlock,
-                        ModBlockVariants.FAMILY_NAMES.get(variant).apply(family.getBaseName()))
+                        childName)
                 .configureBlockFamily(BlockFamily.Builder::generateStonecutterRecipe);
-        if (family.getGeneratedBlockVariants().containsKey(variant)) {
+        boolean generateShapes = generated || variant == ModBlockVariants.REGULAR && GENERATED_SHAPE_FAMILIES.contains(
+                family);
+        if (generateShapes) {
             childFamily.generateFor(BlockSetVariant.STAIRS)
                     .generateFor(BlockSetVariant.SLAB)
                     .generateFor(BlockSetVariant.WALL);
@@ -213,10 +220,6 @@ public final class ModBlockFamilies {
         return childFamilies != null ? childFamilies.get(variant) : null;
     }
 
-    public static boolean hasChiseledMotif(BlockSetFamily family) {
-        return CHISELED_MOTIF_FAMILIES.contains(family);
-    }
-
     public static Stream<? extends ItemLike> getSortedVariantItems() {
         boolean includeVanilla = Stoneworks.CONFIG.getHolder(CommonConfig.class).isAvailable() && Stoneworks.CONFIG.get(
                 CommonConfig.class).vanillaVariantsInCreativeTab;
@@ -234,14 +237,20 @@ public final class ModBlockFamilies {
             }
 
             boolean generated = family.getGeneratedBlockVariants().containsKey(variant);
-            if (!generated && !includeVanilla) {
+            BlockSetFamily childFamily = getChildFamily(family, variant);
+            boolean generatedChild = childFamily != null && !childFamily.getGeneratedBlockVariants().isEmpty();
+            if (!generated && !generatedChild && !includeVanilla) {
                 continue;
             }
 
-            variantItems.add(block.value());
-            BlockSetFamily childFamily = getChildFamily(family, variant);
+            if (generated || includeVanilla) {
+                variantItems.add(block.value());
+            }
             if (childFamily != null) {
-                childFamily.getAllBlockVariants().values().forEach((Holder.Reference<Block> holder) -> {
+                Collection<Holder.Reference<Block>> childBlocks = includeVanilla ?
+                        childFamily.getAllBlockVariants().values() :
+                        childFamily.getGeneratedBlockVariants().values();
+                childBlocks.forEach((Holder.Reference<Block> holder) -> {
                     variantItems.add(holder.value());
                 });
             }

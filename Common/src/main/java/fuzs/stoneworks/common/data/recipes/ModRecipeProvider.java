@@ -16,6 +16,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.Map;
 import java.util.Optional;
@@ -32,23 +33,50 @@ public class ModRecipeProvider extends AbstractRecipeProvider {
             TWO_BY_TWO);
     private static final Map<BlockSetVariant, FamilyRecipeProvider> STONECUTTING_VARIANTS = ImmutableMap.<BlockSetVariant, FamilyRecipeProvider>builder()
             .put(ModBlockVariants.REGULAR, FamilyRecipeProvider.stonecutting())
-            .put(ModBlockVariants.MOSSY_COBBLED, FamilyRecipeProvider.stonecutting())
-            .put(ModBlockVariants.MOSSY_BRICKS, FamilyRecipeProvider.stonecutting())
-            .put(ModBlockVariants.CRACKED_BRICKS, FamilyRecipeProvider.stonecutting())
             .put(ModBlockVariants.CHISELED, FamilyRecipeProvider.stonecutting())
-            .put(ModBlockVariants.CRACKED_TILES, FamilyRecipeProvider.stonecutting())
             .put(ModBlockVariants.SHINGLES, FamilyRecipeProvider.stonecutting())
             .put(ModBlockVariants.PAVERS, FamilyRecipeProvider.stonecutting())
             .put(ModBlockVariants.PLATES, FamilyRecipeProvider.stonecutting())
             .build();
+    private static final Map<BlockSetVariant, BlockSetVariant> MOSSY_VARIANTS = Map.of(ModBlockVariants.MOSSY_COBBLED,
+            ModBlockVariants.COBBLED,
+            ModBlockVariants.MOSSY_BRICKS,
+            ModBlockVariants.BRICKS);
+    private static final Map<BlockSetVariant, BlockSetVariant> SMELTING_VARIANTS = Map.of(ModBlockVariants.CRACKED_BRICKS,
+            ModBlockVariants.BRICKS,
+            ModBlockVariants.CRACKED_TILES,
+            ModBlockVariants.TILES);
 
     public ModRecipeProvider(BootstrapContext<Recipe<?>> recipeOutput, BootstrapContext<Advancement> advancementOutput) {
         super(recipeOutput, advancementOutput);
     }
 
+    public static Map<BlockSetVariant, FamilyRecipeProvider> getCraftingVariants(BlockSetFamily family) {
+        ImmutableMap.Builder<BlockSetVariant, FamilyRecipeProvider> builder = ImmutableMap.builder();
+        builder.putAll(CRAFTING_VARIANTS);
+        MOSSY_VARIANTS.forEach((BlockSetVariant variant, BlockSetVariant baseVariant) -> {
+            builder.put(variant,
+                    (RecipeProvider recipeProvider, ItemLike result, ItemLike input, Optional<String> recipeGroupPrefix, Optional<String> recipeUnlockedBy) -> {
+                        ((ModRecipeProvider) recipeProvider).mossy(result, family.getBlock(baseVariant).value());
+                    });
+        });
+
+        BlockSetFamily regularFamily = ModBlockFamilies.getChildFamily(family, ModBlockVariants.REGULAR);
+        if (regularFamily != null) {
+            builder.put(ModBlockVariants.CHISELED,
+                    (RecipeProvider recipeProvider, ItemLike result, ItemLike input, Optional<String> recipeGroupPrefix, Optional<String> recipeUnlockedBy) -> {
+                        recipeProvider.chiseled(RecipeCategory.BUILDING_BLOCKS,
+                                result,
+                                regularFamily.getBlock(BlockSetVariant.SLAB).value());
+                    });
+        }
+
+        return builder.build();
+    }
+
     public static Map<BlockSetVariant, FamilyRecipeProvider> getSmeltingVariants(BlockSetFamily family) {
         ImmutableMap.Builder<BlockSetVariant, FamilyRecipeProvider> builder = ImmutableMap.builder();
-        ModBlockVariants.SMELTING_VARIANTS.forEach((BlockSetVariant result, BlockSetVariant base) -> {
+        SMELTING_VARIANTS.forEach((BlockSetVariant result, BlockSetVariant base) -> {
             builder.put(result,
                     (RecipeProvider recipeProvider, ItemLike item, ItemLike input, Optional<String> recipeGroupPrefix, Optional<String> recipeUnlockedBy) -> {
                         Holder<Block> baseBlock = family.getBlock(base);
@@ -63,7 +91,7 @@ public class ModRecipeProvider extends AbstractRecipeProvider {
     @Override
     public void buildRecipes() {
         for (BlockSetFamily family : ModBlockFamilies.getBaseFamilies()) {
-            this.generateFor(family, CRAFTING_VARIANTS, STONECUTTING_VARIANTS);
+            this.generateFor(family, getCraftingVariants(family), STONECUTTING_VARIANTS);
             this.generateSmeltingFor(family, getSmeltingVariants(family));
             ModBlockFamilies.getChildFamilies(family).forEach(this::generateFor);
         }
@@ -95,5 +123,23 @@ public class ModRecipeProvider extends AbstractRecipeProvider {
                 .pattern("##")
                 .unlockedBy(getHasName(input), this.has(input))
                 .save(this.output);
+    }
+
+    /**
+     * @see net.minecraft.data.recipes.packs.VanillaRecipeProvider#buildRecipes()
+     */
+    public final void mossy(ItemLike result, ItemLike base) {
+        this.shapeless(RecipeCategory.BUILDING_BLOCKS, result)
+                .requires(base)
+                .requires(Blocks.VINE)
+                .group(getItemName(result))
+                .unlockedBy(getHasName(Blocks.VINE), this.has(Blocks.VINE))
+                .save(this.output, getConversionRecipeName(result, Blocks.VINE));
+        this.shapeless(RecipeCategory.BUILDING_BLOCKS, result)
+                .requires(base)
+                .requires(Blocks.MOSS_BLOCK)
+                .group(getItemName(result))
+                .unlockedBy(getHasName(Blocks.MOSS_BLOCK), this.has(Blocks.MOSS_BLOCK))
+                .save(this.output, getConversionRecipeName(result, Blocks.MOSS_BLOCK));
     }
 }

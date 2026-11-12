@@ -67,7 +67,7 @@ public final class ModBlockVariants {
     }, PLATES, (String name) -> {
         return name + "_plate";
     });
-    public static final List<BlockSetVariant> VALUES = List.of(REGULAR,
+    public static final List<BlockSetVariant> VARIANTS = List.of(REGULAR,
             COBBLED,
             MOSSY_COBBLED,
             BRICKS,
@@ -105,10 +105,6 @@ public final class ModBlockVariants {
             SHINGLES,
             PAVERS,
             PLATES);
-    public static final Map<BlockSetVariant, BlockSetVariant> SMELTING_VARIANTS = Map.of(CRACKED_BRICKS,
-            BRICKS,
-            CRACKED_TILES,
-            TILES);
 
     private ModBlockVariants() {
         // NO-OP

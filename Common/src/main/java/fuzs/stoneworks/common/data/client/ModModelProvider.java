@@ -19,6 +19,7 @@ import net.minecraft.world.level.block.Blocks;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.Set;
 import java.util.function.BiConsumer;
 
 public class ModModelProvider extends AbstractModelProvider {
@@ -30,6 +31,11 @@ public class ModModelProvider extends AbstractModelProvider {
             "template_wall_side_tall_column"), "_side_tall");
     private static final ModelTemplate WALL_INVENTORY_COLUMN = createColumnWallTemplate(Stoneworks.id(
             "template_wall_inventory_column"), "_inventory");
+    private static final Set<BlockSetFamily> CHISELED_MOTIF_FAMILIES = Set.of(ModBlockFamilies.DIORITE,
+            ModBlockFamilies.CALCITE,
+            ModBlockFamilies.PRISMARINE,
+            ModBlockFamilies.DARK_PRISMARINE);
+    private static final Set<BlockSetFamily> COLUMN_SHAPE_FAMILIES = Set.of(ModBlockFamilies.BASALT);
 
     public ModModelProvider(DataProviderContext context) {
         super(context);
@@ -48,7 +54,7 @@ public class ModModelProvider extends AbstractModelProvider {
         for (BlockSetFamily family : ModBlockFamilies.getBaseFamilies()) {
             Map<BlockSetVariant, BiConsumer<BlockModelGenerators, Block>> variantProviders = this.getVariantProviders(
                     family);
-            for (BlockSetVariant variant : ModBlockVariants.VALUES) {
+            for (BlockSetVariant variant : ModBlockVariants.VARIANTS) {
                 Holder.Reference<Block> holder = family.getGeneratedBlockVariants().get(variant);
                 if (holder != null) {
                     Block block = holder.value();
@@ -57,8 +63,7 @@ public class ModModelProvider extends AbstractModelProvider {
 
                 BlockSetFamily childFamily = ModBlockFamilies.getChildFamily(family, variant);
                 if (childFamily != null && !childFamily.getGeneratedBlockVariants().isEmpty()) {
-                    if (ModBlockFamilies.COLUMN_SHAPE_FAMILIES.contains(family)
-                            && variant == ModBlockVariants.REGULAR) {
+                    if (COLUMN_SHAPE_FAMILIES.contains(family) && variant == ModBlockVariants.REGULAR) {
                         this.createColumnShapes(generators, childFamily);
                     } else {
                         this.generateForBlocks(generators, childFamily);
@@ -71,7 +76,7 @@ public class ModModelProvider extends AbstractModelProvider {
     private Map<BlockSetVariant, BiConsumer<BlockModelGenerators, Block>> getVariantProviders(BlockSetFamily family) {
         ImmutableMap.Builder<BlockSetVariant, BiConsumer<BlockModelGenerators, Block>> builder = ImmutableMap.builder();
         builder.put(ModBlockVariants.PILLAR, this::createPillar);
-        if (ModBlockFamilies.CHISELED_MOTIF_FAMILIES.contains(family)) {
+        if (CHISELED_MOTIF_FAMILIES.contains(family)) {
             Block polishedBlock = Objects.requireNonNull(family.getBlock(ModBlockVariants.POLISHED),
                     "polished block is null").value();
             builder.put(ModBlockVariants.CHISELED, (BlockModelGenerators generators, Block block) -> {

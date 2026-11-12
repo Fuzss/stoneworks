@@ -105,20 +105,10 @@ public final class ModBlockVariants {
             SHINGLES,
             PAVERS,
             PLATES);
-    public static final Set<BlockSetVariant> CRAFTING_VARIANTS = Set.of(SHINGLES, PAVERS, PLATES);
     public static final Map<BlockSetVariant, BlockSetVariant> SMELTING_VARIANTS = Map.of(CRACKED_BRICKS,
             BRICKS,
             CRACKED_TILES,
             TILES);
-    public static final Set<BlockSetVariant> STONECUTTER_VARIANTS = Set.of(REGULAR,
-            MOSSY_COBBLED,
-            MOSSY_BRICKS,
-            CRACKED_BRICKS,
-            CHISELED,
-            CRACKED_TILES,
-            SHINGLES,
-            PAVERS,
-            PLATES);
 
     private ModBlockVariants() {
         // NO-OP
